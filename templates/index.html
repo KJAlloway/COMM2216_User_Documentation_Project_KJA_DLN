@@ -674,49 +674,58 @@
 
 <h1 id="configuring-code-templates">Configuring Code Templates</h1>
 <h2 id="overview">Overview</h2>
-<p>IntelliJ IDEA generates boilerplate Java methods — <code>equals()</code>, <code>hashCode()</code>,
-and <code>toString()</code> — using <a href="../glossary/#velocity-template">Velocity templates</a>
-when you use the <strong>Generate</strong> menu. The default templates do not match COMP 2522
-style requirements. This section walks you through replacing them so that every
-time you generate these methods, the output is already compliant.</p>
-<p>This also covers configuring the <a href="../glossary/#javadoc">Javadoc</a> plugin's class-level
-comment template so that generated class headers include the required
-<code>@author</code> and <code>@version</code> tags automatically.</p>
-<p>By the end of this section, generating <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>,
-and class-level Javadoc from the Generate menu will produce COMP 2522-compliant
-output without any manual edits.</p>
+<p>IntelliJ IDEA can automatically generate common Java methods for you —
+<code>equals()</code>, <code>hashCode()</code>, and <code>toString()</code> — so you do not have to write
+them from scratch every time. It does this using templates that define
+what the generated code should look like.</p>
+<p>The default templates do not match COMP 2522 style requirements, so this
+section walks you through replacing them with course-compliant versions.
+Once set up, every time you generate these methods IntelliJ will produce
+code that already follows your instructor's standards.</p>
+<p>This section also covers updating the <a href="../glossary/#javadoc">Javadoc</a> plugin's
+class comment template so that generated class headers automatically include
+the <code>@author</code> and <code>@version</code> tags your instructor requires.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>It is okay if some of the template code below looks unfamiliar — you
+are not expected to understand every line of it yet. The goal right
+now is to get your environment set up correctly so these tools work
+for you throughout the term. If you encounter terms you don't
+recognize, make a note and ask your instructor.</p>
+</div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>These templates are stored globally in your IDE settings and apply to
 every project you open. You only need to configure them once.</p>
 </div>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>You do not need an open project to configure templates. These steps
-can be completed from the IntelliJ IDEA welcome screen by navigating
-to <strong>Customize &gt; All Settings</strong>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Template configuration is accessed through the Generate menu inside
+an open Java class file. Before starting, open any <code>.java</code> file in
+your project — any existing class works fine.</p>
 </div>
 <h2 id="configuring-the-tostring-template">Configuring the toString Template</h2>
-<p>The default <code>toString()</code> template uses string <a href="../glossary/#string">concatenation</a>
-with <code>+</code>. COMP 2522 requires <a href="../glossary/#string">StringBuilder</a> for all string
-construction. The template below generates a compliant <code>toString()</code> method
-automatically.</p>
+<p>The <code>toString()</code> method produces a readable text description of an object —
+useful for debugging and logging. The template below checks what fields are
+present in your class and builds them into a consistent output format,
+while also checking for a <a href="../glossary/#superclass">superclass</a> and including
+its information if one exists.</p>
 <ol>
 <li>
-<p>Open any Java class in the editor and press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open
-   the <strong>Generate</strong> menu.</p>
-<p>Alternatively, from the welcome screen navigate to
-<strong>Customize &gt; All Settings &gt; Editor &gt; File and Code Templates</strong>.</p>
+<p>Open any Java class file in your project.</p>
 </li>
 <li>
-<p>Select <strong>toString()</strong> from the Generate menu.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
+<p><img alt="IntelliJ IDEA Generate menu showing options including toString(), equals() and hashCode(), and JavaDocs" src="graphics/alt_insert_menu.png" title="The Generate menu" /></p>
+</li>
+<li>
+<p>Select <strong>toString()</strong>.</p>
 <p>At this point, the <strong>Generate toString()</strong> dialog opens showing
 your class fields.</p>
 </li>
 <li>
 <p>Click the <strong>...</strong> button beside the <strong>Template</strong> dropdown in the
    top-right area of the dialog.</p>
-<p>At this point, the <strong>toString() Generation Settings</strong> dialog opens.</p>
 </li>
 <li>
 <p>Click the <strong>Templates</strong> tab.</p>
@@ -760,6 +769,9 @@ your class fields.</p>
 <a id="__codelineno-0-31" name="__codelineno-0-31" href="#__codelineno-0-31"></a>return sb.toString();
 <a id="__codelineno-0-32" name="__codelineno-0-32" href="#__codelineno-0-32"></a>}
 </code></pre></div>
+<p>The animation below shows the full flow from opening the dialog
+to saving the completed template:</p>
+<p><img alt="Animation demonstrating how to open the toString generation dialog, access the template settings, and replace the template with the COMP 2522 version" src="graphics/add_tostring_template.gif" title="Replacing the toString template" /></p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to save the template.</p>
@@ -769,35 +781,38 @@ your class fields.</p>
    from the <strong>Template</strong> dropdown to make it active.</p>
 </li>
 <li>
-<p>Click <strong>OK</strong> to close the settings dialog.</p>
-</li>
-<li>
-<p>Click <strong>OK</strong> in the Generate toString() dialog to generate the method
-    for your current class and verify the output matches the COMP 2522
-    pattern.</p>
+<p>Click <strong>OK</strong> to close the settings dialog, then <strong>OK</strong> again in the
+    Generate toString() dialog to generate the method and verify the output.</p>
 </li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> to undo the generated method if the output is not
-what you expected, and revisit the template.</p>
+<p>The same template system works for anything in the Generate menu —
+if you find yourself writing the same code structure repeatedly in
+this course, you can save it as a template the same way. You can
+also look into <strong>Live Templates</strong> (<strong>File &gt; Settings &gt; Editor &gt;
+Live Templates</strong>) which let you type a short abbreviation like
+<code>tostr</code> and have IntelliJ expand it into the full method body
+instantly, without opening the Generate menu at all.</p>
 </div>
 <h2 id="configuring-the-equals-and-hashcode-templates">Configuring the equals and hashCode Templates</h2>
-<p>The default <code>equals()</code> template uses <code>instanceof</code> for type checking, which
-is prohibited in COMP 2522. The templates below use <code>getClass()</code> instead,
-and generate a compliant <code>hashCode()</code> alongside it.</p>
+<p>The <code>equals()</code> method checks whether two objects are meaningfully the same.
+The template below looks at each field in your class and compares them one
+by one, while also checking that the two objects are exactly the same type
+before comparing anything. The <code>hashCode()</code> method works alongside <code>equals()</code>
+— Java requires that if two objects are equal, they must produce the same
+hash code, so these are always configured together.</p>
 <ol>
 <li>
-<p>Open any Java class in the editor and press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open
-   the <strong>Generate</strong> menu.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu again.</p>
 </li>
 <li>
-<p>Select <strong>equals() and hashCode()</strong> from the Generate menu.</p>
+<p>Select <strong>equals() and hashCode()</strong>.</p>
+<p><img alt="IntelliJ IDEA equals() and hashCode() generation dialog showing class fields available for selection" src="graphics/equals_hashcode.png" title="The equals() and hashCode() generation dialog" /></p>
 <p>At this point, the <strong>Generate equals() and hashCode()</strong> wizard opens.</p>
 </li>
 <li>
 <p>Click the <strong>...</strong> button beside the <strong>Template</strong> dropdown.</p>
-<p>At this point, the template editor opens.</p>
 </li>
 <li>
 <p>Select the existing equals template and click <strong>Edit</strong>, or click
@@ -846,8 +861,8 @@ and generate a compliant <code>hashCode()</code> alongside it.</p>
 <p>Click <strong>OK</strong> to save the equals template.</p>
 </li>
 <li>
-<p>Now select the hashCode template and click <strong>Edit</strong>, or add a new one
-   named <code>COMP 2522 hashCode</code>.</p>
+<p>Select the hashCode template entry and click <strong>Edit</strong>, or click
+   <strong>Add</strong> to create a new one named <code>COMP 2522 hashCode</code>.</p>
 </li>
 <li>
 <p>Replace the entire hashCode template contents with the following:</p>
@@ -897,18 +912,13 @@ and generate a compliant <code>hashCode()</code> alongside it.</p>
 <p>Click <strong>Finish</strong> to generate the methods.</p>
 </li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>After generating, verify that the <code>equals()</code> method uses
-<code>getClass() != object.getClass()</code> rather than <code>instanceof</code>.
-If <code>instanceof</code> appears, press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> to undo and confirm
-your template is selected in the dropdown.</p>
-</div>
 <h2 id="configuring-the-javadoc-class-template">Configuring the Javadoc Class Template</h2>
-<p>The JavaDoc plugin generates class-level <a href="../glossary/#javadoc">Javadoc</a> comments
-using its own template system. The default template does not include
-<code>@author</code> or <code>@version</code> tags, which are required by the COMP 2522 Style Guide
-for all classes.</p>
+<p>The JavaDoc plugin's default class comment template does not include
+<code>@author</code> or <code>@version</code> tags. Updating it here means every class comment
+you generate will already have those tags waiting for you to fill in —
+no more forgetting them before submission.</p>
+<p>Unlike the <code>toString</code> and <code>equals</code> templates, this one is configured
+through <strong>Settings</strong> rather than the Generate menu.</p>
 <ol>
 <li>
 <p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
@@ -921,8 +931,9 @@ for all classes.</p>
 </li>
 <li>
 <p>Select <strong>Class level</strong> from the template list.</p>
-<p>At this point, you will see four template fields for the class-level
-comment. Replace all four with the following:</p>
+</li>
+<li>
+<p>Replace all four template fields with the following:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>/**
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a> * @author Your Name
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a> * @version X.X
@@ -935,18 +946,13 @@ comment. Replace all four with the following:</p>
 include the <code>@author</code> and <code>@version</code> tags ready for you to fill in.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Replace <code>Your Name</code> with your actual name and <code>X.X</code> with your
-version number (typically <code>1.0</code> for a new class) each time you
-generate. The template provides the structure — the values are
-yours to fill in.</p>
-</div>
 <h2 id="conclusion">Conclusion</h2>
-<p>Your code generation templates are now configured to produce COMP 2522-compliant
-output automatically. Every <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and
-class-level Javadoc comment generated from the <strong>Generate</strong> menu will match
-your instructor's style requirements from the first keystroke.</p>
+<p>Your code generation templates are now configured for COMP 2522. From here,
+using <strong>Generate</strong> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span>) on any class will produce compliant
+<code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and Javadoc comments automatically.</p>
+<p>This is the last configuration step in the guide. Your environment is now
+fully set up for CST coursework — the work you have done here will save you
+time and help you avoid style penalties on every assignment this term.</p>
 
 
 

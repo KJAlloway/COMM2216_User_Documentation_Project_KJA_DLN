@@ -899,8 +899,7 @@ issues and suggest fixes — you decide whether to apply them.</p>
 <h2 id="understanding-inspection-severity-levels">Understanding Inspection Severity Levels</h2>
 <p>IntelliJ IDEA uses colour-coded highlights to indicate how serious an
 inspection finding is. The <a href="../glossary/#severity">severity</a> level appears
-in the <a href="../glossary/#inspection-widget">inspection widget</a> in the top-right
-corner of the editor.</p>
+in the inspection widget in the top-right corner of the editor.</p>
 <table>
 <thead>
 <tr>
@@ -1061,6 +1060,11 @@ Inspections panel.</p>
 <p>In the <strong>Settings</strong> window, navigate to <strong>Editor &gt; Inspections</strong>.</p>
 </li>
 <li>
+<p>In the profile dropdown at the top of the Inspections panel, select
+   <strong>IDE</strong> from the scope options to ensure the profile is stored
+   globally rather than for a single project.</p>
+</li>
+<li>
 <p>Click the <strong>gear icon</strong> (⚙) at the top of the Inspections panel.</p>
 </li>
 <li>
@@ -1073,20 +1077,15 @@ Keep it as <code>CST_Inspections</code> so it is easy to identify later.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to confirm.</p>
-<p>At this point, <strong>CST_Inspections</strong> will appear in the profile dropdown.</p>
+<p>At this point, <strong>CST_Inspections</strong> will appear in the profile dropdown
+at IDE scope.</p>
 </li>
 <li>
 <p>Select <strong>CST_Inspections</strong> from the profile dropdown to make it active.</p>
+<p><img alt="Editor &gt; Inspections panel showing the gear icon dropdown open with Import Profile visible, and CST_Inspections selected in the profile dropdown at IDE scope" src="graphics/import_inspection_profile.png" title="Importing and activating the CST inspection profile" /></p>
 </li>
 </ol>
 <h2 id="confirming-global-scope">Confirming Global Scope</h2>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>This step is critical. If the profile is applied at the project
-<a href="../glossary/#scope-ide-settings">scope</a> rather than globally, it will
-only be active for the project that was open when you imported it.
-Every other project will still use the default profile.</p>
-</div>
 <p>After selecting <strong>CST_Inspections</strong> in the dropdown, check whether it shows
 <code>CST_Inspections</code> or <code>CST_Inspections (Project)</code> in the dropdown label.</p>
 <ul>
