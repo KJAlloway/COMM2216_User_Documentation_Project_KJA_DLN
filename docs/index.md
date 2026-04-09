@@ -76,10 +76,10 @@ This guide uses the following conventions throughout:
 | Convention | Use | Example |
 |---|---|---|
 | **Bold** | UI elements: buttons, menus, tabs, and labels | Click **OK** |
-| `Monospace` | Keyboard shortcuts, file names, paths, and commands | Press `Ctrl+Alt+S` |
+| `Monospace` | File names, paths, and code | `CST_Inspections.xml` |
 | **Menu > Item** | A sequence of menu selections | **File > Settings > Keymap** |
 | *Italics* | A new term being introduced for the first time | The *Project* tool window |
-| ++key++ | A physical key on your keyboard | Press ++ctrl+alt+s++ |
+| Key badges | A physical key or key combination to press | ++ctrl+alt+s++ |
 
 Keyboard shortcuts in this guide use the default Windows keymap. Where macOS
 shortcuts differ significantly, they are noted in parentheses.

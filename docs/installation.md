@@ -122,11 +122,10 @@ JetBrains account so they are available on any device you log into.
 
 !!! warning
     Settings Sync only pushes your **global IDE settings**. Project-specific
-    overrides — such as an inspection profile or Save Actions configuration
-    stored at the project level rather than the IDE level — are not synced.
-    As you work through the following sections, each page will confirm
-    that the settings you configure are stored globally so they sync
-    correctly.
+    overrides — such as an inspection profile stored at the project level
+    rather than the IDE level — are not synced. As you work through the
+    following sections, each page will confirm that the settings you
+    configure are stored globally so they sync correctly.
 
 !!! tip
     Enable settings sync now, before you configure anything else in this
@@ -136,17 +135,22 @@ JetBrains account so they are available on any device you log into.
 
 1. Open **File > Settings** (++ctrl+alt+s++).
 
-2. Navigate to **Settings Sync** in the left panel.
+2. Navigate to **Tools > Backup and Sync** in the left panel.
 
 3. Click **Enable Settings Sync**.
 
 4. Select the categories you want to sync. For CST coursework, enable:
     - **UI Settings**
     - **Keymaps**
-    - **Code Style**
+    - **Code**
     - **Plugins**
 
-5. Click **Sync** to upload your current settings to your JetBrains account.
+5. Under the sync scope option, select **Sync only this IDE** to keep
+   your IntelliJ IDEA settings separate from other JetBrains IDEs, or
+   select **Sync all JetBrains IDEs** if you use other JetBrains tools
+   and want a shared configuration.
+
+6. Click **Sync** to upload your current settings to your JetBrains account.
 
     At this point, your IDE settings are stored in your JetBrains account
     and will be pushed to any other device where you log in with the same
@@ -162,4 +166,4 @@ Verify your setup before continuing:
 
 - IntelliJ IDEA launches without a trial or activation prompt
 - The title bar does not display "— (evaluation copy)"
-- **Help > About** shows your name and licence type as **Educational**
+- **Help > About** shows your licence as **For educational use only**

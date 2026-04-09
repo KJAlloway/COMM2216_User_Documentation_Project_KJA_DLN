@@ -68,11 +68,11 @@ to press during active editing. No default shortcut is removed.
 
 !!! tip
     There is an important difference between Move Line and Move Statement.
-    Move Line (++alt+shift+up/down++) moves only the single line your
-    caret is on. Move Statement (++ctrl+shift+up/down++) moves the entire
-    logical block — so if your caret is inside a method body, the whole
-    method moves. Use Move Statement when reorganising methods; use Move
-    Line for adjustments within a block.
+    Move Line (++alt+shift+up++ / ++alt+shift+down++) moves only the single
+    line your caret is on. Move Statement (++ctrl+shift+up++ /
+    ++ctrl+shift+down++) moves the entire logical block — so if your caret
+    is inside a method body, the whole method moves. Use Move Statement when
+    reorganising methods; use Move Line for adjustments within a block.
 
 ### Navigation
 
@@ -84,7 +84,7 @@ to press during active editing. No default shortcut is removed.
 | ++ctrl+e++ | Recent files | Quickly switch between recently opened files |
 | ++alt+1++ | Show Project tool window | Toggles the file tree panel open and closed |
 | ++escape++ | Return focus to editor | Works from any tool window or search dialog |
-| ++double-shift++ | Search Everywhere | Find any file, class, action, or setting |
+| ++shift+shift++ | Search Everywhere | Find any file, class, action, or setting — press Shift twice |
 | ++ctrl+shift+a++ | Find Action | Search for any IDE action by name — useful when you forget a shortcut |
 
 ### Multiple Carets
@@ -107,8 +107,8 @@ IntelliJ IDEA provides two complementary ways to place multiple carets:
 
 | Shortcut | Action |
 |---|---|
-| Double ++ctrl++ + ++up++ | Clone caret on the line above |
-| Double ++ctrl++ + ++down++ | Clone caret on the line below |
+| ++ctrl++ twice, then ++up++ | Clone caret on the line above |
+| ++ctrl++ twice, then ++down++ | Clone caret on the line below |
 | ++alt+j++ | Select next occurrence of word under caret |
 | ++ctrl+alt+shift+j++ | Select all occurrences of word under caret in file |
 
@@ -131,7 +131,7 @@ Press ++escape++ to return to a single caret.
 | ++ctrl+slash++ | Toggle line comment | |
 | ++ctrl+shift+slash++ | Toggle block comment | |
 
-#### Generating Javadoc from the Shortcut
+#### Assigning a Javadoc Shortcut
 
 There is no default shortcut for Generate Javadoc. If you want one,
 assign it yourself — it will persist in your keymap and sync to your
@@ -139,7 +139,7 @@ other devices via Settings Sync.
 
 1. Open **File > Settings** (++ctrl+alt+s++).
 2. Navigate to **Keymap**.
-3. Search for `Generate JavaDocs for current element` in the
+3. Search for `Generate JavaDocs for selected element` in the
    action list.
 4. **Right-click** the action and select **Add Keyboard Shortcut**.
 5. Press your desired key combination and click **OK**.

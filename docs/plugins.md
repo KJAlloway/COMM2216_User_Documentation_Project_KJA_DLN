@@ -80,9 +80,9 @@ Checkstyle is the final check that matches exactly what your instructor runs.
 
 !!! warning
     Checkstyle does not produce live underlines as you type. It runs
-    on demand from the Checkstyle tool window, or automatically on
-    save if configured. Do not assume a clean editor means a clean
-    Checkstyle run — always check the Checkstyle panel before submitting.
+    on demand from the Checkstyle tool window. Do not assume a clean
+    editor means a clean Checkstyle run — always check the Checkstyle
+    panel before submitting.
 
 ### Loading the Course Checkstyle Configuration
 
@@ -118,23 +118,21 @@ plugin so it runs the correct rules.
     At this point, the Checkstyle panel at the bottom of the IDE will
     use the course configuration when it runs.
 
-### Confirming Global Scope
+### Confirming the Scan Scope
 
-The Checkstyle configuration you just loaded is stored in your IDE
-settings and applies globally to all projects — you do not need to
-repeat this setup for each lab or assignment. However, confirm this
-is the case before continuing.
+After loading the configuration, confirm it will run against your entire
+project rather than a limited scope.
 
 1. Open **File > Settings** (++ctrl+alt+s++).
 
 2. Navigate to **Tools > Checkstyle**.
 
-3. Confirm the scope dropdown at the top of the panel reads **All** or
-   is not set to a specific project name.
+3. Locate the **Scan Scope** dropdown and confirm it is set to
+   **All files** or your preferred scope.
 
-    If the configuration shows as project-scoped, remove it and repeat
-    the steps above from outside any open project by going to
-    **File > Close Project** first, then reopening Settings.
+    The Checkstyle configuration itself is stored globally in your IDE
+    settings — you do not need to repeat the loading steps for each
+    new project.
 
 ### Running Checkstyle
 
@@ -178,33 +176,9 @@ from the Checkstyle tool window.
 
 Save Actions X runs a set of cleanup actions on your file automatically
 each time you save. For CST coursework, the most useful actions are
-reformatting your code and removing unused imports — two things that
-instructors check and that are easy to forget to do manually.
-
-### Confirming Global Scope
-
-!!! warning
-    Save Actions X can store its configuration either globally in your
-    IDE settings, or locally in a project-specific file committed to
-    your repository. For CST coursework you want the global setting,
-    so your formatting behaviour is consistent across every project
-    you open.
-
-Before configuring Save Actions X, confirm you are editing the global
-settings and not a project-local override:
-
-1. Open **File > Settings** (++ctrl+alt+s++).
-
-2. Navigate to **Save Actions X** in the left panel.
-
-3. At the top of the Save Actions X panel, confirm the scope is set
-   to **IDE** and not **Project**.
-
-    If it shows **Project**, click the **IDE** tab before making any
-    changes. Any settings you configure on the IDE tab apply to every
-    project you open.
-
-### Enabling Save Actions
+reformatting your code, removing unused imports, and trimming trailing
+whitespace — all things that Checkstyle checks and that are easy to
+forget to do manually.
 
 !!! warning
     Save Actions X modifies your file on every save. If you are working
@@ -214,26 +188,19 @@ settings and not a project-local override:
 
 1. Open **File > Settings** (++ctrl+alt+s++).
 
-2. Navigate to **Save Actions X** in the left panel.
+2. Navigate to **Tools > Actions on Save** in the left panel.
 
-3. Confirm you are on the **IDE** tab, not the **Project** tab.
+3. Enable the following actions:
 
-4. Under the **General** tab, check **Activate save actions on save**.
-
-5. Under the **Formatting Actions** section, enable the following:
-
+    - **Reformat code** — applies your code style settings to the
+      entire file on every save
     - **Optimize imports** — removes unused imports and organizes
       import statements according to your code style settings
-    - **Reformat file** — applies your code style settings to the
-      entire file on every save
-    - **Trim trailing whitespace** — removes trailing spaces from
-      line endings, which Checkstyle flags as a violation
 
-6. Click **OK** to save and close.
+4. Click **OK** to save and close.
 
     At this point, every time you press ++ctrl+s++ or the IDE autosaves,
-    your file will be automatically reformatted, its imports cleaned up,
-    and trailing whitespace removed across all your projects.
+    your file will be automatically reformatted and its imports cleaned up.
 
 !!! tip
     Save Actions X uses the code style settings configured at
@@ -252,13 +219,13 @@ In CST courses, complete Javadoc comments are a standard requirement
 for submitted code. This plugin significantly reduces the time it takes
 to document your work correctly.
 
-### Generating Javadoc for a Single Element
+### Generating Javadoc for a Selected Element
 
 1. Place your cursor on the class, method, or field you want to document.
 
 2. Press ++alt+insert++ to open the **Generate** menu.
 
-3. Select **Generate JavaDocs for current element**.
+3. Select **Generate JavaDocs for selected element**.
 
     At this point, a Javadoc comment stub is inserted directly above
     the element. It includes `@param` tags for each parameter, a

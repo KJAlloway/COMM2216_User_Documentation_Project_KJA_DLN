@@ -90,10 +90,11 @@ COMP 2522 requires `StringBuilder` for all string construction. String
 concatenation using `+` is not permitted, even outside of loops.
 
 By default, IntelliJ IDEA includes an inspection called
-**"StringBuilder can be replaced with String"** that suggests converting
-your `StringBuilder` back to simple concatenation. The CST inspection
-profile **disables this inspection** so it does not contradict course
-requirements.
+**"StringBuilder can be replaced with String"** (found under
+**Verbose or redundant code constructs** in the Inspections panel)
+that suggests converting your `StringBuilder` back to simple concatenation.
+The CST inspection profile **disables this inspection** so it does not
+contradict course requirements.
 
 The profile keeps the complementary inspection — **"String concatenation
 in loop"** — enabled, so you will still be warned if you accidentally use
@@ -103,7 +104,8 @@ in loop"** — enabled, so you will still be warned if you accidentally use
 
 1. Open **File > Settings** (++ctrl+alt+s++).
 
-2. Navigate to **Editor > Inspections**.
+2. In the **Settings** window, navigate to **Editor > Inspections** in
+   the left panel.
 
     At this point, you will see the Inspections panel. The dropdown at the
     top shows your currently active profile. The default is **Project Default**.
@@ -125,7 +127,7 @@ in loop"** — enabled, so you will still be warned if you accidentally use
 
 2. Open **File > Settings** (++ctrl+alt+s++).
 
-3. Navigate to **Editor > Inspections**.
+3. In the **Settings** window, navigate to **Editor > Inspections**.
 
 4. Click the **gear icon** (⚙) at the top of the Inspections panel.
 
@@ -182,9 +184,9 @@ After selecting **CST_Inspections** in the dropdown, check whether it shows
 ## Setting Up Code Templates
 
 IntelliJ IDEA generates `equals()`, `hashCode()`, and `toString()` methods
-using built-in templates when you use **Generate** (++alt+insert++). The
-default templates do not match COMP 2522 style requirements, so this section
-walks you through replacing them.
+using built-in templates when you use the **Generate** menu (++alt+insert++).
+The default templates do not match COMP 2522 style requirements. This section
+walks you through replacing them via the Generate menu's template settings.
 
 Replacing these templates is a one-time setup that applies globally across
 all your projects.
@@ -237,42 +239,73 @@ Each field gets its own `sb.append()` line. The method opens with
 `ClassName{`, includes `super.toString()` as the first append, and closes
 with `sb.append('}')`.
 
-### Replacing the equals Template
-
-1. Open **File > Settings** (++ctrl+alt+s++).
-
-2. Navigate to **Editor > Code Style > Java**.
-
-3. Click the **Code Generation** tab.
-
-4. Under the **equals() and hashCode()** section, locate the
-   **equals Template** field.
-
-5. Replace the contents with the COMP 2522 pattern above, substituting
-   `ClassName` and field names with the template variables IntelliJ
-   provides (`${CLASS_NAME}`, `${fields}`).
-
-6. Click **Apply** then **OK**.
-
 ### Replacing the toString Template
 
-1. Open **File > Settings** (++ctrl+alt+s++).
+The `toString()` template is accessed through the Generate menu rather
+than through the main Settings panel.
 
-2. Navigate to **Editor > File and Code Templates**.
+1. Open any Java class in the editor.
 
-3. Click the **Code** tab.
+2. Press ++alt+insert++ to open the **Generate** menu.
 
-4. Select **toString() Body** from the list.
+3. Select **toString()**.
 
-5. Replace the template contents with the `StringBuilder` pattern above.
+    At this point, the **Generate toString()** dialog opens showing
+    your class fields.
 
-6. Click **Apply** then **OK**.
+4. Click the **Settings icon** (⚙) in the top-right corner of the dialog.
+
+    At this point, the **toString() Generation Settings** dialog opens.
+    For more information on the available template options, see the
+    [JetBrains toString() settings documentation](https://www.jetbrains.com/help/idea/generate-tostring-settings-dialog.html).
+
+5. Click the **Templates** tab.
+
+6. Select the current active template and click **Edit** to modify it,
+   or click **Add** to create a new one.
+
+7. Replace the template contents with the COMP 2522 `StringBuilder` pattern
+   shown above, using the template variables available in the editor
+   (such as `${class.name}` and `${member.name}`).
+
+8. Click **OK** to save the template.
+
+9. Back in the toString() settings dialog, select your updated template
+   and click **OK**.
 
 !!! tip
-    After replacing the templates, test them by opening any class,
-    pressing ++alt+insert++, and selecting **toString()** or
-    **equals() and hashCode()**. Verify that the generated code matches
+    After updating the template, test it by clicking **OK** in the Generate
+    toString() dialog on your open class. Verify the generated method matches
     the COMP 2522 pattern before relying on it for assignment submissions.
+    Press ++ctrl+z++ to undo if the output is not what you expected.
+
+### Replacing the equals and hashCode Template
+
+The `equals()` and `hashCode()` templates follow the same process as
+`toString()`.
+
+1. Open any Java class in the editor.
+
+2. Press ++alt+insert++ to open the **Generate** menu.
+
+3. Select **equals() and hashCode()**.
+
+    At this point, the **Generate equals() and hashCode()** wizard opens.
+
+4. Click the **Settings icon** (⚙) or look for a **Template** dropdown
+   within the wizard.
+
+5. Select or edit the template to match the COMP 2522 `equals()` pattern
+   shown above — specifically ensuring `getClass()` is used instead of
+   `instanceof` for the type check.
+
+6. Click through the wizard to select the fields to include, then click
+   **Finish**.
+
+!!! tip
+    After generating, verify the output uses `getClass() != object.getClass()`
+    rather than `instanceof`. If `instanceof` appears, your template still
+    needs updating — press ++ctrl+z++ to undo and revisit the template settings.
 
 ## Verifying Your Inspection Profile
 
