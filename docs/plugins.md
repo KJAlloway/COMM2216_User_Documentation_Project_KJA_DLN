@@ -310,6 +310,3 @@ will keep your code formatted and your imports clean automatically. The
 JavaDoc plugin will reduce the time it takes to document your work. Key
 Promoter X will help you build shortcut habits as you work through the
 rest of this guide.
-
-When you are ready, continue to
-[Keyboard Shortcuts](shortcuts.md).

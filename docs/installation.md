@@ -163,6 +163,3 @@ Verify your setup before continuing:
 - IntelliJ IDEA launches without a trial or activation prompt
 - The title bar does not display "— (evaluation copy)"
 - **Help > About** shows your name and licence type as **Educational**
-
-When you are ready, continue to
-[Configuring Inspections](inspections.md).

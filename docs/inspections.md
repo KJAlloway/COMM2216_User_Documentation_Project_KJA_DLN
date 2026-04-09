@@ -298,6 +298,3 @@ any lab or assignment, run the course Checkstyle configuration from the
 Checkstyle tool window to confirm your code passes the same checks your
 instructor uses. Setup instructions are in
 [Installing and Configuring Plugins](plugins.md).
-
-When you are ready, continue to
-[Installing and Configuring Plugins](plugins.md).
