@@ -468,10 +468,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#confirming-global-scope" class="md-nav__link">
+  <a href="#confirming-the-scan-scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirming Global Scope
+        Confirming the Scan Scope
       
     </span>
   </a>
@@ -514,34 +514,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring Save Actions X">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#confirming-global-scope_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confirming Global Scope
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enabling-save-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enabling Save Actions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -557,10 +529,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generating-javadoc-for-a-single-element" class="md-nav__link">
+  <a href="#generating-javadoc-for-a-selected-element" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generating Javadoc for a Single Element
+        Generating Javadoc for a Selected Element
       
     </span>
   </a>
@@ -788,10 +760,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#confirming-global-scope" class="md-nav__link">
+  <a href="#confirming-the-scan-scope" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Confirming Global Scope
+        Confirming the Scan Scope
       
     </span>
   </a>
@@ -834,34 +806,6 @@
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Configuring Save Actions X">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#confirming-global-scope_1" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Confirming Global Scope
-      
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#enabling-save-actions" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Enabling Save Actions
-      
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
 </li>
       
         <li class="md-nav__item">
@@ -877,10 +821,10 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#generating-javadoc-for-a-single-element" class="md-nav__link">
+  <a href="#generating-javadoc-for-a-selected-element" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Generating Javadoc for a Single Element
+        Generating Javadoc for a Selected Element
       
     </span>
   </a>
@@ -1048,9 +992,9 @@ Checkstyle is the final check that matches exactly what your instructor runs.</p
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Checkstyle does not produce live underlines as you type. It runs
-on demand from the Checkstyle tool window, or automatically on
-save if configured. Do not assume a clean editor means a clean
-Checkstyle run — always check the Checkstyle panel before submitting.</p>
+on demand from the Checkstyle tool window. Do not assume a clean
+editor means a clean Checkstyle run — always check the Checkstyle
+panel before submitting.</p>
 </div>
 <h3 id="loading-the-course-checkstyle-configuration">Loading the Course Checkstyle Configuration</h3>
 <p>Your instructor provides a Checkstyle XML configuration file with each
@@ -1094,11 +1038,9 @@ plugin so it runs the correct rules.</p>
 use the course configuration when it runs.</p>
 </li>
 </ol>
-<h3 id="confirming-global-scope">Confirming Global Scope</h3>
-<p>The Checkstyle configuration you just loaded is stored in your IDE
-settings and applies globally to all projects — you do not need to
-repeat this setup for each lab or assignment. However, confirm this
-is the case before continuing.</p>
+<h3 id="confirming-the-scan-scope">Confirming the Scan Scope</h3>
+<p>After loading the configuration, confirm it will run against your entire
+project rather than a limited scope.</p>
 <ol>
 <li>
 <p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
@@ -1107,11 +1049,11 @@ is the case before continuing.</p>
 <p>Navigate to <strong>Tools &gt; Checkstyle</strong>.</p>
 </li>
 <li>
-<p>Confirm the scope dropdown at the top of the panel reads <strong>All</strong> or
-   is not set to a specific project name.</p>
-<p>If the configuration shows as project-scoped, remove it and repeat
-the steps above from outside any open project by going to
-<strong>File &gt; Close Project</strong> first, then reopening Settings.</p>
+<p>Locate the <strong>Scan Scope</strong> dropdown and confirm it is set to
+   <strong>All files</strong> or your preferred scope.</p>
+<p>The Checkstyle configuration itself is stored globally in your IDE
+settings — you do not need to repeat the loading steps for each
+new project.</p>
 </li>
 </ol>
 <h3 id="running-checkstyle">Running Checkstyle</h3>
@@ -1192,35 +1134,9 @@ than addressing a full list at the end.</p>
 <h2 id="configuring-save-actions-x">Configuring Save Actions X</h2>
 <p>Save Actions X runs a set of cleanup actions on your file automatically
 each time you save. For CST coursework, the most useful actions are
-reformatting your code and removing unused imports — two things that
-instructors check and that are easy to forget to do manually.</p>
-<h3 id="confirming-global-scope_1">Confirming Global Scope</h3>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>Save Actions X can store its configuration either globally in your
-IDE settings, or locally in a project-specific file committed to
-your repository. For CST coursework you want the global setting,
-so your formatting behaviour is consistent across every project
-you open.</p>
-</div>
-<p>Before configuring Save Actions X, confirm you are editing the global
-settings and not a project-local override:</p>
-<ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Navigate to <strong>Save Actions X</strong> in the left panel.</p>
-</li>
-<li>
-<p>At the top of the Save Actions X panel, confirm the scope is set
-   to <strong>IDE</strong> and not <strong>Project</strong>.</p>
-<p>If it shows <strong>Project</strong>, click the <strong>IDE</strong> tab before making any
-changes. Any settings you configure on the IDE tab apply to every
-project you open.</p>
-</li>
-</ol>
-<h3 id="enabling-save-actions">Enabling Save Actions</h3>
+reformatting your code, removing unused imports, and trimming trailing
+whitespace — all things that Checkstyle checks and that are easy to
+forget to do manually.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Save Actions X modifies your file on every save. If you are working
@@ -1233,30 +1149,21 @@ noisy diffs.</p>
 <p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
 </li>
 <li>
-<p>Navigate to <strong>Save Actions X</strong> in the left panel.</p>
+<p>Navigate to <strong>Tools &gt; Actions on Save</strong> in the left panel.</p>
 </li>
 <li>
-<p>Confirm you are on the <strong>IDE</strong> tab, not the <strong>Project</strong> tab.</p>
-</li>
-<li>
-<p>Under the <strong>General</strong> tab, check <strong>Activate save actions on save</strong>.</p>
-</li>
-<li>
-<p>Under the <strong>Formatting Actions</strong> section, enable the following:</p>
+<p>Enable the following actions:</p>
 <ul>
+<li><strong>Reformat code</strong> — applies your code style settings to the
+  entire file on every save</li>
 <li><strong>Optimize imports</strong> — removes unused imports and organizes
   import statements according to your code style settings</li>
-<li><strong>Reformat file</strong> — applies your code style settings to the
-  entire file on every save</li>
-<li><strong>Trim trailing whitespace</strong> — removes trailing spaces from
-  line endings, which Checkstyle flags as a violation</li>
 </ul>
 </li>
 <li>
 <p>Click <strong>OK</strong> to save and close.</p>
 <p>At this point, every time you press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> or the IDE autosaves,
-your file will be automatically reformatted, its imports cleaned up,
-and trailing whitespace removed across all your projects.</p>
+your file will be automatically reformatted and its imports cleaned up.</p>
 </li>
 </ol>
 <div class="admonition tip">
@@ -1274,7 +1181,7 @@ the description blank for you to fill in.</p>
 <p>In CST courses, complete Javadoc comments are a standard requirement
 for submitted code. This plugin significantly reduces the time it takes
 to document your work correctly.</p>
-<h3 id="generating-javadoc-for-a-single-element">Generating Javadoc for a Single Element</h3>
+<h3 id="generating-javadoc-for-a-selected-element">Generating Javadoc for a Selected Element</h3>
 <ol>
 <li>
 <p>Place your cursor on the class, method, or field you want to document.</p>
@@ -1283,7 +1190,7 @@ to document your work correctly.</p>
 <p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
 </li>
 <li>
-<p>Select <strong>Generate JavaDocs for current element</strong>.</p>
+<p>Select <strong>Generate JavaDocs for selected element</strong>.</p>
 <p>At this point, a Javadoc comment stub is inserted directly above
 the element. It includes <code>@param</code> tags for each parameter, a
 <code>@return</code> tag if the method returns a value, and <code>@throws</code> tags

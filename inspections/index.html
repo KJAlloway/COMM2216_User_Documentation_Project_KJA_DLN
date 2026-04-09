@@ -519,10 +519,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#replacing-the-equals-template" class="md-nav__link">
+  <a href="#replacing-the-tostring-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replacing the equals Template
+        Replacing the toString Template
       
     </span>
   </a>
@@ -530,10 +530,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#replacing-the-tostring-template" class="md-nav__link">
+  <a href="#replacing-the-equals-and-hashcode-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replacing the toString Template
+        Replacing the equals and hashCode Template
       
     </span>
   </a>
@@ -855,10 +855,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#replacing-the-equals-template" class="md-nav__link">
+  <a href="#replacing-the-tostring-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replacing the equals Template
+        Replacing the toString Template
       
     </span>
   </a>
@@ -866,10 +866,10 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#replacing-the-tostring-template" class="md-nav__link">
+  <a href="#replacing-the-equals-and-hashcode-template" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Replacing the toString Template
+        Replacing the equals and hashCode Template
       
     </span>
   </a>
@@ -1109,10 +1109,11 @@ drawn directly from the COMP 2522 Style Guide and Checkstyle configuration:</p>
 <p>COMP 2522 requires <code>StringBuilder</code> for all string construction. String
 concatenation using <code>+</code> is not permitted, even outside of loops.</p>
 <p>By default, IntelliJ IDEA includes an inspection called
-<strong>"StringBuilder can be replaced with String"</strong> that suggests converting
-your <code>StringBuilder</code> back to simple concatenation. The CST inspection
-profile <strong>disables this inspection</strong> so it does not contradict course
-requirements.</p>
+<strong>"StringBuilder can be replaced with String"</strong> (found under
+<strong>Verbose or redundant code constructs</strong> in the Inspections panel)
+that suggests converting your <code>StringBuilder</code> back to simple concatenation.
+The CST inspection profile <strong>disables this inspection</strong> so it does not
+contradict course requirements.</p>
 <p>The profile keeps the complementary inspection — <strong>"String concatenation
 in loop"</strong> — enabled, so you will still be warned if you accidentally use
 <code>+</code> concatenation inside a loop.</p>
@@ -1122,7 +1123,8 @@ in loop"</strong> — enabled, so you will still be warned if you accidentally u
 <p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
 </li>
 <li>
-<p>Navigate to <strong>Editor &gt; Inspections</strong>.</p>
+<p>In the <strong>Settings</strong> window, navigate to <strong>Editor &gt; Inspections</strong> in
+   the left panel.</p>
 <p>At this point, you will see the Inspections panel. The dropdown at the
 top shows your currently active profile. The default is <strong>Project Default</strong>.</p>
 </li>
@@ -1149,7 +1151,7 @@ Inspections panel.</p>
 <p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
 </li>
 <li>
-<p>Navigate to <strong>Editor &gt; Inspections</strong>.</p>
+<p>In the <strong>Settings</strong> window, navigate to <strong>Editor &gt; Inspections</strong>.</p>
 </li>
 <li>
 <p>Click the <strong>gear icon</strong> (⚙) at the top of the Inspections panel.</p>
@@ -1215,9 +1217,9 @@ issues according to the CST inspection rules.</p>
 </ol>
 <h2 id="setting-up-code-templates">Setting Up Code Templates</h2>
 <p>IntelliJ IDEA generates <code>equals()</code>, <code>hashCode()</code>, and <code>toString()</code> methods
-using built-in templates when you use <strong>Generate</strong> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span>). The
-default templates do not match COMP 2522 style requirements, so this section
-walks you through replacing them.</p>
+using built-in templates when you use the <strong>Generate</strong> menu (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span>).
+The default templates do not match COMP 2522 style requirements. This section
+walks you through replacing them via the Generate menu's template settings.</p>
 <p>Replacing these templates is a one-time setup that applies globally across
 all your projects.</p>
 <h3 id="the-comp-2522-equals-pattern">The COMP 2522 equals Pattern</h3>
@@ -1257,57 +1259,87 @@ which will warn you if you use <code>instanceof</code> in any <code>equals()</co
 <p>Each field gets its own <code>sb.append()</code> line. The method opens with
 <code>ClassName{</code>, includes <code>super.toString()</code> as the first append, and closes
 with <code>sb.append('}')</code>.</p>
-<h3 id="replacing-the-equals-template">Replacing the equals Template</h3>
-<ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Navigate to <strong>Editor &gt; Code Style &gt; Java</strong>.</p>
-</li>
-<li>
-<p>Click the <strong>Code Generation</strong> tab.</p>
-</li>
-<li>
-<p>Under the <strong>equals() and hashCode()</strong> section, locate the
-   <strong>equals Template</strong> field.</p>
-</li>
-<li>
-<p>Replace the contents with the COMP 2522 pattern above, substituting
-   <code>ClassName</code> and field names with the template variables IntelliJ
-   provides (<code>${CLASS_NAME}</code>, <code>${fields}</code>).</p>
-</li>
-<li>
-<p>Click <strong>Apply</strong> then <strong>OK</strong>.</p>
-</li>
-</ol>
 <h3 id="replacing-the-tostring-template">Replacing the toString Template</h3>
+<p>The <code>toString()</code> template is accessed through the Generate menu rather
+than through the main Settings panel.</p>
 <ol>
 <li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+<p>Open any Java class in the editor.</p>
 </li>
 <li>
-<p>Navigate to <strong>Editor &gt; File and Code Templates</strong>.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
 </li>
 <li>
-<p>Click the <strong>Code</strong> tab.</p>
+<p>Select <strong>toString()</strong>.</p>
+<p>At this point, the <strong>Generate toString()</strong> dialog opens showing
+your class fields.</p>
 </li>
 <li>
-<p>Select <strong>toString() Body</strong> from the list.</p>
+<p>Click the <strong>Settings icon</strong> (⚙) in the top-right corner of the dialog.</p>
+<p>At this point, the <strong>toString() Generation Settings</strong> dialog opens.
+For more information on the available template options, see the
+<a href="https://www.jetbrains.com/help/idea/generate-tostring-settings-dialog.html">JetBrains toString() settings documentation</a>.</p>
 </li>
 <li>
-<p>Replace the template contents with the <code>StringBuilder</code> pattern above.</p>
+<p>Click the <strong>Templates</strong> tab.</p>
 </li>
 <li>
-<p>Click <strong>Apply</strong> then <strong>OK</strong>.</p>
+<p>Select the current active template and click <strong>Edit</strong> to modify it,
+   or click <strong>Add</strong> to create a new one.</p>
+</li>
+<li>
+<p>Replace the template contents with the COMP 2522 <code>StringBuilder</code> pattern
+   shown above, using the template variables available in the editor
+   (such as <code>${class.name}</code> and <code>${member.name}</code>).</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> to save the template.</p>
+</li>
+<li>
+<p>Back in the toString() settings dialog, select your updated template
+   and click <strong>OK</strong>.</p>
 </li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>After replacing the templates, test them by opening any class,
-pressing <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span>, and selecting <strong>toString()</strong> or
-<strong>equals() and hashCode()</strong>. Verify that the generated code matches
-the COMP 2522 pattern before relying on it for assignment submissions.</p>
+<p>After updating the template, test it by clicking <strong>OK</strong> in the Generate
+toString() dialog on your open class. Verify the generated method matches
+the COMP 2522 pattern before relying on it for assignment submissions.
+Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> to undo if the output is not what you expected.</p>
+</div>
+<h3 id="replacing-the-equals-and-hashcode-template">Replacing the equals and hashCode Template</h3>
+<p>The <code>equals()</code> and <code>hashCode()</code> templates follow the same process as
+<code>toString()</code>.</p>
+<ol>
+<li>
+<p>Open any Java class in the editor.</p>
+</li>
+<li>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
+</li>
+<li>
+<p>Select <strong>equals() and hashCode()</strong>.</p>
+<p>At this point, the <strong>Generate equals() and hashCode()</strong> wizard opens.</p>
+</li>
+<li>
+<p>Click the <strong>Settings icon</strong> (⚙) or look for a <strong>Template</strong> dropdown
+   within the wizard.</p>
+</li>
+<li>
+<p>Select or edit the template to match the COMP 2522 <code>equals()</code> pattern
+   shown above — specifically ensuring <code>getClass()</code> is used instead of
+   <code>instanceof</code> for the type check.</p>
+</li>
+<li>
+<p>Click through the wizard to select the fields to include, then click
+   <strong>Finish</strong>.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>After generating, verify the output uses <code>getClass() != object.getClass()</code>
+rather than <code>instanceof</code>. If <code>instanceof</code> appears, your template still
+needs updating — press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-z">Z</kbd></span> to undo and revisit the template settings.</p>
 </div>
 <h2 id="verifying-your-inspection-profile">Verifying Your Inspection Profile</h2>
 <p>Open any <code>.java</code> file in your project and look at the inspection widget in
