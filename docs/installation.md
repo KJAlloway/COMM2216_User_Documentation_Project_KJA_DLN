@@ -4,8 +4,8 @@
 
 This section walks you through installing IntelliJ IDEA on your computer,
 activating a free JetBrains Education licence using your BCIT student email,
-and enabling settings sync so your configuration is consistent across
-multiple devices.
+and enabling [settings sync](glossary.md#settings-sync) so your configuration
+is consistent across multiple devices.
 
 By the end of this section you will have a fully licensed, running copy of
 IntelliJ IDEA linked to your JetBrains account, with global settings sync
@@ -66,7 +66,7 @@ applies across all your devices automatically.
 
 JetBrains verifies student status through your institutional email address.
 You will apply for a licence through the JetBrains website before activating
-it inside the IDE.
+it inside the [IDE](glossary.md#ide).
 
 !!! warning
     You must use your BCIT student email (`firstname_lastname@my.bcit.ca`)
@@ -91,8 +91,9 @@ it inside the IDE.
 
 5. Open the confirmation email and click **Confirm Request**.
 
-    At this point, you will be redirected to create a JetBrains account.
-    Use your BCIT email address as your account email.
+    At this point, you will be redirected to create a
+    [JetBrains account](glossary.md#jetbrains-account). Use your BCIT email
+    address as your account email.
 
 6. Set a password for your JetBrains account and click **Save**.
 
@@ -106,8 +107,8 @@ it inside the IDE.
 
 3. Select **Log in to JetBrains Account**.
 
-4. Enter the email and password for your JetBrains account and click
-   **Log In**.
+4. Enter the email and password for your [JetBrains account](glossary.md#jetbrains-account)
+   and click **Log In**.
 
     At this point, IntelliJ IDEA will detect your Education licence
     automatically and activate.
@@ -116,16 +117,18 @@ it inside the IDE.
 
 ## Syncing Settings Across Devices
 
-IntelliJ IDEA can sync your global IDE settings — including keymaps,
-colour schemes, inspection profiles, and plugin configurations — to your
-JetBrains account so they are available on any device you log into.
+IntelliJ IDEA can sync your global [IDE](glossary.md#ide) settings — including
+[keymaps](glossary.md#keymap), colour schemes, inspection profiles, and
+[plugin](glossary.md#plugin) configurations — to your JetBrains account so
+they are available on any device you log into.
 
 !!! warning
-    Settings Sync only pushes your **global IDE settings**. Project-specific
-    overrides — such as an inspection profile stored at the project level
-    rather than the IDE level — are not synced. As you work through the
-    following sections, each page will confirm that the settings you
-    configure are stored globally so they sync correctly.
+    [Settings sync](glossary.md#settings-sync) only pushes your **global IDE
+    settings**. Project-specific overrides — such as an inspection profile
+    stored at the project [scope](glossary.md#scope-ide-settings) rather than
+    the IDE level — are not synced. As you work through the following sections,
+    each page will confirm that the settings you configure are stored globally
+    so they sync correctly.
 
 !!! tip
     Enable settings sync now, before you configure anything else in this

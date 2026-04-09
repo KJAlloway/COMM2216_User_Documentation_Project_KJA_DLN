@@ -1,11 +1,12 @@
 # IntelliJ IDEA Setup Guide for CST Students
 
-[IntelliJ IDEA](https://www.jetbrains.com/idea/) is a professional integrated
-development environment (IDE) built by JetBrains. It provides intelligent code
-completion, built-in debugging tools, version control integration, and a
-plugin ecosystem that extends its functionality for different languages and
-frameworks. Throughout the CST program, you will use IntelliJ IDEA as your
-primary environment for writing, testing, and debugging Java and Kotlin code.
+[IntelliJ IDEA](https://www.jetbrains.com/idea/) is a professional
+[integrated development environment](glossary.md#ide) (IDE) built by JetBrains.
+It provides intelligent code completion, built-in debugging tools, version
+control integration, and a [plugin](glossary.md#plugin) ecosystem that extends
+its functionality for different languages and frameworks. Throughout the CST
+program, you will use IntelliJ IDEA as your primary environment for writing,
+testing, and debugging Java and Kotlin code.
 
 This guide walks you through the initial setup and configuration of IntelliJ IDEA
 so that your environment is ready before your first day of classes.
@@ -29,29 +30,38 @@ To follow this guide you will need:
 
 1. Install IntelliJ IDEA and activate a free JetBrains Education licence
    using your BCIT student email
-2. Sync your IDE settings across multiple devices using a JetBrains account
-3. Configure code inspections to match the style requirements used in
-   CST courses
-4. Install and configure plugins recommended for CST coursework
-5. Apply a pre-configured keymap and learn the shortcuts most relevant
-   to your daily workflow
+2. Sync your IDE settings across multiple devices using a
+   [JetBrains account](glossary.md#jetbrains-account)
+3. Configure [code inspections](glossary.md#code-inspection) to match the
+   style requirements used in CST courses
+4. Install and configure [plugins](glossary.md#plugin) recommended for
+   CST coursework
+5. Apply a [keymap](glossary.md#keymap) and learn the shortcuts most
+   relevant to your daily workflow
+6. Configure code generation templates for COMP 2522-compliant
+   `equals()`, `hashCode()`, and `toString()` methods
 
 ## What This Guide Covers
 
 The tasks in this guide are designed to be completed in order. Each task builds
-on the previous one, and the final task — keyboard shortcuts — is intentionally
-last so your keymap reflects all other configuration choices.
+on the previous one, and the final task — code templates — is intentionally
+last as it builds on the inspection profile and plugin configuration from
+earlier sections.
 
 1. [Installation and Student Account Setup](installation.md) — Install
    IntelliJ IDEA, activate your free Education licence, and configure
    settings sync across devices
-2. [Configuring Inspections](inspections.md) — Understand what code
+2. [Installing and Configuring Plugins](plugins.md) — Install plugins
+   recommended for CST students, disable AI completion tools, and
+   configure them for coursework
+3. [Configuring Inspections](inspections.md) — Understand what code
    inspections do, and apply inspection profiles configured for CST
    course style requirements
-3. [Installing and Configuring Plugins](plugins.md) — Install plugins
-   recommended for CST students and configure them for coursework
-4. [Keyboard Shortcuts](shortcuts.md) — Apply a pre-configured keymap
-   and learn the shortcuts most relevant to your daily workflow
+4. [Keyboard Shortcuts](shortcuts.md) — Learn the shortcuts most relevant
+   to your daily workflow and customize your keymap
+5. [Configuring Code Templates](templates.md) — Set up `equals()`,
+   `hashCode()`, `toString()`, and Javadoc templates to generate
+   COMP 2522-compliant code automatically
 
 ## Downloadable Configuration Files
 
@@ -60,14 +70,11 @@ This guide includes ready-to-use configuration files hosted in the
 folder of this repository:
 
 - **Inspection profile** — `CST_Inspections.xml`, pre-configured to match
-  COMP 2522 style requirements, referenced in
+  COMP 2522 requirements, referenced in
   [Configuring Inspections](inspections.md)
 - **Checkstyle configuration** — `COMP-2522-Checkstyle.xml`, the course
-  Checkstyle ruleset your instructor grades against, referenced in
-  [Installing and Configuring Plugins](plugins.md)
-- **Keymap** — `CST_Keymap.xml`, a pre-configured keymap with one addition
-  to the IntelliJ IDEA defaults, referenced in
-  [Keyboard Shortcuts](shortcuts.md)
+  [Checkstyle](glossary.md#checkstyle) ruleset your instructor grades against,
+  referenced in [Installing and Configuring Plugins](plugins.md)
 
 ## Typographical Conventions
 
@@ -78,7 +85,7 @@ This guide uses the following conventions throughout:
 | **Bold** | UI elements: buttons, menus, tabs, and labels | Click **OK** |
 | `Monospace` | File names, paths, and code | `CST_Inspections.xml` |
 | **Menu > Item** | A sequence of menu selections | **File > Settings > Keymap** |
-| *Italics* | A new term being introduced for the first time | The *Project* tool window |
+| *Italics* | A new term being introduced for the first time | The *Project* [tool window](glossary.md#tool-window) |
 | Key badges | A physical key or key combination to press | ++ctrl+alt+s++ |
 
 Keyboard shortcuts in this guide use the default Windows keymap. Where macOS
