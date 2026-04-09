@@ -48,6 +48,8 @@ that is separate from the AI Assistant plugin. Both should be disabled.
 
 6. Click **OK** and restart IntelliJ IDEA when prompted.
 
+    ![Animation showing the AI Assistant plugin being located and disabled in the Plugins panel](graphics/disable_AI.gif){ alt="Animation showing how to find and disable the JetBrains AI Assistant plugin" title="Disabling the AI Assistant plugin" }
+
     At this point, the AI Assistant is disabled and will not offer
     code suggestions or completions.
 
@@ -77,6 +79,20 @@ that is separate from the AI Assistant plugin. Both should be disabled.
 | [GitToolBox](https://plugins.jetbrains.com/plugin/7499-gittoolbox) | Displays inline Git blame annotations and branch status directly in the editor |
 | [Rainbow Brackets](https://plugins.jetbrains.com/plugin/10080-rainbow-brackets) | Colours matching bracket pairs to make nested code easier to read |
 | [Key Promoter X](https://plugins.jetbrains.com/plugin/9792-key-promoter-x) | Displays the keyboard shortcut for any action you perform with the mouse, helping you learn shortcuts as you work |
+
+Click any image below to see how each plugin appears in the Marketplace
+before installing:
+
+<div class="grid cards" markdown>
+
+- ![CheckStyle-IDEA in the JetBrains Marketplace](graphics/checkstyle.png){ alt="CheckStyle-IDEA plugin page in the JetBrains Marketplace" title="CheckStyle-IDEA" }
+- ![Save Actions X in the JetBrains Marketplace](graphics/save_actions.png){ alt="Save Actions X plugin page in the JetBrains Marketplace" title="Save Actions X" }
+- ![JavaDoc plugin in the JetBrains Marketplace](graphics/javadoc.png){ alt="JavaDoc plugin page in the JetBrains Marketplace" title="JavaDoc" }
+- ![GitToolBox in the JetBrains Marketplace](graphics/GitToolBox.png){ alt="GitToolBox plugin page in the JetBrains Marketplace" title="GitToolBox" }
+- ![Rainbow Brackets in the JetBrains Marketplace](graphics/rainbow_brackets.png){ alt="Rainbow Brackets plugin page in the JetBrains Marketplace" title="Rainbow Brackets" }
+- ![Key Promoter X in the JetBrains Marketplace](graphics/Key_promoter.png){ alt="Key Promoter X plugin page in the JetBrains Marketplace" title="Key Promoter X" }
+
+</div>
 
 ## Installing a Plugin
 
@@ -154,6 +170,8 @@ plugin so it runs the correct rules.
 4. Under **Configuration File**, click the **+** button to add a new
    configuration.
 
+    ![Checkstyle settings panel with the + button to add a configuration highlighted](graphics/add_checkstyle_config.png){ alt="Checkstyle settings panel showing the + button hovered with Add tooltip visible" title="Adding a Checkstyle configuration" }
+
 5. In the dialog that opens, select **Use a local Checkstyle file**.
 
 6. Click **Browse** and navigate to your `COMP-2522-Checkstyle.xml`
@@ -181,6 +199,8 @@ project rather than a limited [scope](glossary.md#scope-ide-settings).
 
 3. Locate the **Scan Scope** dropdown and confirm it is set to
    **All files** or your preferred scope.
+
+    ![Checkstyle settings showing the Scan Scope dropdown](graphics/checkstyle_scan_scope.png){ alt="Checkstyle settings panel with the Scan Scope dropdown visible" title="Confirming Checkstyle scan scope" }
 
     The Checkstyle configuration itself is stored globally in your IDE
     settings — you do not need to repeat the loading steps for each
@@ -248,6 +268,8 @@ forget to do manually.
       entire file on every save
     - **Optimize imports** — removes unused imports and organizes
       import statements according to your code style settings
+
+    ![Actions on Save settings panel with Reformat code and Optimize imports enabled](graphics/actions_on_save_settings.png){ alt="Tools > Actions on Save panel showing Reformat code and Optimize imports checkboxes enabled" title="Configuring Actions on Save" }
 
 4. Click **OK** to save and close.
 

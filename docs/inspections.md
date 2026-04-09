@@ -53,8 +53,7 @@ instructor runs against your code.
 
 IntelliJ IDEA uses colour-coded highlights to indicate how serious an
 inspection finding is. The [severity](glossary.md#severity) level appears
-in the [inspection widget](glossary.md#inspection-widget) in the top-right
-corner of the editor.
+in the inspection widget in the top-right corner of the editor.
 
 | Colour | Severity | Meaning |
 |---|---|---|
@@ -130,28 +129,29 @@ in loop"** — enabled, so you will still be warned if you accidentally use
 
 3. In the **Settings** window, navigate to **Editor > Inspections**.
 
-4. Click the **gear icon** (⚙) at the top of the Inspections panel.
+4. In the profile dropdown at the top of the Inspections panel, select
+   **IDE** from the scope options to ensure the profile is stored
+   globally rather than for a single project.
 
-5. Select **Import Profile** from the dropdown.
+5. Click the **gear icon** (⚙) at the top of the Inspections panel.
 
-6. Navigate to the downloaded `CST_Inspections.xml` file and click **Open**.
+6. Select **Import Profile** from the dropdown.
+
+7. Navigate to the downloaded `CST_Inspections.xml` file and click **Open**.
 
     At this point, IntelliJ IDEA will ask you to confirm the profile name.
     Keep it as `CST_Inspections` so it is easy to identify later.
 
-7. Click **OK** to confirm.
+8. Click **OK** to confirm.
 
-    At this point, **CST_Inspections** will appear in the profile dropdown.
+    At this point, **CST_Inspections** will appear in the profile dropdown
+    at IDE scope.
 
-8. Select **CST_Inspections** from the profile dropdown to make it active.
+9. Select **CST_Inspections** from the profile dropdown to make it active.
+
+    ![Inspections settings panel showing the gear dropdown with Import Profile highlighted and CST_Inspections selected at IDE scope](graphics/import_inspection_profile.png){ alt="Editor > Inspections panel showing the gear icon dropdown open with Import Profile visible, and CST_Inspections selected in the profile dropdown at IDE scope" title="Importing and activating the CST inspection profile" }
 
 ## Confirming Global Scope
-
-!!! warning
-    This step is critical. If the profile is applied at the project
-    [scope](glossary.md#scope-ide-settings) rather than globally, it will
-    only be active for the project that was open when you imported it.
-    Every other project will still use the default profile.
 
 After selecting **CST_Inspections** in the dropdown, check whether it shows
 `CST_Inspections` or `CST_Inspections (Project)` in the dropdown label.

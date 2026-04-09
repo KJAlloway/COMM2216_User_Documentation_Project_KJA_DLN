@@ -179,6 +179,8 @@ You can search by action name or by the key combination itself.
 
 4. Click **OK** to save.
 
+    ![Animation showing how to search for an action by name and by keypress in the Keymap panel, then reassign a shortcut](graphics/search_keymap.gif){ alt="Animation demonstrating searching the Keymap panel by action name and by key combination, then right-clicking to reassign a shortcut" title="Finding and reassigning shortcuts in the Keymap panel" }
+
 !!! note
     When you modify any shortcut, IntelliJ IDEA creates a copy of the
     predefined keymap rather than editing it directly. Your customized

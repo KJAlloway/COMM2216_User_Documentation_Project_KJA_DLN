@@ -2,58 +2,64 @@
 
 ## Overview
 
-IntelliJ IDEA generates boilerplate Java methods — `equals()`, `hashCode()`,
-and `toString()` — using [Velocity templates](glossary.md#velocity-template)
-when you use the **Generate** menu. The default templates do not match COMP 2522
-style requirements. This section walks you through replacing them so that every
-time you generate these methods, the output is already compliant.
+IntelliJ IDEA can automatically generate common Java methods for you —
+`equals()`, `hashCode()`, and `toString()` — so you do not have to write
+them from scratch every time. It does this using templates that define
+what the generated code should look like.
 
-This also covers configuring the [Javadoc](glossary.md#javadoc) plugin's class-level
-comment template so that generated class headers include the required
-`@author` and `@version` tags automatically.
+The default templates do not match COMP 2522 style requirements, so this
+section walks you through replacing them with course-compliant versions.
+Once set up, every time you generate these methods IntelliJ will produce
+code that already follows your instructor's standards.
 
-By the end of this section, generating `equals()`, `hashCode()`, `toString()`,
-and class-level Javadoc from the Generate menu will produce COMP 2522-compliant
-output without any manual edits.
+This section also covers updating the [Javadoc](glossary.md#javadoc) plugin's
+class comment template so that generated class headers automatically include
+the `@author` and `@version` tags your instructor requires.
+
+!!! note
+    It is okay if some of the template code below looks unfamiliar — you
+    are not expected to understand every line of it yet. The goal right
+    now is to get your environment set up correctly so these tools work
+    for you throughout the term. If you encounter terms you don't
+    recognize, make a note and ask your instructor.
 
 !!! note
     These templates are stored globally in your IDE settings and apply to
     every project you open. You only need to configure them once.
 
-!!! warning
-    You do not need an open project to configure templates. These steps
-    can be completed from the IntelliJ IDEA welcome screen by navigating
-    to **Customize > All Settings**.
+!!! note
+    Template configuration is accessed through the Generate menu inside
+    an open Java class file. Before starting, open any `.java` file in
+    your project — any existing class works fine.
 
 ## Configuring the toString Template
 
-The default `toString()` template uses string [concatenation](glossary.md#string)
-with `+`. COMP 2522 requires [StringBuilder](glossary.md#string) for all string
-construction. The template below generates a compliant `toString()` method
-automatically.
+The `toString()` method produces a readable text description of an object —
+useful for debugging and logging. The template below checks what fields are
+present in your class and builds them into a consistent output format,
+while also checking for a [superclass](glossary.md#superclass) and including
+its information if one exists.
 
-1. Open any Java class in the editor and press ++alt+insert++ to open
-   the **Generate** menu.
+1. Open any Java class file in your project.
 
-    Alternatively, from the welcome screen navigate to
-    **Customize > All Settings > Editor > File and Code Templates**.
+2. Press ++alt+insert++ to open the **Generate** menu.
 
-2. Select **toString()** from the Generate menu.
+    ![The Generate menu open in IntelliJ IDEA showing available generation options](graphics/alt_insert_menu.png){ alt="IntelliJ IDEA Generate menu showing options including toString(), equals() and hashCode(), and JavaDocs" title="The Generate menu" }
+
+3. Select **toString()**.
 
     At this point, the **Generate toString()** dialog opens showing
     your class fields.
 
-3. Click the **...** button beside the **Template** dropdown in the
+4. Click the **...** button beside the **Template** dropdown in the
    top-right area of the dialog.
 
-    At this point, the **toString() Generation Settings** dialog opens.
+5. Click the **Templates** tab.
 
-4. Click the **Templates** tab.
-
-5. Select the existing template and click **Edit**, or click **Add** to
+6. Select the existing template and click **Edit**, or click **Add** to
    create a new one named `COMP 2522 toString`.
 
-6. Replace the entire template contents with the following:
+7. Replace the entire template contents with the following:
 
     ```
     public java.lang.String toString() {
@@ -90,37 +96,46 @@ automatically.
     }
     ```
 
-7. Click **OK** to save the template.
+    The animation below shows the full flow from opening the dialog
+    to saving the completed template:
 
-8. Back in the toString() Settings dialog, select your updated template
+    ![Animation showing the full toString template replacement flow from the Generate menu through to saving the new template](graphics/add_tostring_template.gif){ alt="Animation demonstrating how to open the toString generation dialog, access the template settings, and replace the template with the COMP 2522 version" title="Replacing the toString template" }
+
+8. Click **OK** to save the template.
+
+9. Back in the toString() Settings dialog, select your updated template
    from the **Template** dropdown to make it active.
 
-9. Click **OK** to close the settings dialog.
-
-10. Click **OK** in the Generate toString() dialog to generate the method
-    for your current class and verify the output matches the COMP 2522
-    pattern.
+10. Click **OK** to close the settings dialog, then **OK** again in the
+    Generate toString() dialog to generate the method and verify the output.
 
 !!! tip
-    Press ++ctrl+z++ to undo the generated method if the output is not
-    what you expected, and revisit the template.
+    The same template system works for anything in the Generate menu —
+    if you find yourself writing the same code structure repeatedly in
+    this course, you can save it as a template the same way. You can
+    also look into **Live Templates** (**File > Settings > Editor >
+    Live Templates**) which let you type a short abbreviation like
+    `tostr` and have IntelliJ expand it into the full method body
+    instantly, without opening the Generate menu at all.
 
 ## Configuring the equals and hashCode Templates
 
-The default `equals()` template uses `instanceof` for type checking, which
-is prohibited in COMP 2522. The templates below use `getClass()` instead,
-and generate a compliant `hashCode()` alongside it.
+The `equals()` method checks whether two objects are meaningfully the same.
+The template below looks at each field in your class and compares them one
+by one, while also checking that the two objects are exactly the same type
+before comparing anything. The `hashCode()` method works alongside `equals()`
+— Java requires that if two objects are equal, they must produce the same
+hash code, so these are always configured together.
 
-1. Open any Java class in the editor and press ++alt+insert++ to open
-   the **Generate** menu.
+1. Press ++alt+insert++ to open the **Generate** menu again.
 
-2. Select **equals() and hashCode()** from the Generate menu.
+2. Select **equals() and hashCode()**.
+
+    ![The equals and hashCode generation dialog showing field selection options](graphics/equals_hashcode.png){ alt="IntelliJ IDEA equals() and hashCode() generation dialog showing class fields available for selection" title="The equals() and hashCode() generation dialog" }
 
     At this point, the **Generate equals() and hashCode()** wizard opens.
 
 3. Click the **...** button beside the **Template** dropdown.
-
-    At this point, the template editor opens.
 
 4. Select the existing equals template and click **Edit**, or click
    **Add** to create a new one named `COMP 2522 equals`.
@@ -167,8 +182,8 @@ and generate a compliant `hashCode()` alongside it.
 
 6. Click **OK** to save the equals template.
 
-7. Now select the hashCode template and click **Edit**, or add a new one
-   named `COMP 2522 hashCode`.
+7. Select the hashCode template entry and click **Edit**, or click
+   **Add** to create a new one named `COMP 2522 hashCode`.
 
 8. Replace the entire hashCode template contents with the following:
 
@@ -215,18 +230,15 @@ and generate a compliant `hashCode()` alongside it.
 
 11. Click **Finish** to generate the methods.
 
-!!! tip
-    After generating, verify that the `equals()` method uses
-    `getClass() != object.getClass()` rather than `instanceof`.
-    If `instanceof` appears, press ++ctrl+z++ to undo and confirm
-    your template is selected in the dropdown.
-
 ## Configuring the Javadoc Class Template
 
-The JavaDoc plugin generates class-level [Javadoc](glossary.md#javadoc) comments
-using its own template system. The default template does not include
-`@author` or `@version` tags, which are required by the COMP 2522 Style Guide
-for all classes.
+The JavaDoc plugin's default class comment template does not include
+`@author` or `@version` tags. Updating it here means every class comment
+you generate will already have those tags waiting for you to fill in —
+no more forgetting them before submission.
+
+Unlike the `toString` and `equals` templates, this one is configured
+through **Settings** rather than the Generate menu.
 
 1. Open **File > Settings** (++ctrl+alt+s++).
 
@@ -236,8 +248,7 @@ for all classes.
 
 4. Select **Class level** from the template list.
 
-    At this point, you will see four template fields for the class-level
-    comment. Replace all four with the following:
+5. Replace all four template fields with the following:
 
     ```
     /**
@@ -246,20 +257,17 @@ for all classes.
      */
     ```
 
-5. Click **Apply** then **OK**.
+6. Click **Apply** then **OK**.
 
     At this point, any class-level Javadoc generated by the plugin will
     include the `@author` and `@version` tags ready for you to fill in.
 
-!!! note
-    Replace `Your Name` with your actual name and `X.X` with your
-    version number (typically `1.0` for a new class) each time you
-    generate. The template provides the structure — the values are
-    yours to fill in.
-
 ## Conclusion
 
-Your code generation templates are now configured to produce COMP 2522-compliant
-output automatically. Every `equals()`, `hashCode()`, `toString()`, and
-class-level Javadoc comment generated from the **Generate** menu will match
-your instructor's style requirements from the first keystroke.
+Your code generation templates are now configured for COMP 2522. From here,
+using **Generate** (++alt+insert++) on any class will produce compliant
+`equals()`, `hashCode()`, `toString()`, and Javadoc comments automatically.
+
+This is the last configuration step in the guide. Your environment is now
+fully set up for CST coursework — the work you have done here will save you
+time and help you avoid style penalties on every assignment this term.

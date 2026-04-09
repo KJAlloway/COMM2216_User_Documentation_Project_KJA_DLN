@@ -21,9 +21,8 @@ as your primary IDE for CST coursework:
 
 ```
 docs/                        # MkDocs source files (Markdown)
-resources/
-  inspection-profiles/       # CST_Inspections.xml and COMP-2522-Checkstyle.xml
-  keymaps/                   # CST_Keymap.xml
+resources/                   # CST_Inspections.xml and COMP-2522-Checkstyle.xml
+graphics/                    # Screenshots and gifs
 .github/workflows/           # GitHub Actions deployment workflow
 mkdocs.yml                   # MkDocs site configuration
 requirements.txt             # Python dependencies

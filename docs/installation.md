@@ -29,6 +29,8 @@ applies across all your devices automatically.
     At this point, a `.exe` installer (Windows), `.dmg` disk image (macOS),
     or `.tar.gz` archive (Linux) will begin downloading.
 
+    ![The IntelliJ IDEA download page with the Ultimate column highlighted](graphics/IntelliJ_IDEA_Download.png){ alt="IntelliJ IDEA download page showing Ultimate and Community columns" title="Download IntelliJ IDEA Ultimate" }
+
 !!! tip
     Download Ultimate, not Community. Ultimate is free with your student
     licence and includes features you will need in later CST terms,
@@ -41,9 +43,12 @@ applies across all your devices automatically.
     1. Open the downloaded `.exe` installer.
     2. Click **Next** through the welcome screen.
     3. Select your installation directory and click **Next**.
-    4. Under **Installation Options**, check **Add "Open Folder as Project"**.
-    5. Click **Next**, then **Install**.
-    6. Click **Finish** when the installation completes.
+    4. Under **Installation Options**, check the boxes as shown below,
+       then click **Next**.
+
+        ![Windows installer options screen with recommended checkboxes selected](graphics/setup_options.png){ alt="Windows installer options with Add to PATH and file associations checked" title="Recommended installer options" }
+
+    5. Click **Install**, then **Finish** when the installation completes.
 
 === "macOS"
 
@@ -110,10 +115,14 @@ it inside the [IDE](glossary.md#ide).
 4. Enter the email and password for your [JetBrains account](glossary.md#jetbrains-account)
    and click **Log In**.
 
+    ![IntelliJ IDEA licence activation screen](graphics/Activate_license.png){ alt="IntelliJ IDEA showing the Activate licence dialog with Log in to JetBrains Account selected" title="Activating your Education licence" }
+
     At this point, IntelliJ IDEA will detect your Education licence
     automatically and activate.
 
 5. Click **Continue** to proceed to the IDE.
+
+    ![JetBrains account linking flow showing successful licence detection](graphics/JetBrains_account_link.gif){ alt="Animation showing the JetBrains account login flow and licence activation" title="JetBrains account linking" }
 
 ## Syncing Settings Across Devices
 
@@ -137,6 +146,13 @@ they are available on any device you log into.
     without any additional steps.
 
 1. Open **File > Settings** (++ctrl+alt+s++).
+
+    Throughout this guide, **File > Settings** is where all configuration
+    lives. The animation below shows how to navigate to it from the IDEA
+    welcome screen and gives you a first look at how the Settings panel
+    is organized.
+
+    ![Animation showing how to open Settings from the IntelliJ IDEA welcome screen and navigate the Settings panel](graphics/Initial_settings_nav.gif){ alt="Animation navigating from the IntelliJ IDEA welcome screen to the Settings panel" title="Opening Settings for the first time" }
 
 2. Navigate to **Tools > Backup and Sync** in the left panel.
 
