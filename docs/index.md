@@ -23,7 +23,7 @@ To follow this guide you will need:
   supported Linux distribution
 - A BCIT student email address (format: `firstname_lastname@my.bcit.ca`)
 - An active internet connection
-- [Java Development Kit (JDK) 21](https://www.oracle.com/java/technologies/downloads/#java21)
+- [Java Development Kit (JDK) 25](https://www.oracle.com/java/technologies/downloads/#java25)
   installed on your computer
 
 ## By the End of This Guide You Will Be Able To
