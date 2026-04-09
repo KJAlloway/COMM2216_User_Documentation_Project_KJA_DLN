@@ -1,0 +1,1448 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://sitename.example/plugins/">
+      
+      
+        <link rel="prev" href="../inspections/">
+      
+      
+        <link rel="next" href="../shortcuts/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Installing & Configuring Plugins - IntelliJ IDEA Setup Guide for CST Students</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-purple">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#installing-and-configuring-plugins" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IntelliJ IDEA Setup Guide for CST Students" class="md-header__button md-logo" aria-label="IntelliJ IDEA Setup Guide for CST Students" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IntelliJ IDEA Setup Guide for CST Students
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Installing & Configuring Plugins
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="deep-purple"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    IntelliJ IDEA User Guide for CST Students
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IntelliJ IDEA Setup Guide for CST Students" class="md-nav__button md-logo" aria-label="IntelliJ IDEA Setup Guide for CST Students" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    IntelliJ IDEA Setup Guide for CST Students
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    IntelliJ IDEA User Guide for CST Students
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introduction
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../installation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installation & Student Account Setup
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../inspections/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Configuring Inspections
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing & Configuring Plugins
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Installing & Configuring Plugins
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-plugins-for-cst-students" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Plugins for CST Students
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing a Plugin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-checkstyle-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring CheckStyle-IDEA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring CheckStyle-IDEA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-checkstyle-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Checkstyle Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-the-course-checkstyle-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading the Course Checkstyle Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirming-global-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confirming Global Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-checkstyle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Checkstyle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-checkstyle-violations-in-comp-2522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Checkstyle Violations in COMP 2522
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-save-actions-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Save Actions X
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Save Actions X">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirming-global-scope_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confirming Global Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-save-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling Save Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-javadoc-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring the JavaDoc Plugin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the JavaDoc Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-javadoc-for-a-single-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating Javadoc for a Single Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-javadoc-for-an-entire-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating Javadoc for an Entire File
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-key-promoter-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Key Promoter X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../shortcuts/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Keyboard Shortcuts
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Glossary
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../troubleshooting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Troubleshooting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#recommended-plugins-for-cst-students" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Recommended Plugins for CST Students
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#installing-a-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Installing a Plugin
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-checkstyle-idea" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring CheckStyle-IDEA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring CheckStyle-IDEA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#what-checkstyle-does" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        What Checkstyle Does
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loading-the-course-checkstyle-configuration" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loading the Course Checkstyle Configuration
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#confirming-global-scope" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confirming Global Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#running-checkstyle" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Running Checkstyle
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#common-checkstyle-violations-in-comp-2522" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Common Checkstyle Violations in COMP 2522
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-save-actions-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Save Actions X
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring Save Actions X">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#confirming-global-scope_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Confirming Global Scope
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#enabling-save-actions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Enabling Save Actions
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-the-javadoc-plugin" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring the JavaDoc Plugin
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Configuring the JavaDoc Plugin">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#generating-javadoc-for-a-single-element" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating Javadoc for a Single Element
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#generating-javadoc-for-an-entire-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Generating Javadoc for an Entire File
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configuring-key-promoter-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Configuring Key Promoter X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conclusion
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="installing-and-configuring-plugins">Installing and Configuring Plugins</h1>
+<h2 id="overview">Overview</h2>
+<p>Plugins extend IntelliJ IDEA's built-in functionality. While IDEA includes
+strong support for Java and Kotlin out of the box, several plugins will
+improve your experience in CST courses by automating repetitive formatting
+tasks, enforcing documentation standards, running course-required code
+analysis, and helping you build keyboard shortcut habits as you work.</p>
+<p>This section covers the plugins recommended for CST students, explains
+what each one does, and walks you through installing and configuring them.</p>
+<p>By the end of this section, the recommended plugins will be installed and
+active globally across all your IntelliJ IDEA projects.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Plugins are global to your IntelliJ IDEA installation — they apply
+to every project you open. If you enabled Settings Sync in
+<a href="../installation/">Installation and Student Account Setup</a>, installing
+a plugin on one device will make it available on all your synced
+devices automatically.</p>
+</div>
+<h2 id="recommended-plugins-for-cst-students">Recommended Plugins for CST Students</h2>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea">CheckStyle-IDEA</a></td>
+<td>Runs the course Checkstyle ruleset against your code and reports violations in a dedicated panel</td>
+</tr>
+<tr>
+<td><a href="https://plugins.jetbrains.com/plugin/22113-save-actions-x">Save Actions X</a></td>
+<td>Automatically reformats code and organizes imports every time you save a file</td>
+</tr>
+<tr>
+<td><a href="https://plugins.jetbrains.com/plugin/7157-javadoc">JavaDoc</a></td>
+<td>Generates Javadoc comment stubs for classes, methods, and fields with a single shortcut</td>
+</tr>
+<tr>
+<td><a href="https://plugins.jetbrains.com/plugin/7499-gittoolbox">GitToolBox</a></td>
+<td>Displays inline Git blame annotations and branch status directly in the editor</td>
+</tr>
+<tr>
+<td><a href="https://plugins.jetbrains.com/plugin/10080-rainbow-brackets">Rainbow Brackets</a></td>
+<td>Colours matching bracket pairs to make nested code easier to read</td>
+</tr>
+<tr>
+<td><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x">Key Promoter X</a></td>
+<td>Displays the keyboard shortcut for any action you perform with the mouse, helping you learn shortcuts as you work</td>
+</tr>
+</tbody>
+</table>
+<h2 id="installing-a-plugin">Installing a Plugin</h2>
+<p>The steps below apply to any plugin. Use them to install each plugin in
+the table above.</p>
+<ol>
+<li>
+<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+</li>
+<li>
+<p>Select <strong>Plugins</strong> from the left panel.</p>
+</li>
+<li>
+<p>Click the <strong>Marketplace</strong> tab at the top of the Plugins panel.</p>
+</li>
+<li>
+<p><strong>Type</strong> the name of the plugin in the search field.</p>
+</li>
+<li>
+<p>Click <strong>Install</strong> next to the plugin name in the search results.</p>
+<p>At this point, IntelliJ IDEA will download and install the plugin.
+A progress bar will appear while the download completes.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> when prompted to restart IntelliJ IDEA.</p>
+<p>At this point, the IDE will restart and the plugin will be active
+across all your projects.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Install all recommended plugins before restarting. You can queue
+multiple installs and restart once to apply them all at the same time.</p>
+</div>
+<h2 id="configuring-checkstyle-idea">Configuring CheckStyle-IDEA</h2>
+<h3 id="what-checkstyle-does">What Checkstyle Does</h3>
+<p>IntelliJ IDEA's built-in inspections give you live feedback as you type —
+the red and yellow underlines you see in the editor. Checkstyle is a
+separate tool that does something different: it runs a precise, shared
+ruleset against your finished code and reports any violations in its own
+panel.</p>
+<p>The distinction matters because your instructors use Checkstyle to grade
+your submissions. When your instructor runs the course Checkstyle XML
+against your code, they see exactly the same results you do locally —
+which means a clean Checkstyle run before you submit is a reliable signal
+that your code meets the style requirements.</p>
+<p>In short: IntelliJ inspections catch issues early while you write.
+Checkstyle is the final check that matches exactly what your instructor runs.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Checkstyle does not produce live underlines as you type. It runs
+on demand from the Checkstyle tool window, or automatically on
+save if configured. Do not assume a clean editor means a clean
+Checkstyle run — always check the Checkstyle panel before submitting.</p>
+</div>
+<h3 id="loading-the-course-checkstyle-configuration">Loading the Course Checkstyle Configuration</h3>
+<p>Your instructor provides a Checkstyle XML configuration file with each
+course lab template. You need to load this file into the CheckStyle-IDEA
+plugin so it runs the correct rules.</p>
+<ol>
+<li>
+<p>Obtain the <code>COMP-2522-Checkstyle.xml</code> file from your course lab
+   repository, or download it from the
+   <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources"><code>/resources</code></a>
+   folder of this guide.</p>
+</li>
+<li>
+<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+</li>
+<li>
+<p>Navigate to <strong>Tools &gt; Checkstyle</strong> in the left panel.</p>
+</li>
+<li>
+<p>Under <strong>Configuration File</strong>, click the <strong>+</strong> button to add a new
+   configuration.</p>
+</li>
+<li>
+<p>In the dialog that opens, select <strong>Use a local Checkstyle file</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Browse</strong> and navigate to your <code>COMP-2522-Checkstyle.xml</code>
+   file.</p>
+</li>
+<li>
+<p>Give the configuration a description, such as <code>COMP 2522</code>, and
+   click <strong>Next</strong>.</p>
+</li>
+<li>
+<p>Click <strong>Finish</strong>, then check the box next to your new configuration
+   to make it active.</p>
+</li>
+<li>
+<p>Click <strong>OK</strong> to save and close.</p>
+<p>At this point, the Checkstyle panel at the bottom of the IDE will
+use the course configuration when it runs.</p>
+</li>
+</ol>
+<h3 id="confirming-global-scope">Confirming Global Scope</h3>
+<p>The Checkstyle configuration you just loaded is stored in your IDE
+settings and applies globally to all projects — you do not need to
+repeat this setup for each lab or assignment. However, confirm this
+is the case before continuing.</p>
+<ol>
+<li>
+<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+</li>
+<li>
+<p>Navigate to <strong>Tools &gt; Checkstyle</strong>.</p>
+</li>
+<li>
+<p>Confirm the scope dropdown at the top of the panel reads <strong>All</strong> or
+   is not set to a specific project name.</p>
+<p>If the configuration shows as project-scoped, remove it and repeat
+the steps above from outside any open project by going to
+<strong>File &gt; Close Project</strong> first, then reopening Settings.</p>
+</li>
+</ol>
+<h3 id="running-checkstyle">Running Checkstyle</h3>
+<p>Once configured, you can run Checkstyle against your code at any time
+from the Checkstyle tool window.</p>
+<ol>
+<li>
+<p>Open the Checkstyle tool window by clicking <strong>Checkstyle</strong> in the
+   bottom toolbar, or navigate to <strong>View &gt; Tool Windows &gt; Checkstyle</strong>.</p>
+</li>
+<li>
+<p>In the Checkstyle panel, click the <strong>Check Current File</strong> button
+   (the green play icon) to run against the file you have open.</p>
+<p>Alternatively, click <strong>Check Project</strong> to run against all files
+in your project.</p>
+<p>At this point, any violations will appear as a list in the
+Checkstyle panel. Each entry shows the rule that was violated,
+the line number, and a description.</p>
+</li>
+<li>
+<p><strong>Double-click</strong> any violation in the list to jump directly to
+   that line in the editor.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Run <strong>Check Current File</strong> frequently as you work, not just before
+submission. Fixing one Checkstyle violation at a time is much faster
+than addressing a full list at the end.</p>
+</div>
+<h3 id="common-checkstyle-violations-in-comp-2522">Common Checkstyle Violations in COMP 2522</h3>
+<table>
+<thead>
+<tr>
+<th>Violation</th>
+<th>Cause</th>
+<th>Fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Missing Javadoc</td>
+<td>A public class, method, or field is missing a Javadoc comment</td>
+<td>Add a <code>/** */</code> comment with required tags above the element</td>
+</tr>
+<tr>
+<td>Missing <code>@author</code> or <code>@version</code></td>
+<td>Class Javadoc exists but is missing required tags</td>
+<td>Add <code>@author YourName</code> and <code>@version 1.0</code> to the class comment</td>
+</tr>
+<tr>
+<td>Magic number</td>
+<td>A numeric literal is used directly instead of a named constant</td>
+<td>Assign the value to a <code>static final</code> constant and use the constant name</td>
+</tr>
+<tr>
+<td>Line too long</td>
+<td>A line exceeds 100 characters</td>
+<td>Break the line using <strong>Reformat Code</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span>)</td>
+</tr>
+<tr>
+<td>Unused import</td>
+<td>An import statement is present but not used in the file</td>
+<td>Remove it, or use Save Actions X to remove it automatically on save</td>
+</tr>
+<tr>
+<td>Trailing whitespace</td>
+<td>A line ends with one or more spaces</td>
+<td>Enable <strong>Trim trailing whitespace</strong> in Save Actions X settings</td>
+</tr>
+<tr>
+<td>Missing <code>final</code> on parameter</td>
+<td>A method parameter is not declared <code>final</code></td>
+<td>Add the <code>final</code> keyword before each parameter type</td>
+</tr>
+</tbody>
+</table>
+<h2 id="configuring-save-actions-x">Configuring Save Actions X</h2>
+<p>Save Actions X runs a set of cleanup actions on your file automatically
+each time you save. For CST coursework, the most useful actions are
+reformatting your code and removing unused imports — two things that
+instructors check and that are easy to forget to do manually.</p>
+<h3 id="confirming-global-scope_1">Confirming Global Scope</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Save Actions X can store its configuration either globally in your
+IDE settings, or locally in a project-specific file committed to
+your repository. For CST coursework you want the global setting,
+so your formatting behaviour is consistent across every project
+you open.</p>
+</div>
+<p>Before configuring Save Actions X, confirm you are editing the global
+settings and not a project-local override:</p>
+<ol>
+<li>
+<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+</li>
+<li>
+<p>Navigate to <strong>Save Actions X</strong> in the left panel.</p>
+</li>
+<li>
+<p>At the top of the Save Actions X panel, confirm the scope is set
+   to <strong>IDE</strong> and not <strong>Project</strong>.</p>
+<p>If it shows <strong>Project</strong>, click the <strong>IDE</strong> tab before making any
+changes. Any settings you configure on the IDE tab apply to every
+project you open.</p>
+</li>
+</ol>
+<h3 id="enabling-save-actions">Enabling Save Actions</h3>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Save Actions X modifies your file on every save. If you are working
+in a shared repository, confirm with your team that everyone is using
+the same code style settings before enabling reformatting, to avoid
+noisy diffs.</p>
+</div>
+<ol>
+<li>
+<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+</li>
+<li>
+<p>Navigate to <strong>Save Actions X</strong> in the left panel.</p>
+</li>
+<li>
+<p>Confirm you are on the <strong>IDE</strong> tab, not the <strong>Project</strong> tab.</p>
+</li>
+<li>
+<p>Under the <strong>General</strong> tab, check <strong>Activate save actions on save</strong>.</p>
+</li>
+<li>
+<p>Under the <strong>Formatting Actions</strong> section, enable the following:</p>
+<ul>
+<li><strong>Optimize imports</strong> — removes unused imports and organizes
+  import statements according to your code style settings</li>
+<li><strong>Reformat file</strong> — applies your code style settings to the
+  entire file on every save</li>
+<li><strong>Trim trailing whitespace</strong> — removes trailing spaces from
+  line endings, which Checkstyle flags as a violation</li>
+</ul>
+</li>
+<li>
+<p>Click <strong>OK</strong> to save and close.</p>
+<p>At this point, every time you press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> or the IDE autosaves,
+your file will be automatically reformatted, its imports cleaned up,
+and trailing whitespace removed across all your projects.</p>
+</li>
+</ol>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Save Actions X uses the code style settings configured at
+<strong>File &gt; Settings &gt; Editor &gt; Code Style</strong>. If you have imported
+the CST inspection profile from <a href="../inspections/">Configuring Inspections</a>,
+your formatting will already match course style requirements.</p>
+</div>
+<h2 id="configuring-the-javadoc-plugin">Configuring the JavaDoc Plugin</h2>
+<p>The JavaDoc plugin generates comment stubs for classes, methods, and
+fields based on their signatures. Instead of typing <code>@param</code>, <code>@return</code>,
+and <code>@throws</code> tags manually, the plugin inserts them for you and leaves
+the description blank for you to fill in.</p>
+<p>In CST courses, complete Javadoc comments are a standard requirement
+for submitted code. This plugin significantly reduces the time it takes
+to document your work correctly.</p>
+<h3 id="generating-javadoc-for-a-single-element">Generating Javadoc for a Single Element</h3>
+<ol>
+<li>
+<p>Place your cursor on the class, method, or field you want to document.</p>
+</li>
+<li>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
+</li>
+<li>
+<p>Select <strong>Generate JavaDocs for current element</strong>.</p>
+<p>At this point, a Javadoc comment stub is inserted directly above
+the element. It includes <code>@param</code> tags for each parameter, a
+<code>@return</code> tag if the method returns a value, and <code>@throws</code> tags
+for any declared exceptions.</p>
+</li>
+<li>
+<p>Fill in the description text for each tag.</p>
+</li>
+</ol>
+<h3 id="generating-javadoc-for-an-entire-file">Generating Javadoc for an Entire File</h3>
+<ol>
+<li>
+<p>Open the file you want to document.</p>
+</li>
+<li>
+<p>Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span> to open <strong>Find Action</strong>.</p>
+</li>
+<li>
+<p>Type <code>Generate JavaDocs for all elements</code> and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
+<p>At this point, stubs are inserted for every undocumented class,
+method, and field in the file.</p>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The JavaDoc plugin only generates stubs — it does not write
+descriptions for you. You are responsible for filling in meaningful
+content for each tag. Javadoc comments with empty or placeholder
+descriptions will not satisfy course requirements.</p>
+</div>
+<h2 id="configuring-key-promoter-x">Configuring Key Promoter X</h2>
+<p>Key Promoter X requires no additional configuration to begin working.
+Once installed, it will automatically display a popup in the bottom-right
+corner of the IDE whenever you use the mouse to perform an action that
+has a keyboard shortcut.</p>
+<p>To adjust how often popups appear:</p>
+<ol>
+<li>
+<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+</li>
+<li>
+<p>Navigate to <strong>Key Promoter X</strong> in the left panel.</p>
+</li>
+<li>
+<p>Adjust the <strong>Suppress count</strong> value — this controls how many times
+   you can perform an action with the mouse before Key Promoter X stops
+   reminding you about its shortcut.</p>
+</li>
+</ol>
+<h2 id="conclusion">Conclusion</h2>
+<p>Your recommended plugins are now installed and configured globally across
+all your IntelliJ IDEA projects. CheckStyle-IDEA will let you run the
+course Checkstyle configuration before every submission. Save Actions X
+will keep your code formatted and your imports clean automatically. The
+JavaDoc plugin will reduce the time it takes to document your work. Key
+Promoter X will help you build shortcut habits as you work through the
+rest of this guide.</p>
+<p>When you are ready, continue to
+<a href="../shortcuts/">Keyboard Shortcuts</a>.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Footer" >
+        
+          
+          <a href="../inspections/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Configuring Inspections">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              <div class="md-ellipsis">
+                Configuring Inspections
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../shortcuts/" class="md-footer__link md-footer__link--next" aria-label="Next: Keyboard Shortcuts">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              <div class="md-ellipsis">
+                Keyboard Shortcuts
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
