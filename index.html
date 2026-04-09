@@ -361,6 +361,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#typographical-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typographical Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admonitions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -601,6 +623,28 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#typographical-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Typographical Conventions
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#admonitions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Admonitions
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -622,62 +666,131 @@
 
 
 <h1 id="intellij-idea-setup-guide-for-cst-students">IntelliJ IDEA Setup Guide for CST Students</h1>
-<p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> is a professional integrated 
-development environment (IDE) built by JetBrains. It provides intelligent code 
-completion, built-in debugging tools, version control integration, and a 
-plugin ecosystem that extends its functionality for different languages and 
-frameworks. Throughout the CST program, you will use IntelliJ IDEA as your 
+<p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> is a professional integrated
+development environment (IDE) built by JetBrains. It provides intelligent code
+completion, built-in debugging tools, version control integration, and a
+plugin ecosystem that extends its functionality for different languages and
+frameworks. Throughout the CST program, you will use IntelliJ IDEA as your
 primary environment for writing, testing, and debugging Java and Kotlin code.</p>
-<p>This guide walks you through the initial setup and configuration of IntelliJ IDEA 
+<p>This guide walks you through the initial setup and configuration of IntelliJ IDEA
 so that your environment is ready before your first day of classes.</p>
 <h2 id="is-this-guide-for-you">Is This Guide for You?</h2>
-<p>This guide is written for students entering BCIT's Computer Systems Technology 
-program in September 2026 who have not previously used IntelliJ IDEA or any 
+<p>This guide is written for students entering BCIT's Computer Systems Technology
+program in September 2026 who have not previously used IntelliJ IDEA or any
 other JetBrains IDE. No prior configuration experience is required.</p>
 <p>To follow this guide you will need:</p>
 <ul>
-<li>A computer running Windows 10 or later, macOS 12 or later, or a 
+<li>A computer running Windows 10 or later, macOS 12 or later, or a
   supported Linux distribution</li>
 <li>A BCIT student email address (format: <code>firstname_lastname@my.bcit.ca</code>)</li>
 <li>An active internet connection</li>
-<li><a href="https://www.oracle.com/java/technologies/downloads/#java21">Java Development Kit (JDK) 21</a> 
+<li><a href="https://www.oracle.com/java/technologies/downloads/#java21">Java Development Kit (JDK) 21</a>
   installed on your computer</li>
 </ul>
 <h2 id="by-the-end-of-this-guide-you-will-be-able-to">By the End of This Guide You Will Be Able To</h2>
 <ol>
-<li>Install IntelliJ IDEA and activate a free JetBrains Education licence 
+<li>Install IntelliJ IDEA and activate a free JetBrains Education licence
    using your BCIT student email</li>
 <li>Sync your IDE settings across multiple devices using a JetBrains account</li>
-<li>Configure code inspections to match the style requirements used in 
+<li>Configure code inspections to match the style requirements used in
    CST courses</li>
 <li>Install and configure plugins recommended for CST coursework</li>
-<li>Apply a pre-configured keymap and identify the shortcuts you will use 
-   most frequently in class</li>
+<li>Apply a pre-configured keymap and learn the shortcuts most relevant
+   to your daily workflow</li>
 </ol>
 <h2 id="what-this-guide-covers">What This Guide Covers</h2>
-<p>The tasks in this guide are designed to be completed in order. Each task builds 
-on the previous one, and the final task — keyboard shortcuts — is intentionally 
+<p>The tasks in this guide are designed to be completed in order. Each task builds
+on the previous one, and the final task — keyboard shortcuts — is intentionally
 last so your keymap reflects all other configuration choices.</p>
 <ol>
-<li><a href="installation/">Installation and Student Account Setup</a> — Install 
-   IntelliJ IDEA, activate your free Education licence, and configure 
+<li><a href="installation/">Installation and Student Account Setup</a> — Install
+   IntelliJ IDEA, activate your free Education licence, and configure
    settings sync across devices</li>
-<li><a href="inspections/">Configuring Inspections</a> — Understand what code 
-   inspections do, and apply inspection profiles configured for CST 
+<li><a href="inspections/">Configuring Inspections</a> — Understand what code
+   inspections do, and apply inspection profiles configured for CST
    course style requirements</li>
-<li><a href="plugins/">Installing and Configuring Plugins</a> — Install plugins 
+<li><a href="plugins/">Installing and Configuring Plugins</a> — Install plugins
    recommended for CST students and configure them for coursework</li>
-<li><a href="shortcuts/">Keyboard Shortcuts</a> — Apply a pre-configured keymap 
+<li><a href="shortcuts/">Keyboard Shortcuts</a> — Apply a pre-configured keymap
    and learn the shortcuts most relevant to your daily workflow</li>
 </ol>
 <h2 id="downloadable-configuration-files">Downloadable Configuration Files</h2>
-<p>This guide includes ready-to-use configuration files hosted in the 
-<a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/resources"><code>/resources</code></a> folder of this 
-repository:</p>
+<p>This guide includes ready-to-use configuration files hosted in the
+<a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources"><code>/resources</code></a>
+folder of this repository:</p>
 <ul>
-<li><strong>Inspection profiles</strong> — XML files pre-configured to match CST course 
-  style guides, referen</li>
+<li><strong>Inspection profile</strong> — <code>CST_Inspections.xml</code>, pre-configured to match
+  COMP 2522 style requirements, referenced in
+  <a href="inspections/">Configuring Inspections</a></li>
+<li><strong>Checkstyle configuration</strong> — <code>COMP-2522-Checkstyle.xml</code>, the course
+  Checkstyle ruleset your instructor grades against, referenced in
+  <a href="plugins/">Installing and Configuring Plugins</a></li>
+<li><strong>Keymap</strong> — <code>CST_Keymap.xml</code>, a pre-configured keymap with one addition
+  to the IntelliJ IDEA defaults, referenced in
+  <a href="shortcuts/">Keyboard Shortcuts</a></li>
 </ul>
+<h2 id="typographical-conventions">Typographical Conventions</h2>
+<p>This guide uses the following conventions throughout:</p>
+<table>
+<thead>
+<tr>
+<th>Convention</th>
+<th>Use</th>
+<th>Example</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Bold</strong></td>
+<td>UI elements: buttons, menus, tabs, and labels</td>
+<td>Click <strong>OK</strong></td>
+</tr>
+<tr>
+<td><code>Monospace</code></td>
+<td>Keyboard shortcuts, file names, paths, and commands</td>
+<td>Press <code>Ctrl+Alt+S</code></td>
+</tr>
+<tr>
+<td><strong>Menu &gt; Item</strong></td>
+<td>A sequence of menu selections</td>
+<td><strong>File &gt; Settings &gt; Keymap</strong></td>
+</tr>
+<tr>
+<td><em>Italics</em></td>
+<td>A new term being introduced for the first time</td>
+<td>The <em>Project</em> tool window</td>
+</tr>
+<tr>
+<td>++key++</td>
+<td>A physical key on your keyboard</td>
+<td>Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+</tr>
+</tbody>
+</table>
+<p>Keyboard shortcuts in this guide use the default Windows keymap. Where macOS
+shortcuts differ significantly, they are noted in parentheses.</p>
+<h2 id="admonitions">Admonitions</h2>
+<p>This guide uses four types of notices. Each appears before the step or
+section it applies to:</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Provides helpful context or extra information. Skipping a note will
+not cause errors, but reading it will improve your understanding.</p>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Highlights a faster or recommended approach that saves time or effort.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Flags something that may produce unexpected results if ignored.
+Read before performing the associated step.</p>
+</div>
+<div class="admonition danger">
+<p class="admonition-title">Danger</p>
+<p>Identifies an action that could cause data loss or require
+reinstallation to recover from. Do not proceed without reading.</p>
+</div>
 
 
 
