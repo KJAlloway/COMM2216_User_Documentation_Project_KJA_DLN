@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    CST COMP 2522 IntelliJ IDEA Inspection Profile
+    Aligned with the COMP 2522 Style Guide (January 2026)
+    and COMP 2522 Checkstyle configuration.
+
+    This profile provides live in-editor feedback as you type.
+    It does NOT replace the course Checkstyle configuration —
+    load COMP-2522-Checkstyle.xml into the CheckStyle-IDEA plugin
+    and run it before every submission.
+
+    Import this file via:
+    File > Settings > Editor > Inspections > gear icon > Import Profile
+-->
+<component name="InspectionProjectProfileManager">
+    <profile version="1.0">
+        <option name="myName" value="CST_Inspections"/>
+
+        <!-- ============================================================
+             JAVADOC
+             Style Guide rules 9, 10, 13, 14, 15
+             - All classes require @author and @version tags
+             - Public/protected methods require @param, @return, @throws
+             - Public constants require Javadoc
+        ============================================================ -->
+
+        <inspection_tool class="JavaDoc" enabled="true" level="WARNING" enabled_by_default="true">
+            <option name="TOP_LEVEL_CLASS_OPTIONS">
+                <value>
+                    <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="public"/>
+                    <option name="REQUIRED_TAGS" value="@author @version"/>
+                </value>
+            </option>
+            <option name="INNER_CLASS_OPTIONS">
+                <value>
+                    <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="protected"/>
+                    <option name="REQUIRED_TAGS" value="@author @version"/>
+                </value>
+            </option>
+            <option name="METHOD_OPTIONS">
+                <value>
+                    <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="protected"/>
+                    <option name="REQUIRED_TAGS" value="@return @param @throws or @exception"/>
+                </value>
+            </option>
+            <option name="FIELD_OPTIONS">
+                <value>
+                    <option name="ACCESS_JAVADOC_REQUIRED_FOR" value="public"/>
+                </value>
+            </option>
+        </inspection_tool>
+
+        <inspection_tool class="EmptyJavadoc" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             STRINGBUILDER
+             COMP 2522 requires StringBuilder for all string construction.
+             String concatenation with + is not permitted.
+
+             The inspection "StringConcatenationInLoop" warns about
+             concatenation inside loops — keep this ENABLED as it
+             catches the most common violation.
+
+             The inspection "StringBufferReplaceableByString" suggests
+             replacing StringBuilder with simple concatenation — this is
+             DISABLED because it contradicts course requirements.
+        ============================================================ -->
+
+        <!-- Keep enabled: warns when concatenation is used inside a loop -->
+        <inspection_tool class="StringConcatenationInLoop" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- Disabled: suppresses the suggestion to replace StringBuilder
+             with string concatenation, which contradicts COMP 2522 style -->
+        <inspection_tool class="StringBufferReplaceableByString" enabled="false" level="WARNING" enabled_by_default="false"/>
+
+        <!-- Keep enabled: warns when + concatenation is used outside loops.
+             COMP 2522 expects StringBuilder in all cases. -->
+        <inspection_tool class="StringConcatenation" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             MUTABILITY — final on parameters and fields
+             Style Guide rules 18, 19
+             - All method parameters must be declared final
+             - Consider making methods final
+        ============================================================ -->
+
+        <inspection_tool class="MethodParameterAlwaysFinal" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="LocalCanBeFinal" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="FieldMayBeFinal" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             VISIBILITY AND ENCAPSULATION
+             Style Guide rules 11, 12
+             - Instance variables: private or protected only
+             - Constants: must be static and final
+        ============================================================ -->
+
+        <inspection_tool class="PublicField" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="WeakerAccess" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="NonFinalStaticVariableUsedinField" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             EQUALS AND HASHCODE
+             Style Guide rule 24
+             - equals() and hashCode() must both be overridden together
+             - instanceof must NOT be used in equals() — use
+               getClass() != object.getClass() instead
+
+             The "InstanceofInEquals" inspection warns when instanceof
+             appears inside an equals() method — keep this ENABLED.
+        ============================================================ -->
+
+        <inspection_tool class="EqualsAndHashcode" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- Warns when instanceof is used inside equals() instead of
+             getClass() comparison — required by COMP 2522 style -->
+        <inspection_tool class="InstanceofInEquals" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             NAMING CONVENTIONS
+        ============================================================ -->
+
+        <inspection_tool class="ConstantNamingConvention" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="ClassNamingConvention" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="MethodNamingConvention" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="LocalVariableNamingConvention" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="InstanceVariableNamingConvention" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             IMPORTS
+        ============================================================ -->
+
+        <inspection_tool class="OnDemandImport" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="UnusedImport" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             CODE QUALITY
+             Style Guide rules 17, 21, 23, 25, 26
+        ============================================================ -->
+
+        <inspection_tool class="MagicNumber" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="EmptyCatchBlock" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="CatchGenericClass" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="DuplicatedCode" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="UnnecessaryLocalVariable" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="StringEquality" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="PointlessBooleanExpression" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="ConditionalExpression" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="SwitchStatementWithoutDefaultBranch" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="fallthrough" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="AssignmentToForLoopParameter" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="NestedAssignment" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="RedundantModifier" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             METHOD DESIGN
+             Style Guide rule 26: max 20 statements, aim for 10
+        ============================================================ -->
+
+        <inspection_tool class="MethodTooLong" enabled="true" level="WARNING" enabled_by_default="true">
+            <option name="m_limit" value="30"/>
+        </inspection_tool>
+
+        <inspection_tool class="MethodWithTooManyParameters" enabled="true" level="WARNING" enabled_by_default="true">
+            <option name="m_limit" value="7"/>
+        </inspection_tool>
+
+        <!-- ============================================================
+             INHERITANCE AND OOP
+             Style Guide rules 28, 29
+        ============================================================ -->
+
+        <inspection_tool class="AbstractClassWithoutAbstractMethods" enabled="true" level="WARNING" enabled_by_default="true"/>
+        <inspection_tool class="InterfaceIsType" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+        <!-- ============================================================
+             FORMATTING
+        ============================================================ -->
+
+        <inspection_tool class="LineLength" enabled="true" level="WARNING" enabled_by_default="true">
+            <option name="m_limit" value="100"/>
+        </inspection_tool>
+
+        <!-- ============================================================
+             GENERAL
+        ============================================================ -->
+
+        <inspection_tool class="TodoComment" enabled="true" level="WARNING" enabled_by_default="true">
+            <option name="todoPattern" value="\\btodo\\b.*"/>
+        </inspection_tool>
+
+        <inspection_tool class="CommentedOutCode" enabled="true" level="WARNING" enabled_by_default="true"/>
+
+    </profile>
+</component>

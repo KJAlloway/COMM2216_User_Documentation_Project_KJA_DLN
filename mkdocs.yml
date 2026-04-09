@@ -1,0 +1,51 @@
+site_name: IntelliJ IDEA Setup Guide for CST Students
+site_url: https://sitename.example  # Update when GitHub Pages is configured
+repo_url: https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN  # Adds a GitHub link in the top right
+repo_name: IntelliJ IDEA User Guide for CST Students  # Label for that GitHub link
+
+theme:
+  name: material
+  palette:
+    - scheme: default
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: black
+      accent: deep purple
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.top          # "Back to top" button when scrolling up
+    - navigation.indexes      # Allows section index pages
+    - navigation.footer   # Adds Previous/Next buttons at the bottom of every page
+    - content.code.copy       # Adds a copy button to all code blocks
+    - search.highlight        # Highlights search terms in results
+    - search.suggest          # Autocomplete in the search bar
+    - toc.follow          # Table of contents highlights as you scroll
+
+nav:
+  - Introduction: index.md
+  - Installation & Student Account Setup: installation.md
+  - Configuring Inspections: inspections.md
+  - Installing & Configuring Plugins: plugins.md
+  - Keyboard Shortcuts: shortcuts.md
+  - Glossary: glossary.md
+  - Troubleshooting: troubleshooting.md
+
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - footnotes
+  - attr_list          # Required for image alt-text and captions
+  - md_in_html         # Allows markdown inside HTML blocks
+  - pymdownx.highlight:
+      anchor_linenums: true   # Adds line numbers to code blocks
+  - pymdownx.inlinehilite    # Inline code syntax highlighting
+  - pymdownx.keys            # Renders keyboard keys nicely e.g. ++ctrl+alt+s++
+  - pymdownx.tabbed:
+      alternate_style: true  # Tabbed content blocks (useful for Windows/macOS variants)
