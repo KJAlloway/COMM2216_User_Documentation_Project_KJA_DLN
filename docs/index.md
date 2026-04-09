@@ -6,7 +6,7 @@ It provides intelligent code completion, built-in debugging tools, version
 control integration, and a [plugin](glossary.md#plugin) ecosystem that extends
 its functionality for different languages and frameworks. Throughout the CST
 program, you will use IntelliJ IDEA as your primary environment for writing,
-testing, and debugging Java and Kotlin code.
+testing, and debugging Java and [Kotlin](glossary.md#Kotlin) code.
 
 This guide walks you through the initial setup and configuration of IntelliJ IDEA
 so that your environment is ready before your first day of classes.
@@ -14,7 +14,7 @@ so that your environment is ready before your first day of classes.
 ## Is This Guide for You?
 
 This guide is written for students entering BCIT's Computer Systems Technology
-program in September 2026 who have not previously used IntelliJ IDEA or any
+program who have not previously used IntelliJ IDEA or any
 other JetBrains IDE. No prior configuration experience is required.
 
 To follow this guide you will need:
@@ -80,13 +80,13 @@ folder of this repository:
 
 This guide uses the following conventions throughout:
 
-| Convention | Use | Example |
-|---|---|---|
-| **Bold** | UI elements: buttons, menus, tabs, and labels | Click **OK** |
-| `Monospace` | File names, paths, and code | `CST_Inspections.xml` |
-| **Menu > Item** | A sequence of menu selections | **File > Settings > Keymap** |
-| *Italics* | A new term being introduced for the first time | The *Project* [tool window](glossary.md#tool-window) |
-| Key badges | A physical key or key combination to press | ++ctrl+alt+s++ |
+| Convention | Use                                                   | Example |
+|---|-------------------------------------------------------|---|
+| **Bold** | UI elements: buttons, menus, tabs, and labels         | Click **OK** |
+| `Monospace` | File names, paths, code, or page specific info/inputs | `CST_Inspections.xml` |
+| **Menu > Item** | A sequence of menu selections                         | **File > Settings > Keymap** |
+| *Italics* | A new term being introduced for the first time        | The *Project* [tool window](glossary.md#tool-window) |
+| Key badges | A physical key or key combination to press            | ++ctrl+alt+s++ |
 
 Keyboard shortcuts in this guide use the default Windows keymap. Where macOS
 shortcuts differ significantly, they are noted in parentheses.

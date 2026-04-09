@@ -82,7 +82,7 @@ it inside the [IDE](glossary.md#ide).
 
 1. Navigate to the [JetBrains Education licence page](https://www.jetbrains.com/community/education/#students).
 
-2. Click **Apply Now**.
+2. Click **Request Now**.
 
 3. Fill in the application form:
     - Set **Apply with** to **University email address**
