@@ -4,8 +4,8 @@
 
 This section walks you through installing IntelliJ IDEA on your computer,
 activating a free JetBrains Education licence using your BCIT student email,
-and enabling [settings sync](glossary.md#settings-sync) so your configuration
-is consistent across multiple devices.
+and enabling settings sync so your configuration is consistent across
+multiple devices.
 
 By the end of this section you will have a fully licensed, running copy of
 IntelliJ IDEA linked to your JetBrains account, with global settings sync
@@ -71,7 +71,7 @@ applies across all your devices automatically.
 
 JetBrains verifies student status through your institutional email address.
 You will apply for a licence through the JetBrains website before activating
-it inside the [IDE](glossary.md#ide).
+it inside the IDE.
 
 !!! warning
     You must use your BCIT student email (`firstname_lastname@my.bcit.ca`)
@@ -96,9 +96,8 @@ it inside the [IDE](glossary.md#ide).
 
 5. Open the confirmation email and click **Confirm Request**.
 
-    At this point, you will be redirected to create a
-    [JetBrains account](glossary.md#jetbrains-account). Use your BCIT email
-    address as your account email.
+    At this point, you will be redirected to create a JetBrains account.
+    Use your BCIT email address as your account email.
 
 6. Set a password for your JetBrains account and click **Save**.
 
@@ -112,47 +111,46 @@ it inside the [IDE](glossary.md#ide).
 
 3. Select **Log in to JetBrains Account**.
 
-4. Enter the email and password for your [JetBrains account](glossary.md#jetbrains-account)
-   and click **Log In**.
+4. Enter the email and password for your JetBrains account and click **Log In**.
 
-    ![IntelliJ IDEA licence activation screen](graphics/Activate_license.png){ alt="IntelliJ IDEA showing the Activate licence dialog with Log in to JetBrains Account selected" title="Activating your Education licence" }
+    ![JetBrains account linking flow showing successful licence detection](graphics/JetBrains_account_link.gif){ alt="IntelliJ IDEA showing the Activate licence dialog with Log in to JetBrains Account selected" title="Activating your Education licence" }
 
     At this point, IntelliJ IDEA will detect your Education licence
     automatically and activate.
 
-5. Click **Continue** to proceed to the IDE.
+5. Click **Activate** to proceed to the IDE.
 
-    ![JetBrains account linking flow showing successful licence detection](graphics/JetBrains_account_link.gif){ alt="Animation showing the JetBrains account login flow and licence activation" title="JetBrains account linking" }
+    ![IntelliJ IDEA licence activation screen](graphics/Activate_license.png){ alt="Animation showing the JetBrains account login flow and licence activation" title="JetBrains account linking" }
 
 ## Syncing Settings Across Devices
 
-IntelliJ IDEA can sync your global [IDE](glossary.md#ide) settings — including
-[keymaps](glossary.md#keymap), colour schemes, inspection profiles, and
-[plugin](glossary.md#plugin) configurations — to your JetBrains account so
-they are available on any device you log into.
-
-!!! warning
-    [Settings sync](glossary.md#settings-sync) only pushes your **global IDE
-    settings**. Project-specific overrides — such as an inspection profile
-    stored at the project [scope](glossary.md#scope-ide-settings) rather than
-    the IDE level — are not synced. As you work through the following sections,
-    each page will confirm that the settings you configure are stored globally
-    so they sync correctly.
+IntelliJ IDEA can sync your global IDE settings — including keymaps, colour
+schemes, inspection profiles, and plugin configurations — to your JetBrains
+account so they are available on any device you log into.
 
 !!! tip
     Enable settings sync now, before you configure anything else in this
-    guide. This ensures that every configuration change you make in the
-    following sections is automatically available on all your devices
-    without any additional steps.
+    guide. This ensures that every change you make in the following sections
+    is automatically available on all your devices without any extra steps.
 
-1. Open **File > Settings** (++ctrl+alt+s++).
+    Note that sync only pushes your **global IDE settings**. Project-specific
+    overrides — such as an inspection profile stored at the project scope
+    rather than the IDE level — are not synced. Each section of this guide
+    confirms that its settings are stored globally so they sync correctly.
 
-    Throughout this guide, **File > Settings** is where all configuration
-    lives. The animation below shows how to navigate to it from the IDEA
-    welcome screen and gives you a first look at how the Settings panel
-    is organized.
+=== "Windows"
 
-    ![Animation showing how to open Settings from the IntelliJ IDEA welcome screen and navigate the Settings panel](graphics/Initial_settings_nav.gif){ alt="Animation navigating from the IntelliJ IDEA welcome screen to the Settings panel" title="Opening Settings for the first time" }
+    1. Open **File > Settings** (++ctrl+alt+s++).
+
+=== "macOS"
+
+    1. Open **IntelliJ IDEA > Settings** (++cmd+comma++).
+
+Throughout this guide, this is where all configuration lives. The animation
+below shows how to navigate to it from the IDEA welcome screen and gives you
+a first look at how the Settings panel is organized.
+
+![Animation showing how to open Settings from the IntelliJ IDEA welcome screen and navigate the Settings panel](graphics/Initial_settings_nav.gif){ alt="Animation navigating from the IntelliJ IDEA welcome screen to the Settings panel" title="Opening Settings for the first time" }
 
 2. Navigate to **Tools > Backup and Sync** in the left panel.
 
@@ -177,9 +175,8 @@ they are available on any device you log into.
 
 ## Conclusion
 
-At this point, IntelliJ IDEA is installed, licenced, and synced to your
-JetBrains account. Your global settings will now follow you across devices
-automatically.
+IntelliJ IDEA is now installed, licenced, and synced to your JetBrains
+account. Your global settings will follow you across devices automatically.
 
 Verify your setup before continuing:
 

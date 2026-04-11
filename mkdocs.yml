@@ -23,6 +23,7 @@ theme:
     - navigation.indexes
     - navigation.footer
     - content.code.copy
+    - content.tooltips
     - search.highlight
     - search.suggest
     - toc.follow
@@ -44,9 +45,22 @@ markdown_extensions:
   - footnotes
   - attr_list
   - md_in_html
+  - abbr
   - pymdownx.highlight:
       anchor_linenums: true
   - pymdownx.inlinehilite
   - pymdownx.keys
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.snippets:
+      auto_append:
+        - includes/abbreviations.md
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/os-toggle.js
+
+hooks:
+  - docs/hooks.py

@@ -9,25 +9,22 @@ what the generated code should look like.
 
 The default templates do not match COMP 2522 style requirements, so this
 section walks you through replacing them with course-compliant versions.
-Once set up, every time you generate these methods IntelliJ will produce
+Once set up, every time you use the Generate menu IntelliJ will produce
 code that already follows your instructor's standards.
 
-This section also covers updating the [Javadoc](glossary.md#javadoc) plugin's
-class comment template so that generated class headers automatically include
-the `@author` and `@version` tags your instructor requires.
+This section also covers updating the Javadoc plugin's class comment
+template so that generated class headers automatically include the
+`@author` and `@version` tags your instructor requires.
 
 !!! note
     It is okay if some of the template code below looks unfamiliar — you
     are not expected to understand every line of it yet. The goal right
-    now is to get your environment set up correctly so these tools work
-    for you throughout the term. If you encounter terms you don't
-    recognize, make a note and ask your instructor.
+    now is to get your environment set up correctly. If you encounter
+    terms you don't recognize, make a note and ask your instructor.
 
-!!! note
-    These templates are stored globally in your IDE settings and apply to
-    every project you open. You only need to configure them once.
+    These templates are stored globally in your IDE settings and apply
+    to every project you open. You only need to configure them once.
 
-!!! note
     Template configuration is accessed through the Generate menu inside
     an open Java class file. Before starting, open any `.java` file in
     your project — any existing class works fine.
@@ -36,13 +33,13 @@ the `@author` and `@version` tags your instructor requires.
 
 The `toString()` method produces a readable text description of an object —
 useful for debugging and logging. The template below checks what fields are
-present in your class and builds them into a consistent output format,
-while also checking for a [superclass](glossary.md#superclass) and including
-its information if one exists.
+present in your class and builds them into a consistent output format. It
+also checks whether your class extends another class and includes that
+information in the output if so.
 
 1. Open any Java class file in your project.
 
-2. Press ++alt+insert++ to open the **Generate** menu.
+2. Press ++alt+insert++ (Windows) or ++cmd+n++ (macOS) to open the **Generate** menu.
 
     ![The Generate menu open in IntelliJ IDEA showing available generation options](graphics/alt_insert_menu.png){ alt="IntelliJ IDEA Generate menu showing options including toString(), equals() and hashCode(), and JavaDocs" title="The Generate menu" }
 
@@ -121,13 +118,13 @@ its information if one exists.
 ## Configuring the equals and hashCode Templates
 
 The `equals()` method checks whether two objects are meaningfully the same.
-The template below looks at each field in your class and compares them one
-by one, while also checking that the two objects are exactly the same type
-before comparing anything. The `hashCode()` method works alongside `equals()`
-— Java requires that if two objects are equal, they must produce the same
-hash code, so these are always configured together.
+The template below compares each field in your class one by one, and first
+confirms that the two objects are exactly the same type before comparing
+anything. The `hashCode()` method works alongside `equals()` — Java
+requires that if two objects are equal, they must produce the same hash
+code, so these are always configured together.
 
-1. Press ++alt+insert++ to open the **Generate** menu again.
+1. Press ++alt+insert++ (Windows) or ++cmd+n++ (macOS) to open the **Generate** menu again.
 
 2. Select **equals() and hashCode()**.
 
@@ -240,7 +237,13 @@ no more forgetting them before submission.
 Unlike the `toString` and `equals` templates, this one is configured
 through **Settings** rather than the Generate menu.
 
-1. Open **File > Settings** (++ctrl+alt+s++).
+=== "Windows"
+
+    1. Open **File > Settings** (++ctrl+alt+s++).
+
+=== "macOS"
+
+    1. Open **IntelliJ IDEA > Settings** (++cmd+comma++).
 
 2. Navigate to **Tools > JavaDoc** in the left panel.
 
@@ -264,10 +267,11 @@ through **Settings** rather than the Generate menu.
 
 ## Conclusion
 
-Your code generation templates are now configured for COMP 2522. From here,
-using **Generate** (++alt+insert++) on any class will produce compliant
-`equals()`, `hashCode()`, `toString()`, and Javadoc comments automatically.
+Your code generation templates are now configured for COMP 2522. Using
+**Generate** (++alt+insert++ on Windows, ++cmd+n++ on macOS) on any class
+will now produce compliant `equals()`, `hashCode()`, `toString()`, and
+Javadoc comments automatically.
 
-This is the last configuration step in the guide. Your environment is now
-fully set up for CST coursework — the work you have done here will save you
-time and help you avoid style penalties on every assignment this term.
+This is the last configuration step in the guide. Your environment is fully
+set up for CST coursework — the work you have done here will save you time
+and help you avoid style penalties on every assignment this term.

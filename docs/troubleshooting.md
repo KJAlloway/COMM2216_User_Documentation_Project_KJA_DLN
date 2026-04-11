@@ -46,8 +46,8 @@ your keymaps, plugins, or inspection profiles are not present.
 1. Open **File > Settings > Settings Sync** and confirm that sync
    is enabled and shows a recent sync timestamp.
 2. Click **Sync** to force a manual sync.
-3. If the categories you want are not syncing, check that they are
-   checked under **File > Settings > Settings Sync**.
+3. If the categories you want are not syncing, confirm they are checked
+   under **File > Settings > Settings Sync**.
 
 !!! warning
     Settings sync requires both devices to be running the same major
@@ -61,11 +61,11 @@ does not appear in the Inspections dropdown.
 
 **Solution:**
 
-1. Confirm that the file downloaded completely and is not corrupted —
-   it should be a valid XML file you can open in a text editor.
+1. Confirm the file downloaded completely — it should be a valid XML
+   file you can open in a text editor.
 2. In **File > Settings > Editor > Inspections**, click the gear icon
    (⚙) and select **Import Profile** again.
-3. If the import still fails, check that you are importing from
+3. If the import still fails, confirm that you are importing from
    **Editor > Inspections** and not from a different settings panel.
 
 ## The CST Inspection Profile Only Applies to One Project
@@ -75,12 +75,19 @@ but does not appear, or reverts to the default, when you open a
 different project.
 
 **Cause:** The profile was imported while a project was open and was
-stored at the project level rather than globally in your IDE settings.
-It will show as `CST_Inspections (Project)` in the profile dropdown.
+stored at the project level rather than globally. It will show as
+`CST_Inspections (Project)` in the profile dropdown.
 
 **Solution:**
 
-1. Open **File > Settings** (++ctrl+alt+s++).
+=== "Windows"
+
+    1. Open **File > Settings** (++ctrl+alt+s++).
+
+=== "macOS"
+
+    1. Open **IntelliJ IDEA > Settings** (++cmd+comma++).
+
 2. Navigate to **Editor > Inspections**.
 3. Confirm the profile dropdown shows `CST_Inspections (Project)`.
 4. Click the **gear icon** (⚙) at the top of the Inspections panel.
@@ -121,9 +128,20 @@ as a second binding for Reformat Code and does not conflict with any
 Windows system shortcuts. If you have not yet imported the CST keymap,
 see [Keyboard Shortcuts](shortcuts.md) for import instructions.
 
+!!! note
+    On macOS, the default shortcut for Reformat Code is ++cmd+opt+l++
+    and does not conflict with any system shortcuts.
+
 Alternatively, assign your own shortcut manually:
 
-1. Open **File > Settings** (++ctrl+alt+s++).
+=== "Windows"
+
+    1. Open **File > Settings** (++ctrl+alt+s++).
+
+=== "macOS"
+
+    1. Open **IntelliJ IDEA > Settings** (++cmd+comma++).
+
 2. Navigate to **Keymap**.
 3. Search for **Reformat Code** in the action list.
 4. **Right-click** **Reformat Code** and select **Add Keyboard Shortcut**.
