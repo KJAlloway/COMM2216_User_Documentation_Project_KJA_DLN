@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -952,31 +954,49 @@
 
 <h1 id="keyboard-shortcuts">Keyboard Shortcuts</h1>
 <h2 id="overview">Overview</h2>
-<p>IntelliJ IDEA has keyboard shortcuts for nearly every action in the IDE.
+<p>IntelliJ IDEA has keyboard shortcuts for nearly every action in the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>.
 Learning even a small set of core shortcuts will meaningfully reduce the
 time you spend navigating menus and let you stay focused on your code.</p>
-<p>This section explains how <a href="../glossary/#keymap">keymaps</a> work in IntelliJ IDEA,
-walks through the shortcuts most relevant to CST coursework, and shows you
-how to find and customize shortcuts to match your own preferences.</p>
+<p>This section explains how <a href="../glossary/#keymap" class="glossary-link"><abbr title="Complete sets of keyboard shortcut assignments for IDE actions — click for more details">keymaps</abbr></a> work in IntelliJ IDEA, walks through
+the shortcuts most relevant to CST coursework, and shows you how to find
+and customize shortcuts to match your own preferences.</p>
 <p>By the end of this section you will know the most useful shortcuts for
 daily coursework and how to reassign any shortcut that does not work
 well for you.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Select the tab for your operating system in each section below.
+All shortcuts use the default IntelliJ IDEA <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> for that OS.</p>
+</div>
 <h2 id="understanding-keymaps">Understanding Keymaps</h2>
-<p>A <a href="../glossary/#keymap">keymap</a> is a complete mapping of keyboard shortcuts
-to IDE actions. IntelliJ IDEA stores your active keymap as a file that can
-be shared and imported. When you modify a predefined keymap, IDEA automatically
-creates a copy — the original is never changed.</p>
-<p>To view your current keymap:</p>
+<p>A <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> is a complete set of keyboard shortcut assignments for the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>.
+IntelliJ IDEA stores your active <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> as a file that can be shared and
+imported. When you modify a predefined <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a>, IDEA automatically creates
+a copy — the original is never changed.</p>
+<p>To view your current <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
 <li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
-<li>
-<p>Select <strong>Keymap</strong> from the left panel.</p>
-<p>At this point, you will see your active keymap in the dropdown at
-the top of the panel and a full searchable list of actions below.</p>
-</li>
+<li>Select <strong><a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong> from the left panel.</li>
 </ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+<li>Select <strong><a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong> from the left panel.</li>
+</ol>
+</div>
+</div>
+</div>
+<p>At this point, you will see your active <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> in the dropdown at the top
+of the panel and a full searchable list of actions below.</p>
 <h2 id="shortcuts-reference">Shortcuts Reference</h2>
 <h3 id="line-editing">Line Editing</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -989,17 +1009,17 @@ the top of the panel and a full searchable list of actions below.</p>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-y">Y</kbd></span></td>
 <td>Delete current line</td>
-<td>Removes the entire line under the <a href="../glossary/#caret">caret</a></td>
+<td>Removes the entire line under the <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a></td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-d">D</kbd></span></td>
 <td>Duplicate line or selection</td>
-<td>Duplicates current line, or duplicates and appends a selection</td>
+<td>Duplicates the current line, or duplicates and appends a selection</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
 <td>Start new line below</td>
-<td>Moves to a new line without breaking the current one, regardless of <a href="../glossary/#caret">caret</a> position</td>
+<td>Moves to a new line without breaking the current one, regardless of <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> position</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-j">J</kbd></span></td>
@@ -1028,17 +1048,8 @@ the top of the panel and a full searchable list of actions below.</p>
 </tr>
 </tbody>
 </table>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>There is an important difference between Move Line and Move Statement.
-Move Line (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> / <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span>) moves only the single
-line your <a href="../glossary/#caret">caret</a> is on. Move Statement
-(<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span> / <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span>) moves the entire logical
-block — so if your caret is inside a method body, the whole method
-moves. Use Move Statement when reorganising methods; use Move Line
-for adjustments within a block.</p>
 </div>
-<h3 id="navigation">Navigation</h3>
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1049,14 +1060,80 @@ for adjustments within a block.</p>
 </thead>
 <tbody>
 <tr>
-<td><span class="keys"><kbd class="key-end">End</kbd></span> or <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></td>
-<td>Go to end of line</td>
-<td><code>End</code> on full keyboards; <code>Fn+Right</code> on laptops</td>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-backspace">Backspace</kbd></span></td>
+<td>Delete current line</td>
+<td>Removes the entire line under the <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a></td>
 </tr>
 <tr>
-<td><span class="keys"><kbd class="key-home">Home</kbd></span> or <span class="keys"><kbd class="key-function">Fn</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-d">D</kbd></span></td>
+<td>Duplicate line or selection</td>
+<td>Duplicates the current line, or duplicates and appends a selection</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
+<td>Start new line below</td>
+<td>Moves to a new line without breaking the current one, regardless of <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> position</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-j">J</kbd></span></td>
+<td>Join lines</td>
+<td>Merges the next line up into the current line</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span></td>
+<td>Move line up</td>
+<td>Shifts the current line up one position</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Move line down</td>
+<td>Shifts the current line down one position</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-up">Up</kbd></span></td>
+<td>Move statement up</td>
+<td>Moves an entire code block — method, if block, loop — up</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Move statement down</td>
+<td>Moves an entire code block down</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Move Line and Move Statement behave differently. Move Line moves only
+the single line your <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> is on. Move Statement moves the entire
+logical block — so if your <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> is inside a method body, the whole
+method moves. Use Move Statement when reorganising methods; use Move
+Line for smaller adjustments within a block.</p>
+</div>
+<h3 id="navigation">Navigation</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-end">End</kbd></span></td>
+<td>Go to end of line</td>
+<td><code>Fn+Right</code> on laptops without a dedicated <code>End</code> key</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-home">Home</kbd></span></td>
 <td>Go to start of line</td>
-<td><code>Home</code> on full keyboards; <code>Fn+Left</code> on laptops</td>
+<td><code>Fn+Left</code> on laptops without a dedicated <code>Home</code> key</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-b">B</kbd></span></td>
@@ -1070,13 +1147,13 @@ for adjustments within a block.</p>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-1">1</kbd></span></td>
-<td>Show Project <a href="../glossary/#tool-window">tool window</a></td>
+<td>Show Project <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a></td>
 <td>Toggles the file tree panel open and closed</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
 <td>Return focus to editor</td>
-<td>Works from any tool window or search dialog</td>
+<td>Works from any <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a> or search dialog</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span></td>
@@ -1086,17 +1163,75 @@ for adjustments within a block.</p>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span></td>
 <td>Find Action</td>
-<td>Search for any IDE action by name — useful when you forget a shortcut</td>
+<td>Search for any <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> action by name</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-arrow-right">Right</kbd></span></td>
+<td>Go to end of line</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-arrow-left">Left</kbd></span></td>
+<td>Go to start of line</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-b">B</kbd></span></td>
+<td>Go to declaration</td>
+<td>Jumps to where a method, class, or variable is defined</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-e">E</kbd></span></td>
+<td>Recent files</td>
+<td>Quickly switch between recently opened files</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-1">1</kbd></span></td>
+<td>Show Project <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a></td>
+<td>Toggles the file tree panel open and closed</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-escape">Esc</kbd></span></td>
+<td>Return focus to editor</td>
+<td>Works from any <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a> or search dialog</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span></td>
+<td>Search Everywhere</td>
+<td>Find any file, class, action, or setting — press Shift twice</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span></td>
+<td>Find Action</td>
+<td>Search for any <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> action by name</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <h3 id="multiple-carets">Multiple Carets</h3>
-<p>Multiple <a href="../glossary/#caret">carets</a> let you edit several locations in a file
-simultaneously. This is useful for renaming a variable in multiple places
-without using a full rename <a href="../glossary/#refactoring">refactor</a>, or for adding
-the same text to several lines at once.</p>
-<p>IntelliJ IDEA provides two complementary ways to place multiple carets:</p>
+<p>Multiple <a href="../glossary/#caret" class="glossary-link"><abbr title="Blinking cursors in the editor. IntelliJ IDEA supports multiple carets for editing several locations at once — click for more details">carets</abbr></a> let you edit several locations in a file at the same time.
+This is useful for renaming a variable in multiple places without a full
+rename <a href="../glossary/#refactoring" class="glossary-link"><abbr title="Restructuring code to improve its design without changing what it does — click for more details">refactor</abbr></a>, or for adding the same text to several lines at once.</p>
+<p>IntelliJ IDEA provides two ways to place multiple <a href="../glossary/#caret" class="glossary-link"><abbr title="Blinking cursors in the editor. IntelliJ IDEA supports multiple carets for editing several locations at once — click for more details">carets</abbr></a>:</p>
 <p><strong>By clicking specific locations:</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1106,16 +1241,42 @@ the same text to several lines at once.</p>
 </thead>
 <tbody>
 <tr>
-<td>++alt+shift+click++</td>
-<td>Add or remove a caret at the clicked location</td>
+<td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> + click</td>
+<td>Add or remove a <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> at the clicked location</td>
 </tr>
 <tr>
-<td>++ctrl+click++</td>
-<td>Add a caret at the clicked location (alternative)</td>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> + click</td>
+<td>Add a <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> at the clicked location (alternative)</td>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> + click</td>
+<td>Add or remove a <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> at the clicked location</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd></span> + click</td>
+<td>Add a <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> at the clicked location (alternative)</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <p><strong>By keyboard on adjacent lines:</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Windows</label><label for="__tabbed_5_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1126,31 +1287,65 @@ the same text to several lines at once.</p>
 <tbody>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> twice, then <span class="keys"><kbd class="key-arrow-up">Up</kbd></span></td>
-<td>Clone caret on the line above</td>
+<td>Clone <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> on the line above</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> twice, then <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
-<td>Clone caret on the line below</td>
+<td>Clone <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> on the line below</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-j">J</kbd></span></td>
-<td>Select next occurrence of word under caret</td>
+<td>Select next occurrence of word under <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a></td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-j">J</kbd></span></td>
-<td>Select all occurrences of word under caret in file</td>
+<td>Select all occurrences of word under <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> in file</td>
 </tr>
 </tbody>
 </table>
-<p>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to return to a single caret.</p>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> twice, then <span class="keys"><kbd class="key-arrow-up">Up</kbd></span></td>
+<td>Clone <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> on the line above</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd></span> twice, then <span class="keys"><kbd class="key-arrow-down">Down</kbd></span></td>
+<td>Clone <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> on the line below</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-g">G</kbd></span></td>
+<td>Select next occurrence of word under <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-g">G</kbd></span></td>
+<td>Select all occurrences of word under <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> in file</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<p>Press <span class="keys"><kbd class="key-escape">Esc</kbd></span> to return to a single <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Multiple carets are especially useful when adding <code>final</code> to method
-parameters. Place a caret before each parameter type using
-++alt+shift+click++, then type <code>final</code> once to insert it at all
-caret positions simultaneously.</p>
+<p>Multiple <a href="../glossary/#caret" class="glossary-link"><abbr title="Blinking cursors in the editor. IntelliJ IDEA supports multiple carets for editing several locations at once — click for more details">carets</abbr></a> are especially useful when adding <code>final</code> to method
+parameters. Place a <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> before each parameter type using
+<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> + click (Windows) or <span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-shift">Shift</kbd></span> + click (macOS), then
+type <code>final</code> once to insert it at all <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> positions simultaneously.</p>
 </div>
 <h3 id="code-generation-and-formatting">Code Generation and Formatting</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Windows</label><label for="__tabbed_6_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1168,7 +1363,7 @@ caret positions simultaneously.</p>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-l">L</kbd></span></td>
 <td>Reformat code</td>
-<td>Applies your <a href="../glossary/#code-style">code style</a> settings to the file</td>
+<td>Applies your <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> settings to the file</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span></td>
@@ -1178,7 +1373,7 @@ caret positions simultaneously.</p>
 <tr>
 <td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
 <td>Show context actions</td>
-<td>Quick-fixes for inspection warnings and errors</td>
+<td>Quick-fixes for <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> warnings and errors</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-slash">/</kbd></span></td>
@@ -1192,11 +1387,60 @@ caret positions simultaneously.</p>
 </tr>
 </tbody>
 </table>
-<h4 id="assigning-a-javadoc-shortcut">Assigning a Javadoc Shortcut</h4>
-<p>There is no default shortcut for Generate Javadoc. If you want one,
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+<td>Save all</td>
+<td>Also triggers Save Actions X if configured</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-l">L</kbd></span></td>
+<td>Reformat code</td>
+<td>Applies your <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> settings to the file</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span></td>
+<td>Open Generate menu</td>
+<td>Generate getters, setters, constructors, <code>toString</code>, <code>equals</code>, <code>hashCode</code></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
+<td>Show context actions</td>
+<td>Quick-fixes for <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> warnings and errors</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-slash">/</kbd></span></td>
+<td>Toggle line comment</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-slash">/</kbd></span></td>
+<td>Toggle block comment</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h4 id="assigning-a-javadoc-shortcut">Assigning a <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> Shortcut</h4>
+<p>There is no default shortcut for Generate <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a>. If you want one,
 see <a href="#customizing-your-keymap">Customizing Your Keymap</a> below for
 instructions on assigning your own shortcut.</p>
 <h3 id="code-analysis">Code Analysis</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Windows</label><label for="__tabbed_7_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1209,7 +1453,7 @@ instructions on assigning your own shortcut.</p>
 <tr>
 <td><span class="keys"><kbd class="key-f2">F2</kbd></span></td>
 <td>Jump to next error or warning</td>
-<td>Cycles through inspection findings in the current file</td>
+<td>Cycles through <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> findings in the current file</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f2">F2</kbd></span></td>
@@ -1218,8 +1462,8 @@ instructions on assigning your own shortcut.</p>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-i">I</kbd></span></td>
-<td>Run inspection by name</td>
-<td>Run a specific <a href="../glossary/#code-inspection">inspection</a> on demand</td>
+<td>Run <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> by name</td>
+<td>Run a specific <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> on demand</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
@@ -1228,7 +1472,46 @@ instructions on assigning your own shortcut.</p>
 </tr>
 </tbody>
 </table>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-f2">F2</kbd></span></td>
+<td>Jump to next error or warning</td>
+<td>Cycles through <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> findings in the current file</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f2">F2</kbd></span></td>
+<td>Jump to previous error or warning</td>
+<td></td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-i">I</kbd></span></td>
+<td>Run <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> by name</td>
+<td>Run a specific <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> on demand</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span></td>
+<td>Show context actions</td>
+<td>See suggested fixes for the highlighted issue</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
 <h3 id="refactoring">Refactoring</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="8:2"><input checked="checked" id="__tabbed_8_1" name="__tabbed_8" type="radio" /><input id="__tabbed_8_2" name="__tabbed_8" type="radio" /><div class="tabbed-labels"><label for="__tabbed_8_1">Windows</label><label for="__tabbed_8_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <table>
 <thead>
 <tr>
@@ -1241,7 +1524,7 @@ instructions on assigning your own shortcut.</p>
 <tr>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-t">T</kbd></span></td>
 <td>Open Refactor menu</td>
-<td>Access all <a href="../glossary/#refactoring">refactoring</a> options</td>
+<td>Access all <a href="../glossary/#refactoring" class="glossary-link"><abbr title="Restructuring existing code to improve its design without changing what it does — click for more details">refactoring</abbr></a> options</td>
 </tr>
 <tr>
 <td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f6">F6</kbd></span></td>
@@ -1260,31 +1543,78 @@ instructions on assigning your own shortcut.</p>
 </tr>
 </tbody>
 </table>
-<h2 id="customizing-your-keymap">Customizing Your Keymap</h2>
-<p>IntelliJ IDEA makes it straightforward to find and reassign any shortcut.
-You can search by action name or by the key combination itself.</p>
+</div>
+<div class="tabbed-block">
+<table>
+<thead>
+<tr>
+<th>Shortcut</th>
+<th>Action</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-t">T</kbd></span></td>
+<td>Open Refactor menu</td>
+<td>Access all <a href="../glossary/#refactoring" class="glossary-link"><abbr title="Restructuring existing code to improve its design without changing what it does — click for more details">refactoring</abbr></a> options</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-f6">F6</kbd></span></td>
+<td>Rename</td>
+<td>Renames a variable, method, or class and updates every reference</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-m">M</kbd></span></td>
+<td>Extract method</td>
+<td>Extracts selected code into a new method</td>
+</tr>
+<tr>
+<td><span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-v">V</kbd></span></td>
+<td>Introduce variable</td>
+<td>Extracts an expression into a named local variable</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<h2 id="customizing-your-keymap">Customizing Your <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></h2>
+<p>IntelliJ IDEA makes it easy to find and reassign any shortcut. You can
+search by action name or by the key combination itself.</p>
 <h3 id="finding-a-shortcut-by-action-name">Finding a Shortcut by Action Name</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="9:2"><input checked="checked" id="__tabbed_9_1" name="__tabbed_9" type="radio" /><input id="__tabbed_9_2" name="__tabbed_9" type="radio" /><div class="tabbed-labels"><label for="__tabbed_9_1">Windows</label><label for="__tabbed_9_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+<li>Navigate to <strong><a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong>.</li>
 <li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Navigate to <strong>Keymap</strong>.</p>
-</li>
-<li>
-<p><strong>Type</strong> the name of the action in the search field at the top of
-   the Keymap panel — for example, <code>Generate JavaDocs for selected element</code>.</p>
+<p><strong>Type</strong> the name of the action in the search field — for example,
+   <code>Generate JavaDocs for selected element</code>.</p>
 <p>At this point, the list filters to show only matching actions, with
 their current shortcut assignments shown beside them.</p>
 </li>
 </ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+<li>Navigate to <strong><a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong>.</li>
+<li>
+<p><strong>Type</strong> the name of the action in the search field — for example,
+   <code>Generate JavaDocs for selected element</code>.</p>
+<p>At this point, the list filters to show only matching actions, with
+their current shortcut assignments shown beside them.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
 <h3 id="finding-which-action-a-key-combination-is-assigned-to">Finding Which Action a Key Combination Is Assigned To</h3>
 <ol>
 <li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Navigate to <strong>Keymap</strong>.</p>
+<p>Open <strong>Settings</strong> and navigate to <strong><a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong>.</p>
 </li>
 <li>
 <p>Click the <strong>Find Action by Shortcut</strong> button — the magnifying glass
@@ -1318,13 +1648,13 @@ whether to reassign or choose a different combination.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>When you modify any shortcut, IntelliJ IDEA creates a copy of the
-predefined keymap rather than editing it directly. Your customized
-keymap will appear in the dropdown with a name like
-<strong>Windows copy</strong>. The original keymap is preserved and you can
-revert to it at any time by selecting it from the dropdown.</p>
+predefined <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> rather than editing it directly. Your customized
+<a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> will appear in the dropdown with a name like <strong>Windows copy</strong>
+or <strong>macOS copy</strong>. The original is preserved and you can revert to
+it at any time by selecting it from the dropdown.</p>
 </div>
 <h2 id="learning-shortcuts-as-you-work">Learning Shortcuts as You Work</h2>
-<p>The Key Promoter X plugin installed in
+<p>The Key Promoter X <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> installed in
 <a href="../plugins/">Installing and Configuring Plugins</a> will display a popup
 whenever you use the mouse for an action that has a keyboard shortcut.
 This is the most practical way to build shortcut habits without stopping
@@ -1336,10 +1666,10 @@ to memorise a list.</p>
 <ul>
 <li>IntelliJ IDEA Ultimate is installed and licenced</li>
 <li>AI completion is disabled to comply with course requirements</li>
-<li>Your settings sync across devices via your JetBrains account</li>
-<li>Your inspection profile provides live feedback aligned with course
+<li>Your <a href="../glossary/#settings-sync" class="glossary-link"><abbr title="An IntelliJ IDEA feature that uploads your IDE configuration to your JetBrains account so it is available on any device you log into — click for more details">settings sync</abbr></a> across devices via your <a href="../glossary/#jetbrains-account" class="glossary-link"><abbr title="An online account used to manage JetBrains licences and sync IDE settings across multiple devices — click for more details">JetBrains account</abbr></a></li>
+<li>Your <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> provides live feedback aligned with course
   style requirements</li>
-<li>Recommended plugins are installed, including CheckStyle-IDEA for
+<li>Recommended <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> are installed, including CheckStyle-IDEA for
   pre-submission verification</li>
 <li>You know the core shortcuts and how to customize any that do not
   work for you</li>
@@ -1441,10 +1771,12 @@ to memorise a list.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/os-toggle.js"></script>
       
     
   </body>

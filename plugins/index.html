@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -1016,44 +1018,51 @@
   
 
 
-<h1 id="installing-and-configuring-plugins">Installing and Configuring Plugins</h1>
+<h1 id="installing-and-configuring-plugins">Installing and Configuring <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a></h1>
 <h2 id="overview">Overview</h2>
-<p><a href="../glossary/#plugin">Plugins</a> extend IntelliJ IDEA's built-in functionality.
-While IDEA includes strong support for Java and Kotlin out of the box, several
-plugins will improve your experience in CST courses by automating repetitive
-formatting tasks, enforcing documentation standards, running course-required
-<a href="../glossary/#static-analysis">static analysis</a>, and helping you build keyboard
-shortcut habits as you work.</p>
-<p>This section covers the plugins recommended for CST students, explains what
+<p><a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a> extend IntelliJ IDEA's built-in functionality. While IDEA includes
+strong support for Java and <a href="../glossary/#kotlin" class="glossary-link"><abbr title="A modern JetBrains language that runs on the JVM and is fully interoperable with Java. You will encounter it in later CST terms — click for more details">Kotlin</abbr></a> out of the box, several <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> will
+improve your experience in CST courses — automating repetitive formatting
+tasks, enforcing documentation standards, running course-required style
+checks, and helping you build keyboard shortcut habits as you work.</p>
+<p>This section covers the <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> recommended for CST students, explains what
 each one does, and walks you through installing and configuring them.</p>
-<p>By the end of this section, the recommended plugins will be installed and
+<p>By the end of this section, the recommended <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> will be installed and
 active globally across all your IntelliJ IDEA projects.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Plugins are global to your IntelliJ IDEA installation — they apply
-to every project you open. If you enabled Settings Sync in
+<p><a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a> apply to every project you open in IntelliJ IDEA. If you
+enabled Settings Sync in
 <a href="../installation/">Installation and Student Account Setup</a>, installing
-a plugin on one device will make it available on all your synced
+a <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> on one device will make it available on all your synced
 devices automatically.</p>
 </div>
-<h2 id="disabling-ai-and-code-completion-plugins">Disabling AI and Code Completion Plugins</h2>
+<h2 id="disabling-ai-and-code-completion-plugins">Disabling AI and Code Completion <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>AI-assisted code completion tools are <strong>not permitted</strong> in CST
 coursework. IntelliJ IDEA Ultimate installs the <strong>JetBrains AI
-Assistant</strong> plugin automatically, and may suggest other AI completion
-tools during setup. You must disable these before writing any
-assignment code.</p>
+Assistant</strong> <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> automatically, and may suggest other AI completion
+tools during setup. Disable these before writing any assignment code.</p>
 </div>
-<p>IntelliJ IDEA also has a built-in <strong>Full Line Code Completion</strong> feature
-that is separate from the AI Assistant plugin. Both should be disabled.</p>
 <h3 id="disabling-the-jetbrains-ai-assistant-plugin">Disabling the JetBrains AI Assistant Plugin</h3>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
 <ol>
 <li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Select <strong>Plugins</strong> from the left panel.</p>
+<p>Select <strong><a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a></strong> from the left panel.</p>
 </li>
 <li>
 <p>Click the <strong>Installed</strong> tab.</p>
@@ -1072,10 +1081,30 @@ code suggestions or completions.</p>
 </li>
 </ol>
 <h3 id="disabling-full-line-code-completion">Disabling Full Line Code Completion</h3>
+<p>IntelliJ IDEA also has a built-in <strong>Full Line Code Completion</strong> feature
+that is separate from the AI Assistant <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> and must also be turned off.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Basic code completion — where IntelliJ suggests method names,
+variable names, and class names as you type — is permitted and
+useful. Only AI-powered and full-line completion tools need to
+be disabled.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
 <li>
 <p>Navigate to <strong>Editor &gt; General &gt; Inline Completion</strong>.</p>
 </li>
@@ -1086,14 +1115,7 @@ code suggestions or completions.</p>
 <p>Click <strong>Apply</strong> then <strong>OK</strong>.</p>
 </li>
 </ol>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>Basic code completion — where IntelliJ suggests method names,
-variable names, and class names as you type — is permitted and
-useful. Only AI-powered and full-line completion tools need to
-be disabled.</p>
-</div>
-<h2 id="recommended-plugins-for-cst-students">Recommended Plugins for CST Students</h2>
+<h2 id="recommended-plugins-for-cst-students">Recommended <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a> for CST Students</h2>
 <table>
 <thead>
 <tr>
@@ -1103,32 +1125,32 @@ be disabled.</p>
 </thead>
 <tbody>
 <tr>
-<td><a href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea">CheckStyle-IDEA</a></td>
-<td>Runs the course <a href="../glossary/#checkstyle">Checkstyle</a> ruleset against your code and reports violations in a dedicated panel</td>
+<td><a href="https://plugins.jetbrains.com/plugin/1065-checkstyle-idea" target="_blank" rel="noopener noreferrer">CheckStyle-IDEA</a></td>
+<td>Runs the course <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> ruleset against your code and reports violations in a dedicated panel</td>
 </tr>
 <tr>
-<td><a href="https://plugins.jetbrains.com/plugin/22113-save-actions-x">Save Actions X</a></td>
+<td><a href="https://plugins.jetbrains.com/plugin/22113-save-actions-x" target="_blank" rel="noopener noreferrer">Save Actions X</a></td>
 <td>Automatically reformats code and organizes imports every time you save a file</td>
 </tr>
 <tr>
-<td><a href="https://plugins.jetbrains.com/plugin/7157-javadoc">JavaDoc</a></td>
-<td>Generates <a href="../glossary/#javadoc">Javadoc</a> comment <a href="../glossary/#stub">stubs</a> for classes, methods, and fields with a single shortcut</td>
+<td><a href="https://plugins.jetbrains.com/plugin/7157-javadoc" target="_blank" rel="noopener noreferrer">JavaDoc</a></td>
+<td>Generates <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> comment <a href="../glossary/#stub" class="glossary-link"><abbr title="Generated code skeletons with placeholder content for you to fill in — click for more details">stubs</abbr></a> for classes, methods, and fields with a single shortcut</td>
 </tr>
 <tr>
-<td><a href="https://plugins.jetbrains.com/plugin/7499-gittoolbox">GitToolBox</a></td>
+<td><a href="https://plugins.jetbrains.com/plugin/7499-gittoolbox" target="_blank" rel="noopener noreferrer">GitToolBox</a></td>
 <td>Displays inline Git blame annotations and branch status directly in the editor</td>
 </tr>
 <tr>
-<td><a href="https://plugins.jetbrains.com/plugin/10080-rainbow-brackets">Rainbow Brackets</a></td>
+<td><a href="https://plugins.jetbrains.com/plugin/10080-rainbow-brackets" target="_blank" rel="noopener noreferrer">Rainbow Brackets</a></td>
 <td>Colours matching bracket pairs to make nested code easier to read</td>
 </tr>
 <tr>
-<td><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x">Key Promoter X</a></td>
+<td><a href="https://plugins.jetbrains.com/plugin/9792-key-promoter-x" target="_blank" rel="noopener noreferrer">Key Promoter X</a></td>
 <td>Displays the keyboard shortcut for any action you perform with the mouse, helping you learn shortcuts as you work</td>
 </tr>
 </tbody>
 </table>
-<p>Click any image below to see how each plugin appears in the Marketplace
+<p>Click any image below to see how each <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> appears in the Marketplace
 before installing:</p>
 <div class="grid cards">
 <ul>
@@ -1141,93 +1163,112 @@ before installing:</p>
 </ul>
 </div>
 <h2 id="installing-a-plugin">Installing a Plugin</h2>
-<p>The steps below apply to any plugin. Use them to install each plugin in
+<p>The steps below apply to any <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a>. Use them to install each <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> in
 the table above.</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>Install all recommended <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> before restarting. You can queue
+multiple installs and restart once to apply them all at the same time.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
 <ol>
 <li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
+<p>Select <strong><a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a></strong> from the left panel.</p>
 </li>
 <li>
-<p>Select <strong>Plugins</strong> from the left panel.</p>
+<p>Click the <strong>Marketplace</strong> tab at the top of the <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a> panel.</p>
 </li>
 <li>
-<p>Click the <strong>Marketplace</strong> tab at the top of the Plugins panel.</p>
+<p><strong>Type</strong> the name of the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> in the search field.</p>
 </li>
 <li>
-<p><strong>Type</strong> the name of the plugin in the search field.</p>
-</li>
-<li>
-<p>Click <strong>Install</strong> next to the plugin name in the search results.</p>
-<p>At this point, IntelliJ IDEA will download and install the plugin.
+<p>Click <strong>Install</strong> next to the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> name in the search results.</p>
+<p>At this point, IntelliJ IDEA will download and install the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a>.
 A progress bar will appear while the download completes.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong> when prompted to restart IntelliJ IDEA.</p>
-<p>At this point, the IDE will restart and the plugin will be active
+<p>At this point, the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> will restart and the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> will be active
 across all your projects.</p>
 </li>
 </ol>
-<div class="admonition tip">
-<p class="admonition-title">Tip</p>
-<p>Install all recommended plugins before restarting. You can queue
-multiple installs and restart once to apply them all at the same time.</p>
-</div>
 <h2 id="configuring-checkstyle-idea">Configuring CheckStyle-IDEA</h2>
-<h3 id="what-checkstyle-does">What Checkstyle Does</h3>
-<p>IntelliJ IDEA's built-in <a href="../glossary/#code-inspection">inspections</a> give you
-live feedback as you type — the red and yellow underlines you see in the editor.
-<a href="../glossary/#checkstyle">Checkstyle</a> is a separate <a href="../glossary/#static-analysis">static analysis</a>
-tool that does something different: it runs a precise, shared ruleset against
-your finished code and reports any violations in its own panel.</p>
-<p>The distinction matters because your instructors use Checkstyle to grade
-your submissions. When your instructor runs the course Checkstyle XML
-against your code, they see exactly the same results you do locally —
-which means a clean Checkstyle run before you submit is a reliable signal
-that your code meets the style requirements.</p>
-<p>In short: IntelliJ inspections catch issues early while you write.
-Checkstyle is the final check that matches exactly what your instructor runs.</p>
+<h3 id="what-checkstyle-does">What <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> Does</h3>
+<p>IntelliJ IDEA's built-in <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr></a> give you live feedback as you type —
+the red and yellow underlines you see in the editor. <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> is a
+separate tool that does something different: it runs a precise, shared
+ruleset against your finished code and reports any violations in its own
+panel.</p>
+<p>This distinction matters because your instructors use <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> to grade
+your submissions. When your instructor runs the course <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> XML
+against your code, they see exactly the same results you do locally — which
+means a clean <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> run before you submit is a reliable signal that
+your code meets the style requirements.</p>
+<p>In short: use IntelliJ <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr></a> to catch issues early while you write.
+Use <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> as the final check before submission.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Checkstyle does not produce live underlines as you type. It runs
-on demand from the Checkstyle <a href="../glossary/#tool-window">tool window</a>.
-Do not assume a clean editor means a clean Checkstyle run — always
-check the Checkstyle panel before submitting.</p>
+<p><a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> does not produce live underlines as you type — it only runs
+when you ask it to. Do not assume a clean editor means a clean
+<a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> run. Always check the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> panel before submitting.</p>
 </div>
-<h3 id="loading-the-course-checkstyle-configuration">Loading the Course Checkstyle Configuration</h3>
-<p>Your instructor provides a Checkstyle XML configuration file with each
+<h3 id="loading-the-course-checkstyle-configuration">Loading the Course <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> Configuration</h3>
+<p>Your instructor provides a <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> XML configuration file with each
 course lab template. You need to load this file into the CheckStyle-IDEA
-plugin so it runs the correct rules.</p>
+<a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> so it runs the correct rules.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Save the <code>COMP-2522-Checkstyle.xml</code> file somewhere it will not be
-accidentally deleted — a dedicated folder such as
-<code>Documents/BCIT/IDE_Config</code> works well. IntelliJ IDEA needs to
-reference this file path each time Checkstyle runs.</p>
+<p>Save <code>COMP-2522-Checkstyle.xml</code> somewhere it will not be accidentally
+deleted — a dedicated folder such as <code>Documents/BCIT/IDE_Config</code> works
+well. IntelliJ IDEA needs to reference this file path each time
+<a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> runs.</p>
+</div>
+<ol>
+<li>Obtain the <code>COMP-2522-Checkstyle.xml</code> file from your course lab
+   repository, or download it from the
+   <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources" target="_blank" rel="noopener noreferrer"><code>/resources</code></a>
+   folder of this guide.</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="4:2"><input checked="checked" id="__tabbed_4_1" name="__tabbed_4" type="radio" /><input id="__tabbed_4_2" name="__tabbed_4" type="radio" /><div class="tabbed-labels"><label for="__tabbed_4_1">Windows</label><label for="__tabbed_4_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
 </div>
 <ol>
 <li>
-<p>Obtain the <code>COMP-2522-Checkstyle.xml</code> file from your course lab
-   repository, or download it from the
-   <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources"><code>/resources</code></a>
-   folder of this guide.</p>
-</li>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Navigate to <strong>Tools &gt; Checkstyle</strong> in the left panel.</p>
+<p>Navigate to <strong>Tools &gt; <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></strong> in the left panel.</p>
 </li>
 <li>
 <p>Under <strong>Configuration File</strong>, click the <strong>+</strong> button to add a new
    configuration.</p>
-<p><img alt="Checkstyle settings panel showing the + button hovered with Add tooltip visible" src="../graphics/add_checkstyle_config.png" title="Adding a Checkstyle configuration" /></p>
 </li>
 <li>
-<p>In the dialog that opens, select <strong>Use a local Checkstyle file</strong>.</p>
+<p>In the dialog that opens, select <strong>Use a local <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> file</strong>.</p>
 </li>
 <li>
-<p>Click <strong>Browse</strong> and navigate to your <code>COMP-2522-Checkstyle.xml</code>
-   file.</p>
+<p>Click <strong>Browse</strong> and navigate to your <code>COMP-2522-Checkstyle.xml</code> file.</p>
 </li>
 <li>
 <p>Give the configuration a description, such as <code>COMP 2522</code>, and
@@ -1239,44 +1280,55 @@ reference this file path each time Checkstyle runs.</p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to save and close.</p>
-<p>At this point, the Checkstyle panel at the bottom of the IDE will
+<p>At this point, the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> panel at the bottom of the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> will
 use the course configuration when it runs.</p>
+<p><img alt="Checkstyle settings panel showing the + button hovered with Add tooltip visible" src="../graphics/add_checkstyle_config.png" title="Adding a Checkstyle configuration" /></p>
 </li>
 </ol>
 <h3 id="confirming-the-scan-scope">Confirming the Scan Scope</h3>
 <p>After loading the configuration, confirm it will run against your entire
-project rather than a limited <a href="../glossary/#scope-ide-settings">scope</a>.</p>
+project rather than a limited <a href="../glossary/#scope-ide-settings" class="glossary-link"><abbr title="Whether a setting applies to a single project only, or globally to every project you open — click for more details">scope</abbr></a>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="5:2"><input checked="checked" id="__tabbed_5_1" name="__tabbed_5" type="radio" /><input id="__tabbed_5_2" name="__tabbed_5" type="radio" /><div class="tabbed-labels"><label for="__tabbed_5_1">Windows</label><label for="__tabbed_5_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
 <ol>
 <li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
-<li>
-<p>Navigate to <strong>Tools &gt; Checkstyle</strong>.</p>
+<p>Navigate to <strong>Tools &gt; <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></strong>.</p>
 </li>
 <li>
 <p>Locate the <strong>Scan Scope</strong> dropdown and confirm it is set to
-   <strong>All files</strong> or your preferred scope.</p>
+   <strong>All files</strong> or your preferred <a href="../glossary/#scope-ide-settings" class="glossary-link"><abbr title="Whether a setting applies to a single project only, or globally to every project you open — click for more details">scope</abbr></a>.</p>
 <p><img alt="Checkstyle settings panel with the Scan Scope dropdown visible" src="../graphics/checkstyle_scan_scope.png" title="Confirming Checkstyle scan scope" /></p>
-<p>The Checkstyle configuration itself is stored globally in your IDE
-settings — you do not need to repeat the loading steps for each
-new project.</p>
+<p>The <a href="../glossary/#checkstyle-configuration" class="glossary-link"><abbr title="An XML file defining the exact style rules graded against your code submissions. In CST courses this is COMP-2522-Checkstyle.xml — click for more details">Checkstyle configuration</abbr></a> is stored globally in your <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> settings —
+you do not need to repeat the loading steps for each new project.</p>
 </li>
 </ol>
-<h3 id="running-checkstyle">Running Checkstyle</h3>
-<p>Once configured, you can run Checkstyle against your code at any time
-from the Checkstyle <a href="../glossary/#tool-window">tool window</a>.</p>
+<h3 id="running-checkstyle">Running <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></h3>
+<p>Once configured, you can run <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> against your code at any time
+from the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a>.</p>
 <ol>
 <li>
-<p>Open the Checkstyle tool window by clicking <strong>Checkstyle</strong> in the
-   bottom toolbar, or navigate to <strong>View &gt; Tool Windows &gt; Checkstyle</strong>.</p>
+<p>Open the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a> by clicking <strong><a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></strong> in the
+   bottom toolbar, or navigate to <strong>View &gt; Tool Windows &gt; <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></strong>.</p>
 </li>
 <li>
-<p>In the Checkstyle panel, click the <strong>Check Current File</strong> button
+<p>In the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> panel, click the <strong>Check Current File</strong> button
    (the green play icon) to run against the file you have open.</p>
 <p>Alternatively, click <strong>Check Project</strong> to run against all files
 in your project.</p>
 <p>At this point, any violations will appear as a list in the
-Checkstyle panel. Each entry shows the rule that was violated,
+<a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> panel. Each entry shows the rule that was violated,
 the line number, and a description.</p>
 </li>
 <li>
@@ -1287,10 +1339,10 @@ the line number, and a description.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Run <strong>Check Current File</strong> frequently as you work, not just before
-submission. Fixing one Checkstyle violation at a time is much faster
-than addressing a full list at the end.</p>
+submission. Fixing one violation at a time is much faster than
+addressing a long list at the end.</p>
 </div>
-<h3 id="common-checkstyle-violations-in-comp-2522">Common Checkstyle Violations in COMP 2522</h3>
+<h3 id="common-checkstyle-violations-in-comp-2522">Common <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> Violations in COMP 2522</h3>
 <table>
 <thead>
 <tr>
@@ -1301,24 +1353,24 @@ than addressing a full list at the end.</p>
 </thead>
 <tbody>
 <tr>
-<td>Missing Javadoc</td>
-<td>A public class, method, or field is missing a <a href="../glossary/#javadoc">Javadoc</a> comment</td>
+<td>Missing <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a></td>
+<td>A public class, method, or field is missing a <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> comment</td>
 <td>Add a <code>/** */</code> comment with required tags above the element</td>
 </tr>
 <tr>
 <td>Missing <code>@author</code> or <code>@version</code></td>
-<td>Class Javadoc exists but is missing required tags</td>
+<td>Class <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> exists but is missing required tags</td>
 <td>Add <code>@author YourName</code> and <code>@version 1.0</code> to the class comment</td>
 </tr>
 <tr>
-<td><a href="../glossary/#magic-number">Magic number</a></td>
+<td><a href="../glossary/#magic-number" class="glossary-link"><abbr title="A numeric literal used directly in code instead of a named constant — click for more details">Magic number</abbr></a></td>
 <td>A numeric literal is used directly instead of a named constant</td>
 <td>Assign the value to a <code>static final</code> constant and use the constant name</td>
 </tr>
 <tr>
 <td>Line too long</td>
 <td>A line exceeds 100 characters</td>
-<td>Break the line using <strong>Reformat Code</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span>)</td>
+<td>Break the line using <strong>Reformat Code</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span> on Windows, <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-l">L</kbd></span> on macOS)</td>
 </tr>
 <tr>
 <td>Unused import</td>
@@ -1338,65 +1390,87 @@ than addressing a full list at the end.</p>
 </tbody>
 </table>
 <h2 id="configuring-save-actions-x">Configuring Save Actions X</h2>
-<p>Save Actions X runs a set of cleanup actions on your file automatically
-each time you save. For CST coursework, the most useful actions are
-reformatting your code, removing unused imports, and trimming trailing
-whitespace — all things that Checkstyle checks and that are easy to
-forget to do manually.</p>
+<p>Save Actions X automatically cleans up your file every time you save.
+For CST coursework, the most useful actions are reformatting your code,
+removing unused imports, and trimming trailing whitespace — all things
+that <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> checks and that are easy to forget to do manually.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Save Actions X modifies your file on every save. If you are working
 in a shared repository, confirm with your team that everyone is using
-the same <a href="../glossary/#code-style">code style</a> settings before enabling
-reformatting, to avoid noisy diffs.</p>
+the same <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> settings before enabling reformatting, to avoid
+noisy diffs.</p>
+</div>
+<div class="tabbed-set tabbed-alternate" data-tabs="6:2"><input checked="checked" id="__tabbed_6_1" name="__tabbed_6" type="radio" /><input id="__tabbed_6_2" name="__tabbed_6" type="radio" /><div class="tabbed-labels"><label for="__tabbed_6_1">Windows</label><label for="__tabbed_6_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
 </div>
 <ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
 <li>
 <p>Navigate to <strong>Tools &gt; Actions on Save</strong> in the left panel.</p>
 </li>
 <li>
 <p>Enable the following actions:</p>
 <ul>
-<li><strong>Reformat code</strong> — applies your code style settings to the
+<li><strong>Reformat code</strong> — applies your <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> settings to the
   entire file on every save</li>
 <li><strong>Optimize imports</strong> — removes unused imports and organizes
-  import statements according to your code style settings</li>
+  import statements according to your <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> settings</li>
 </ul>
 <p><img alt="Tools &gt; Actions on Save panel showing Reformat code and Optimize imports checkboxes enabled" src="../graphics/actions_on_save_settings.png" title="Configuring Actions on Save" /></p>
 </li>
 <li>
 <p>Click <strong>OK</strong> to save and close.</p>
-<p>At this point, every time you press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> or the IDE autosaves,
-your file will be automatically reformatted and its imports cleaned up.</p>
+<p>At this point, every time you press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-s">S</kbd></span> (Windows) or
+<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-s">S</kbd></span> (macOS) — or the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> autosaves — your file will be
+automatically reformatted and its imports cleaned up.</p>
 </li>
 </ol>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Save Actions X uses the <a href="../glossary/#code-style">code style</a> settings
-configured at <strong>File &gt; Settings &gt; Editor &gt; Code Style</strong>. If you have
-imported the CST inspection profile from
-<a href="../inspections/">Configuring Inspections</a>, your formatting will already
-match course style requirements.</p>
+<p>Save Actions X uses the <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> settings configured at
+<strong>File &gt; Settings &gt; Editor &gt; Code Style</strong>. If you have imported
+the CST <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> from
+<a href="../inspections/">Configuring Inspections</a>, your formatting will
+already match course style requirements.</p>
 </div>
 <h2 id="configuring-the-javadoc-plugin">Configuring the JavaDoc Plugin</h2>
-<p>The JavaDoc <a href="../glossary/#plugin">plugin</a> generates comment <a href="../glossary/#stub">stubs</a>
-for classes, methods, and fields based on their signatures. Instead of typing
-<code>@param</code>, <code>@return</code>, and <code>@throws</code> tags manually, the plugin inserts them for
-you and leaves the description blank for you to fill in.</p>
-<p>In CST courses, complete <a href="../glossary/#javadoc">Javadoc</a> comments are a standard
-requirement for submitted code. This plugin significantly reduces the time it
-takes to document your work correctly.</p>
+<p>The JavaDoc <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> generates comment <a href="../glossary/#stub" class="glossary-link"><abbr title="Generated code skeletons with placeholder content for you to fill in — click for more details">stubs</abbr></a> for classes, methods, and
+fields based on their signatures. Instead of typing <code>@param</code>, <code>@return</code>,
+and <code>@throws</code> tags manually, the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> inserts the structure for you and
+leaves the descriptions blank for you to fill in.</p>
+<p>In CST courses, complete <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> comments are required for all submitted
+code. This <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> significantly reduces the time it takes to document
+your work correctly.</p>
 <h3 id="configuring-the-class-level-template">Configuring the Class-Level Template</h3>
-<p>By default, the JavaDoc plugin's class-level template does not include
-<code>@author</code> or <code>@version</code> tags. You need to update the template so that
-generated class comments include them automatically.</p>
+<p>By default, the JavaDoc <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a>'s class-level template does not include
+<code>@author</code> or <code>@version</code> tags. Update the template here so that generated
+class comments include them automatically.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="7:2"><input checked="checked" id="__tabbed_7_1" name="__tabbed_7" type="radio" /><input id="__tabbed_7_2" name="__tabbed_7" type="radio" /><div class="tabbed-labels"><label for="__tabbed_7_1">Windows</label><label for="__tabbed_7_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
 <li>
 <p>Navigate to <strong>Tools &gt; JavaDoc</strong> in the left panel.</p>
 </li>
@@ -1415,49 +1489,48 @@ with the following:</p>
 </li>
 <li>
 <p>Click <strong>Apply</strong> then <strong>OK</strong>.</p>
-<p>At this point, any class-level Javadoc generated by the plugin will
+<p>At this point, any class-level <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> generated by the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> will
 include the <code>@author</code> and <code>@version</code> tags ready for you to fill in.</p>
 </li>
 </ol>
-<h3 id="generating-javadoc-for-a-selected-element">Generating Javadoc for a Selected Element</h3>
+<h3 id="generating-javadoc-for-a-selected-element">Generating <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> for a Selected Element</h3>
 <ol>
 <li>
-<p>Place your <a href="../glossary/#caret">caret</a> on the class, method, or field
-   you want to document.</p>
+<p>Place your <a href="../glossary/#caret" class="glossary-link"><abbr title="The blinking cursor in the editor marking your current position in the file — click for more details">caret</abbr></a> on the class, method, or field you want to document.</p>
 </li>
 <li>
-<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> (Windows) or <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span> (macOS) to open the <strong>Generate</strong> menu.</p>
 </li>
 <li>
 <p>Select <strong>Generate JavaDocs for selected element</strong>.</p>
-<p>At this point, a <a href="../glossary/#javadoc">Javadoc</a> comment <a href="../glossary/#stub">stub</a>
-is inserted directly above the element. It includes <code>@param</code> tags for
-each parameter, a <code>@return</code> tag if the method returns a value, and
-<code>@throws</code> tags for any declared exceptions.</p>
+<p>At this point, a <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> comment <a href="../glossary/#stub" class="glossary-link"><abbr title="A generated code skeleton with placeholder content for you to fill in — click for more details">stub</abbr></a> is inserted directly above the
+element. It includes <code>@param</code> tags for each parameter, a <code>@return</code>
+tag if the method returns a value, and <code>@throws</code> tags for any
+declared exceptions.</p>
 </li>
 <li>
 <p>Fill in the description text for each tag.</p>
 </li>
 </ol>
-<h3 id="generating-javadoc-for-an-entire-file">Generating Javadoc for an Entire File</h3>
+<h3 id="generating-javadoc-for-an-entire-file">Generating <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> for an Entire File</h3>
 <ol>
 <li>
 <p>Open the file you want to document.</p>
 </li>
 <li>
-<p>Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span> to open <strong>Find Action</strong>.</p>
+<p>Press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span> (Windows) or <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-shift">Shift</kbd><span>+</span><kbd class="key-a">A</kbd></span> (macOS) to open <strong>Find Action</strong>.</p>
 </li>
 <li>
 <p>Type <code>Generate JavaDocs for all elements</code> and press <span class="keys"><kbd class="key-enter">Enter</kbd></span>.</p>
-<p>At this point, <a href="../glossary/#stub">stubs</a> are inserted for every
-undocumented class, method, and field in the file.</p>
+<p>At this point, <a href="../glossary/#stub" class="glossary-link"><abbr title="Generated code skeletons with placeholder content for you to fill in — click for more details">stubs</abbr></a> are inserted for every undocumented class,
+method, and field in the file.</p>
 </li>
 </ol>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>The JavaDoc plugin only generates stubs — it does not write
+<p>The JavaDoc <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> only generates <a href="../glossary/#stub" class="glossary-link"><abbr title="Generated code skeletons with placeholder content for you to fill in — click for more details">stubs</abbr></a> — it does not write
 descriptions for you. You are responsible for filling in meaningful
-content for each tag. Javadoc comments with empty or placeholder
+content for each tag. <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> comments with empty or placeholder
 descriptions will not satisfy course requirements.</p>
 </div>
 <h2 id="configuring-key-promoter-x-and-rainbow-brackets">Configuring Key Promoter X and Rainbow Brackets</h2>
@@ -1472,11 +1545,11 @@ about its shortcut.</p>
 <strong>File &gt; Settings &gt; Rainbow Brackets</strong> where you can customize colours
 if desired, but the defaults work well out of the box.</p>
 <h2 id="conclusion">Conclusion</h2>
-<p>Your recommended plugins are now installed and configured globally across
+<p>Your recommended <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> are now installed and configured globally across
 all your IntelliJ IDEA projects. AI completion is disabled to comply with
-course requirements. CheckStyle-IDEA will let you run the course Checkstyle
+course requirements. CheckStyle-IDEA will let you run the course <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a>
 configuration before every submission. Save Actions X will keep your code
-formatted and your imports clean automatically. The JavaDoc plugin will
+formatted and your imports clean automatically. The JavaDoc <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> will
 reduce the time it takes to document your work.</p>
 
 
@@ -1573,10 +1646,12 @@ reduce the time it takes to document your work.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/os-toggle.js"></script>
       
     
   </body>

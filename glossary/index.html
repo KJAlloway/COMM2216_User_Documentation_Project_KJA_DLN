@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -895,152 +897,159 @@
 <h1 id="glossary">Glossary</h1>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-</div>
-<p>If you come across a term in this guide that isn't listed here or
+<p>If you come across a term in this guide that isn't listed here, or
 that still doesn't make sense after reading the definition, make a
 note of it and bring it to your instructor. Getting comfortable with
 this vocabulary early will make the rest of the program easier.</p>
+</div>
 <h2 id="a">A</h2>
-<p><span id="annotation"><strong>Annotation</strong></span>
-:   A metadata tag in Java code beginning with <code>@</code>, used to provide
-information to the compiler or IDE. Common examples include
-<code>@Override</code>, <code>@author</code>, and <code>@param</code>.</p>
+<p><span id="annotation"><strong><abbr title="A metadata tag in Java code beginning with @, used to give the compiler or IDE extra information — click for more details">Annotation</abbr></strong></span>
+:   A tag in Java code that begins with <code>@</code>, used to pass information to
+    the compiler or <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr>. Common examples include <code>@Override</code>, <code>@author</code>,
+    and <code>@param</code>.</p>
 <h2 id="b">B</h2>
-<p><span id="build-tool"><strong>Build tool</strong></span>
+<p><span id="build-tool"><strong><abbr title="Software that automates compiling, testing, and packaging Java code — click for more details">Build tool</abbr></strong></span>
 :   Software that automates compiling, testing, and packaging Java code.
-IntelliJ IDEA integrates with the two most common build tools:
-Maven and Gradle.</p>
+    IntelliJ IDEA integrates with the two most common build tools:
+    Maven and Gradle.</p>
 <h2 id="c">C</h2>
 <p><span id="caret"><strong>Caret</strong></span>
 :   The blinking cursor in the editor that marks your current position
-in the file. IntelliJ IDEA supports multiple carets simultaneously
-for editing several locations at once.</p>
-<p><span id="checkstyle"><strong>Checkstyle</strong></span>
-:   A static analysis tool that checks Java source code against a defined
-ruleset. In CST courses, your instructor uses a Checkstyle XML
-configuration file to grade code style compliance.</p>
-<p><span id="code-inspection"><strong>Code inspection</strong></span>
+    in the file. IntelliJ IDEA supports multiple <abbr title="Blinking cursors in the editor. IntelliJ IDEA supports multiple carets for editing several locations at once — click for more details">carets</abbr> simultaneously,
+    allowing you to edit several locations at once.</p>
+<p><span id="checkstyle"><strong><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></strong></span>
+:   A <abbr title="Examining source code without running it to find potential errors and style issues — click for more details">static analysis</abbr> tool that checks Java source code against a defined
+    ruleset. In CST courses, your instructor uses a <abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr> XML
+    configuration file to grade <abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr> compliance.</p>
+<p><span id="checkstyle-configuration"><strong><abbr title="An XML file defining the exact style rules graded against your code submissions. In CST courses this is COMP-2522-Checkstyle.xml — click for more details">Checkstyle configuration</abbr></strong></span>
+:   An XML file that defines the exact set of style rules <abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr>
+    enforces. In CST courses, your instructor provides
+    <code>COMP-2522-Checkstyle.xml</code> — the same file loaded into the
+    CheckStyle-IDEA <abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr> and run against your submissions at grading time.</p>
+<p><span id="code-inspection"><strong>Code <abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></strong></span>
 :   An automated analysis rule that IntelliJ IDEA applies to your code
-as you type, flagging potential errors, warnings, and style violations
-without requiring compilation.</p>
+    as you type, flagging potential errors, warnings, and style violations
+    without requiring you to compile or run your program.</p>
 <p><span id="code-style"><strong>Code style</strong></span>
-:   A set of formatting and structural rules that determine how code is
-written — indentation, line length, naming conventions, and so on.</p>
+:   A set of formatting and structural rules that define how code is
+    written — indentation, line length, naming conventions, and so on.</p>
 <h2 id="i">I</h2>
-<p><span id="ide"><strong>IDE</strong></span>
+<p><span id="ide"><strong><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></strong></span>
 :   Integrated Development Environment — a software application that
-combines a code editor, compiler or interpreter, debugger, and other
-tools into a single interface.</p>
+    combines a code editor, compiler or interpreter, debugger, and other
+    tools into a single interface.</p>
 <p><span id="indexing"><strong>Indexing</strong></span>
-:   A background process IntelliJ IDEA runs when opening a project,
-scanning and cataloguing all files so features like Search Everywhere
-and Go to Declaration work correctly. Indicated by a progress bar in
-the bottom-right corner of the IDE.</p>
+:   A background process IntelliJ IDEA runs when opening a project. It
+    scans and catalogues all files so features like Search Everywhere and
+    Go to Declaration work correctly. You can see it happening via a
+    progress bar in the bottom-right corner of the <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr>.</p>
 <h2 id="j">J</h2>
-<p><span id="javadoc"><strong>Javadoc</strong></span>
+<p><span id="javadoc"><strong><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></strong></span>
 :   Java's standard documentation comment format, written using <code>/** */</code>
-blocks above classes, methods, and fields. Javadoc comments support
-tags like <code>@param</code>, <code>@return</code>, <code>@throws</code>, <code>@author</code>, and <code>@version</code>.</p>
-<p><span id="jdk"><strong>JDK</strong></span>
+    blocks above classes, methods, and fields. <abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr> comments support
+    tags like <code>@param</code>, <code>@return</code>, <code>@throws</code>, <code>@author</code>, and <code>@version</code>.</p>
+<p><span id="jdk"><strong><abbr title="Java Development Kit — the software package required to write and run Java programs — click for more details">JDK</abbr></strong></span>
 :   Java Development Kit — a software package that includes the Java
-compiler, runtime environment, and standard libraries required to
-write and run Java programs.</p>
-<p><span id="jetbrains-account"><strong>JetBrains account</strong></span>
-:   An online account used to manage JetBrains licences and sync IDE
-settings across multiple devices.</p>
+    compiler, runtime environment, and standard libraries required to
+    write and run Java programs.</p>
+<p><span id="jetbrains-account"><strong><abbr title="An online account used to manage JetBrains licences and sync IDE settings across multiple devices — click for more details">JetBrains account</abbr></strong></span>
+:   An online account used to manage JetBrains licences and sync <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr>
+    settings across multiple devices.</p>
 <h2 id="k">K</h2>
-<p><span id="keymap"><strong>Keymap</strong></span>
-:   A complete set of keyboard shortcut assignments for IDE actions.
-IntelliJ IDEA includes predefined keymaps and allows you to create
-and import custom ones.</p>
-<p><span id="keymap"><strong>Kotlin</strong></span>
-:   Kotlin is a modern, open-source, statically typed programming language 
-designed by JetBrains, released in 2016, and officially preferred for Android development. 
-It runs on the Java Virtual Machine (JVM) and is fully interoperable with
-Java, allowing developers to write more concise, safe, and readable code.</p>
+<p><span id="keymap"><strong><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></strong></span>
+:   A complete set of keyboard shortcut assignments for <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr> actions.
+    IntelliJ IDEA includes predefined <abbr title="Complete sets of keyboard shortcut assignments for IDE actions — click for more details">keymaps</abbr> and allows you to create
+    and import custom ones.</p>
+<p><span id="kotlin"><strong><abbr title="A modern JetBrains language that runs on the JVM and is fully interoperable with Java. You will encounter it in later CST terms — click for more details">Kotlin</abbr></strong></span>
+:   A modern, statically typed programming language designed by JetBrains
+    and officially preferred for Android development. It runs on the Java
+    Virtual Machine (<abbr title="Java Virtual Machine — the runtime environment that executes Java and Kotlin bytecode — click for more details">JVM</abbr>) and is fully interoperable with Java, allowing
+    developers to write more concise, safe, and readable code.</p>
 <h2 id="l">L</h2>
-<p><span id="lint"><strong>Lint / linting</strong></span>
-:   An informal term for the process of running static analysis tools —
-like Checkstyle or IntelliJ inspections — to catch code style and
-quality issues automatically.</p>
+<p><span id="lint"><strong><abbr title="The process of running static analysis tools to catch code style and quality issues automatically — click for more details">Lint</abbr> / <abbr title="The process of running static analysis tools to catch code style and quality issues automatically — click for more details">linting</abbr></strong></span>
+:   An informal term for running <abbr title="Examining source code without running it to find potential errors and style issues — click for more details">static analysis</abbr> tools — like <abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr>
+    or IntelliJ <abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr> — to catch <abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr> and quality issues
+    automatically.</p>
 <h2 id="m">M</h2>
-<p><span id="magic-number"><strong>Magic number</strong></span>
+<p><span id="magic-number"><strong><abbr title="A numeric literal used directly in code instead of a named constant — click for more details">Magic number</abbr></strong></span>
 :   A numeric literal used directly in code instead of being assigned to
-a named constant. For example, writing <code>if (score &gt; 100)</code> instead of
-defining <code>static final int MAX_SCORE = 100</code> and writing
-<code>if (score &gt; MAX_SCORE)</code>.</p>
+    a named constant. For example, writing <code>if (score &gt; 100)</code> instead of
+    defining <code>static final int MAX_SCORE = 100</code> and writing
+    <code>if (score &gt; MAX_SCORE)</code>.</p>
 <h2 id="p">P</h2>
 <p><span id="plugin"><strong>Plugin</strong></span>
 :   An optional add-on that extends IntelliJ IDEA's built-in functionality
-with new features or language support.</p>
-<p><span id="profile"><strong>Profile (inspection)</strong></span>
-:   A saved collection of inspection settings that can be exported, shared,
-and imported between IDE installations.</p>
-<p><span id="project-tool-window"><strong>Project tool window</strong></span>
-:   The panel on the left side of the IntelliJ IDEA interface that displays
-your project's file and folder structure.</p>
+    with new features or language support.</p>
+<p><span id="profile"><strong><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr> (<abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr>)</strong></span>
+:   A named, saved collection of IntelliJ IDEA <abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr> settings that
+    can be exported as an XML file, shared, and imported into any <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr>
+    installation. Switching profiles changes which rules are active and
+    at what <abbr title="The level of importance assigned to an inspection finding: Error, Warning, Weak Warning, or Typo — click for more details">severity</abbr>. The CST <abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr> provided with this guide
+    is pre-configured to match COMP 2522 style requirements.</p>
+<p><span id="project-tool-window"><strong>Project <abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></strong></span>
+:   The panel on the left side of the IntelliJ IDEA interface that
+    displays your project's file and folder structure.</p>
 <h2 id="r">R</h2>
 <p><span id="refactoring"><strong>Refactoring</strong></span>
 :   Restructuring existing code to improve its design or readability
-without changing its external behaviour. Common refactoring operations
-include renaming, extracting methods, and introducing variables.</p>
-<p><span id="run-configuration"><strong>Run configuration</strong></span>
+    without changing what the code actually does. Common operations
+    include renaming, extracting methods, and introducing variables.</p>
+<p><span id="run-configuration"><strong><abbr title="A saved set of parameters that tells IntelliJ IDEA how to run or debug your program — click for more details">Run configuration</abbr></strong></span>
 :   A saved set of parameters that tells IntelliJ IDEA how to run or
-debug your program — including which class to launch, what arguments
-to pass, and which JDK to use.</p>
+    debug your program — including which class to launch, what arguments
+    to pass, and which <abbr title="Java Development Kit — the software package required to write and run Java programs — click for more details">JDK</abbr> to use.</p>
 <h2 id="s">S</h2>
-<p><span id="scope-ide-settings"><strong>Scope (IDE settings)</strong></span>
-:   Whether a setting applies to a single project only, or globally to
-every project you open. Settings stored at the IDE level apply
-everywhere; settings stored at the project level apply only to
-that project.</p>
-<p><span id="settings-sync"><strong>Settings sync</strong></span>
-:   An IntelliJ IDEA feature that uploads your IDE configuration —
-including keymaps, plugins, and code style settings — to your
-JetBrains account so they are available on any device you log into.</p>
+<p><span id="scope-ide-settings"><strong>Scope (<abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr> settings)</strong></span>
+:   Whether a setting applies to a single project only, or to every
+    project you open. Settings stored at the <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr> level apply everywhere;
+    settings stored at the project level apply only to that project.</p>
+<p><span id="settings-sync"><strong><abbr title="An IntelliJ IDEA feature that uploads your IDE configuration to your JetBrains account so it is available on any device you log into — click for more details">Settings sync</abbr></strong></span>
+:   An IntelliJ IDEA feature that uploads your <abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr> configuration —
+    including <abbr title="Complete sets of keyboard shortcut assignments for IDE actions — click for more details">keymaps</abbr>, <abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr>, and <abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr> settings — to your
+    <abbr title="An online account used to manage JetBrains licences and sync IDE settings across multiple devices — click for more details">JetBrains account</abbr> so they are available on any device you log into.</p>
 <p><span id="severity"><strong>Severity</strong></span>
-:   The level of importance assigned to an inspection finding: Error,
-Warning, Weak Warning, or Typo.</p>
+:   The level of importance assigned to an <abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr> finding: Error,
+    Warning, Weak Warning, or Typo.</p>
 <p><span id="static-analysis"><strong>Static analysis</strong></span>
-:   The process of examining source code without executing it, to identify
-potential errors, style violations, or quality issues. Both IntelliJ
-inspections and Checkstyle are static analysis tools.</p>
-<p><span id="string"><strong>String</strong></span>
+:   The process of examining source code without running it, to identify
+    potential errors, style violations, or quality issues. Both IntelliJ
+    <abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr> and <abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr> are <abbr title="Examining source code without running it to find potential errors and style issues — click for more details">static analysis</abbr> tools.</p>
+<p><span id="string"><strong><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">String</abbr></strong></span>
 :   A sequence of characters treated as text in Java, represented by the
-<code>String</code> class. Strings are enclosed in double quotes:
-<code>"Hello, world!"</code>.</p>
+    <code>String</code> class. Strings are enclosed in double quotes:
+    <code>"Hello, world!"</code>.</p>
 <p><span id="stub"><strong>Stub</strong></span>
 :   A generated code skeleton with placeholder content that you fill in.
-The JavaDoc plugin generates Javadoc stubs — it inserts the comment
-structure with empty descriptions for you to complete.</p>
+    The JavaDoc <abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr> generates <abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr> <abbr title="Generated code skeletons with placeholder content for you to fill in — click for more details">stubs</abbr> — it inserts the comment
+    structure with empty descriptions for you to complete.</p>
 <p><span id="superclass"><strong>Superclass</strong></span>
 :   A class that another class inherits from. When class <code>B</code> extends
-class <code>A</code>, class <code>A</code> is the superclass. The superclass provides
-fields and methods that the child class automatically has access to.
-In COMP 2522, your <code>toString()</code> and <code>equals()</code> methods check whether
-a superclass exists and include its data in the output.</p>
+    class <code>A</code>, class <code>A</code> is the <abbr title="A class that another class inherits from. When B extends A, A is the superclass — click for more details">superclass</abbr>. The <abbr title="A class that another class inherits from. When B extends A, A is the superclass — click for more details">superclass</abbr> provides
+    fields and methods that the child class can use automatically. In
+    COMP 2522, your <code>toString()</code> and <code>equals()</code> methods check whether a
+    <abbr title="A class that another class inherits from. When B extends A, A is the superclass — click for more details">superclass</abbr> exists and include its data in the output.</p>
 <h2 id="t">T</h2>
 <p><span id="tool-window"><strong>Tool window</strong></span>
 :   A panel docked to the edge of the IntelliJ IDEA interface that
-provides access to a specific feature or view. Examples include the
-Project tool window, the Checkstyle tool window, and the Terminal.</p>
+    provides access to a specific feature or view. Examples include the
+    Project <abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr>, the <abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr> <abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr>, and the Terminal.</p>
 <h2 id="u">U</h2>
-<p><span id="uml"><strong>UML</strong></span>
+<p><span id="uml"><strong><abbr title="Unified Modelling Language — a standard notation for software structure diagrams — click for more details">UML</abbr></strong></span>
 :   Unified Modelling Language — a standardised notation for creating
-diagrams that represent the structure and behaviour of software
-systems.</p>
+    diagrams that represent the structure and behaviour of software
+    systems.</p>
 <h2 id="v">V</h2>
-<p><span id="velocity-template"><strong>Velocity template</strong></span>
+<p><span id="velocity-template"><strong><abbr title="The templating language IntelliJ IDEA uses internally for code generation via the Generate menu — click for more details">Velocity template</abbr></strong></span>
 :   The templating language IntelliJ IDEA uses internally for code
-generation. When you use the Generate menu to create <code>equals()</code>,
-<code>hashCode()</code>, or <code>toString()</code> methods, IntelliJ fills in the code
-using a Velocity template that you can customize.</p>
+    generation. When you use the Generate menu to create <code>equals()</code>,
+    <code>hashCode()</code>, or <code>toString()</code> methods, IntelliJ fills in the code
+    using a <abbr title="The templating language IntelliJ IDEA uses internally for code generation via the Generate menu — click for more details">Velocity template</abbr> that you can customize.</p>
 <h2 id="w">W</h2>
 <p><span id="wildcard-import"><strong>Wildcard import</strong></span>
 :   An import statement that uses <code>*</code> to import all classes from a
-package at once, for example <code>import java.util.*</code>. Wildcard imports
-are prohibited in COMP 2522 because they obscure which classes your
-code actually depends on.</p>
+    package at once, for example <code>import java.util.*</code>. <abbr title="Imports using * to bring in all classes from a package at once, e.g. import java.util.*. Prohibited in COMP 2522 — click for more details">Wildcard imports</abbr>
+    are prohibited in COMP 2522 because they make it unclear which
+    classes your code actually depends on.</p>
 
 
 
@@ -1136,10 +1145,12 @@ code actually depends on.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/os-toggle.js"></script>
       
     
   </body>

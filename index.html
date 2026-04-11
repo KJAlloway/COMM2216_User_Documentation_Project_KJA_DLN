@@ -49,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="stylesheets/extra.css">
+    
     <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -362,10 +364,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#typographical-conventions" class="md-nav__link">
+  <a href="#conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typographical Conventions
+        Conventions
       
     </span>
   </a>
@@ -651,10 +653,10 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#typographical-conventions" class="md-nav__link">
+  <a href="#conventions" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Typographical Conventions
+        Conventions
       
     </span>
   </a>
@@ -693,78 +695,73 @@
 
 
 <h1 id="intellij-idea-setup-guide-for-cst-students">IntelliJ IDEA Setup Guide for CST Students</h1>
-<p><a href="https://www.jetbrains.com/idea/">IntelliJ IDEA</a> is a professional
-<a href="glossary/#ide">integrated development environment</a> (IDE) built by JetBrains.
+<p><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener noreferrer">IntelliJ IDEA</a> is a professional
+<a href="glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">integrated development environment</abbr></a> (<a href="glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>) built by JetBrains.
 It provides intelligent code completion, built-in debugging tools, version
-control integration, and a <a href="glossary/#plugin">plugin</a> ecosystem that extends
-its functionality for different languages and frameworks. Throughout the CST
-program, you will use IntelliJ IDEA as your primary environment for writing,
-testing, and debugging Java and <a href="glossary/#Kotlin">Kotlin</a> code.</p>
+control integration, and a <a href="glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> ecosystem that extends its functionality
+for different languages and frameworks. Throughout the CST program, you will
+use IntelliJ IDEA as your primary environment for writing, testing, and
+debugging Java and <a href="glossary/#kotlin" class="glossary-link"><abbr title="A modern JetBrains language that runs on the JVM and is fully interoperable with Java. You will encounter it in later CST terms — click for more details">Kotlin</abbr></a> code.</p>
 <p>This guide walks you through the initial setup and configuration of IntelliJ IDEA
 so that your environment is ready before your first day of classes.</p>
 <h2 id="is-this-guide-for-you">Is This Guide for You?</h2>
 <p>This guide is written for students entering BCIT's Computer Systems Technology
-program who have not previously used IntelliJ IDEA or any
-other JetBrains IDE. No prior configuration experience is required.</p>
+program who have not previously used IntelliJ IDEA or any other JetBrains <a href="glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>.
+No prior configuration experience is required.</p>
 <p>To follow this guide you will need:</p>
 <ul>
 <li>A computer running Windows 10 or later, macOS 12 or later, or a
   supported Linux distribution</li>
 <li>A BCIT student email address (format: <code>firstname_lastname@my.bcit.ca</code>)</li>
 <li>An active internet connection</li>
-<li><a href="https://www.oracle.com/java/technologies/downloads/#java25">Java Development Kit (JDK) 25</a>
+<li><a href="https://www.oracle.com/java/technologies/downloads/#java25" target="_blank" rel="noopener noreferrer">Java Development Kit (JDK) 25</a>
   installed on your computer</li>
 </ul>
 <h2 id="by-the-end-of-this-guide-you-will-be-able-to">By the End of This Guide You Will Be Able To</h2>
 <ol>
 <li>Install IntelliJ IDEA and activate a free JetBrains Education licence
    using your BCIT student email</li>
-<li>Sync your IDE settings across multiple devices using a
-   <a href="glossary/#jetbrains-account">JetBrains account</a></li>
-<li>Configure <a href="glossary/#code-inspection">code inspections</a> to match the
-   style requirements used in CST courses</li>
-<li>Install and configure <a href="glossary/#plugin">plugins</a> recommended for
-   CST coursework</li>
-<li>Apply a <a href="glossary/#keymap">keymap</a> and learn the shortcuts most
-   relevant to your daily workflow</li>
+<li>Sync your <a href="glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> settings across multiple devices using a <a href="glossary/#jetbrains-account" class="glossary-link"><abbr title="An online account used to manage JetBrains licences and sync IDE settings across multiple devices — click for more details">JetBrains account</abbr></a></li>
+<li>Configure <a href="glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">code inspections</abbr></a> to match the style requirements used in CST courses</li>
+<li>Install and configure <a href="glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a> recommended for CST coursework</li>
+<li>Apply a <a href="glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a> and learn the shortcuts most relevant to your daily workflow</li>
 <li>Configure code generation templates for COMP 2522-compliant
    <code>equals()</code>, <code>hashCode()</code>, and <code>toString()</code> methods</li>
 </ol>
 <h2 id="what-this-guide-covers">What This Guide Covers</h2>
 <p>The tasks in this guide are designed to be completed in order. Each task builds
 on the previous one, and the final task — code templates — is intentionally
-last as it builds on the inspection profile and plugin configuration from
+last because it builds on the <a href="glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> and <a href="glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> configuration from
 earlier sections.</p>
 <ol>
 <li><a href="installation/">Installation and Student Account Setup</a> — Install
    IntelliJ IDEA, activate your free Education licence, and configure
-   settings sync across devices</li>
-<li><a href="plugins/">Installing and Configuring Plugins</a> — Install plugins
+   <a href="glossary/#settings-sync" class="glossary-link"><abbr title="An IntelliJ IDEA feature that uploads your IDE configuration to your JetBrains account so it is available on any device you log into — click for more details">settings sync</abbr></a> across devices</li>
+<li><a href="plugins/">Installing and Configuring Plugins</a> — Install <a href="glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a>
    recommended for CST students, disable AI completion tools, and
    configure them for coursework</li>
 <li><a href="inspections/">Configuring Inspections</a> — Understand what code
-   inspections do, and apply inspection profiles configured for CST
+   <a href="glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr></a> do, and apply <a href="glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> profiles configured for CST
    course style requirements</li>
 <li><a href="shortcuts/">Keyboard Shortcuts</a> — Learn the shortcuts most relevant
-   to your daily workflow and customize your keymap</li>
+   to your daily workflow and customize your <a href="glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a></li>
 <li><a href="templates/">Configuring Code Templates</a> — Set up <code>equals()</code>,
-   <code>hashCode()</code>, <code>toString()</code>, and Javadoc templates to generate
+   <code>hashCode()</code>, <code>toString()</code>, and <a href="glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> templates to generate
    COMP 2522-compliant code automatically</li>
 </ol>
 <h2 id="downloadable-configuration-files">Downloadable Configuration Files</h2>
 <p>This guide includes ready-to-use configuration files hosted in the
-<a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources"><code>/resources</code></a>
+<a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources" target="_blank" rel="noopener noreferrer"><code>/resources</code></a>
 folder of this repository:</p>
 <ul>
-<li><strong>Inspection profile</strong> — <code>CST_Inspections.xml</code>, pre-configured to match
-  COMP 2522 requirements, referenced in
-  <a href="inspections/">Configuring Inspections</a></li>
-<li><strong>Checkstyle configuration</strong> — <code>COMP-2522-Checkstyle.xml</code>, the course
-  <a href="glossary/#checkstyle">Checkstyle</a> ruleset your instructor grades against,
+<li><strong><a href="glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">Inspection profile</abbr></a></strong> — <code>CST_Inspections.xml</code>, pre-configured to match
+  COMP 2522 requirements, referenced in <a href="inspections/">Configuring Inspections</a></li>
+<li><strong><a href="glossary/#checkstyle-configuration" class="glossary-link"><abbr title="An XML file defining the exact style rules graded against your code submissions. In CST courses this is COMP-2522-Checkstyle.xml — click for more details">Checkstyle configuration</abbr></a></strong> — <code>COMP-2522-Checkstyle.xml</code>, the course
+  <a href="glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> ruleset your instructor grades against,
   referenced in <a href="plugins/">Installing and Configuring Plugins</a></li>
 </ul>
-<h2 id="typographical-conventions">Typographical Conventions</h2>
-<p>This guide uses the following conventions throughout:</p>
+<h2 id="conventions">Conventions</h2>
+<p>This guide uses the following typographical and link conventions:</p>
 <table>
 <thead>
 <tr>
@@ -775,34 +772,46 @@ folder of this repository:</p>
 </thead>
 <tbody>
 <tr>
-<td><strong>Bold</strong></td>
-<td>UI elements: buttons, menus, tabs, and labels</td>
-<td>Click <strong>OK</strong></td>
+<td><strong>Bold</strong> · <strong>Bold &gt; Bold</strong></td>
+<td>UI elements, buttons, labels, and menu selection sequences</td>
+<td>Click <strong>OK</strong> · <strong>File &gt; Settings &gt; <a href="glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong></td>
 </tr>
 <tr>
 <td><code>Monospace</code></td>
-<td>File names, paths, code, or page specific info/inputs</td>
+<td>File names, paths, code, or exact input values</td>
 <td><code>CST_Inspections.xml</code></td>
-</tr>
-<tr>
-<td><strong>Menu &gt; Item</strong></td>
-<td>A sequence of menu selections</td>
-<td><strong>File &gt; Settings &gt; Keymap</strong></td>
 </tr>
 <tr>
 <td><em>Italics</em></td>
 <td>A new term being introduced for the first time</td>
-<td>The <em>Project</em> <a href="glossary/#tool-window">tool window</a></td>
+<td>The <em>Project</em> <a href="glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a></td>
 </tr>
 <tr>
 <td>Key badges</td>
-<td>A physical key or key combination to press</td>
+<td>A key or key combination to press</td>
 <td><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span></td>
+</tr>
+<tr>
+<td><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener noreferrer">External link</a></td>
+<td>A link to a website outside this guide — opens in a new tab</td>
+<td><a href="https://www.jetbrains.com/idea/" target="_blank" rel="noopener noreferrer">JetBrains website</a></td>
+</tr>
+<tr>
+<td><a href="installation/">Internal link</a></td>
+<td>A link to another page within this guide</td>
+<td><a href="installation/">Installation and Student Account Setup</a></td>
+</tr>
+<tr>
+<td>Glossary term</td>
+<td>A dotted underline indicates a defined term — hover for a quick definition, click to see the full Glossary entry</td>
+<td><a href="glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">integrated development environment</abbr></a> (<a href="glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>)</td>
 </tr>
 </tbody>
 </table>
-<p>Keyboard shortcuts in this guide use the default Windows keymap. Where macOS
-shortcuts differ significantly, they are noted in parentheses.</p>
+<p>Keyboard shortcuts in this guide cover both operating systems. Use the
+<strong>Windows / macOS</strong> toggle button in the top-right of the header to switch
+all shortcut tables at once. Your choice is saved and applied automatically
+on every page.</p>
 <h2 id="admonitions">Admonitions</h2>
 <p>This guide uses four types of notices. Each appears before the step or
 section it applies to:</p>
@@ -904,10 +913,12 @@ reinstallation to recover from. Do not proceed without reading.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": ".", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="javascripts/os-toggle.js"></script>
       
     
   </body>

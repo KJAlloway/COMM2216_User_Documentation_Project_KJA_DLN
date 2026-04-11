@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -680,26 +682,19 @@ them from scratch every time. It does this using templates that define
 what the generated code should look like.</p>
 <p>The default templates do not match COMP 2522 style requirements, so this
 section walks you through replacing them with course-compliant versions.
-Once set up, every time you generate these methods IntelliJ will produce
+Once set up, every time you use the Generate menu IntelliJ will produce
 code that already follows your instructor's standards.</p>
-<p>This section also covers updating the <a href="../glossary/#javadoc">Javadoc</a> plugin's
-class comment template so that generated class headers automatically include
-the <code>@author</code> and <code>@version</code> tags your instructor requires.</p>
+<p>This section also covers updating the <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a>'s class comment
+template so that generated class headers automatically include the
+<code>@author</code> and <code>@version</code> tags your instructor requires.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>It is okay if some of the template code below looks unfamiliar — you
 are not expected to understand every line of it yet. The goal right
-now is to get your environment set up correctly so these tools work
-for you throughout the term. If you encounter terms you don't
-recognize, make a note and ask your instructor.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>These templates are stored globally in your IDE settings and apply to
-every project you open. You only need to configure them once.</p>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
+now is to get your environment set up correctly. If you encounter
+terms you don't recognize, make a note and ask your instructor.</p>
+<p>These templates are stored globally in your <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> settings and apply
+to every project you open. You only need to configure them once.</p>
 <p>Template configuration is accessed through the Generate menu inside
 an open Java class file. Before starting, open any <code>.java</code> file in
 your project — any existing class works fine.</p>
@@ -707,15 +702,15 @@ your project — any existing class works fine.</p>
 <h2 id="configuring-the-tostring-template">Configuring the toString Template</h2>
 <p>The <code>toString()</code> method produces a readable text description of an object —
 useful for debugging and logging. The template below checks what fields are
-present in your class and builds them into a consistent output format,
-while also checking for a <a href="../glossary/#superclass">superclass</a> and including
-its information if one exists.</p>
+present in your class and builds them into a consistent output format. It
+also checks whether your class extends another class and includes that
+information in the output if so.</p>
 <ol>
 <li>
 <p>Open any Java class file in your project.</p>
 </li>
 <li>
-<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> (Windows) or <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span> (macOS) to open the <strong>Generate</strong> menu.</p>
 <p><img alt="IntelliJ IDEA Generate menu showing options including toString(), equals() and hashCode(), and JavaDocs" src="../graphics/alt_insert_menu.png" title="The Generate menu" /></p>
 </li>
 <li>
@@ -797,14 +792,14 @@ instantly, without opening the Generate menu at all.</p>
 </div>
 <h2 id="configuring-the-equals-and-hashcode-templates">Configuring the equals and hashCode Templates</h2>
 <p>The <code>equals()</code> method checks whether two objects are meaningfully the same.
-The template below looks at each field in your class and compares them one
-by one, while also checking that the two objects are exactly the same type
-before comparing anything. The <code>hashCode()</code> method works alongside <code>equals()</code>
-— Java requires that if two objects are equal, they must produce the same
-hash code, so these are always configured together.</p>
+The template below compares each field in your class one by one, and first
+confirms that the two objects are exactly the same type before comparing
+anything. The <code>hashCode()</code> method works alongside <code>equals()</code> — Java
+requires that if two objects are equal, they must produce the same hash
+code, so these are always configured together.</p>
 <ol>
 <li>
-<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> to open the <strong>Generate</strong> menu again.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> (Windows) or <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span> (macOS) to open the <strong>Generate</strong> menu again.</p>
 </li>
 <li>
 <p>Select <strong>equals() and hashCode()</strong>.</p>
@@ -912,17 +907,28 @@ hash code, so these are always configured together.</p>
 <p>Click <strong>Finish</strong> to generate the methods.</p>
 </li>
 </ol>
-<h2 id="configuring-the-javadoc-class-template">Configuring the Javadoc Class Template</h2>
-<p>The JavaDoc plugin's default class comment template does not include
+<h2 id="configuring-the-javadoc-class-template">Configuring the <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> Class Template</h2>
+<p>The JavaDoc <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a>'s default class comment template does not include
 <code>@author</code> or <code>@version</code> tags. Updating it here means every class comment
 you generate will already have those tags waiting for you to fill in —
 no more forgetting them before submission.</p>
 <p>Unlike the <code>toString</code> and <code>equals</code> templates, this one is configured
 through <strong>Settings</strong> rather than the Generate menu.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
 <li>
 <p>Navigate to <strong>Tools &gt; JavaDoc</strong> in the left panel.</p>
 </li>
@@ -942,17 +948,18 @@ through <strong>Settings</strong> rather than the Generate menu.</p>
 </li>
 <li>
 <p>Click <strong>Apply</strong> then <strong>OK</strong>.</p>
-<p>At this point, any class-level Javadoc generated by the plugin will
+<p>At this point, any class-level <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> generated by the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> will
 include the <code>@author</code> and <code>@version</code> tags ready for you to fill in.</p>
 </li>
 </ol>
 <h2 id="conclusion">Conclusion</h2>
-<p>Your code generation templates are now configured for COMP 2522. From here,
-using <strong>Generate</strong> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span>) on any class will produce compliant
-<code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and Javadoc comments automatically.</p>
-<p>This is the last configuration step in the guide. Your environment is now
-fully set up for CST coursework — the work you have done here will save you
-time and help you avoid style penalties on every assignment this term.</p>
+<p>Your code generation templates are now configured for COMP 2522. Using
+<strong>Generate</strong> (<span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-insert">Ins</kbd></span> on Windows, <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-n">N</kbd></span> on macOS) on any class
+will now produce compliant <code>equals()</code>, <code>hashCode()</code>, <code>toString()</code>, and
+<a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> comments automatically.</p>
+<p>This is the last configuration step in the guide. Your environment is fully
+set up for CST coursework — the work you have done here will save you time
+and help you avoid style penalties on every assignment this term.</p>
 
 
 
@@ -1048,10 +1055,12 @@ time and help you avoid style penalties on every assignment this term.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/os-toggle.js"></script>
       
     
   </body>

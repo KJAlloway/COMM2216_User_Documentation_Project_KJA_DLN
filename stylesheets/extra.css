@@ -1,0 +1,191 @@
+/* =============================================================
+   Link type differentiation
+
+   1. External links  — classic blue, ↗ arrow, lightens on hover
+   2. Internal links  — dark purple, solid underline, ↗ arrow, lightens on hover
+   3. Glossary terms  — dark purple, dotted underline, no arrow, lightens on hover
+   ============================================================= */
+
+:root {
+  --link-external:     #1565c0;
+  --link-external-hov: #1e88e5;
+  --link-internal:     #6a1b9a;
+  --link-internal-hov: #9c27b0;
+}
+
+[data-md-color-scheme="slate"] {
+  --link-external:     #82b1ff;
+  --link-external-hov: #b3d1ff;
+  --link-internal:     #ce93d8;
+  --link-internal-hov: #e1bee7;
+}
+
+/* 1. External links */
+.md-typeset a[href^="http"]:not(.glossary-link),
+.md-typeset a[href^="https"]:not(.glossary-link) {
+  color: var(--link-external);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.md-typeset a[href^="http"]:not(.glossary-link)::after,
+.md-typeset a[href^="https"]:not(.glossary-link)::after {
+  content: "\00a0↗";
+  font-size: 0.72em;
+  vertical-align: super;
+  opacity: 0.8;
+}
+
+.md-typeset a[href^="http"]:not(.glossary-link):hover,
+.md-typeset a[href^="https"]:not(.glossary-link):hover {
+  color: var(--link-external-hov);
+}
+
+/* 2. Internal page links */
+.md-typeset a:not([href^="http"]):not([href^="https"]):not([href^="#"]):not(.glossary-link) {
+  color: var(--link-internal);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.md-typeset a:not([href^="http"]):not([href^="https"]):not([href^="#"]):not(.glossary-link)::after {
+  content: "\00a0↗";
+  font-size: 0.72em;
+  vertical-align: super;
+  opacity: 0.8;
+}
+
+.md-typeset a:not([href^="http"]):not([href^="https"]):not([href^="#"]):not(.glossary-link):hover {
+  color: var(--link-internal-hov);
+}
+
+/* 3. Glossary terms — dotted underline only, NO arrow under any circumstance */
+.md-typeset a.glossary-link {
+  color: var(--link-internal);
+  text-decoration: none;
+}
+
+/* Explicit content:"" ensures no ::after arrow can inherit or cascade in */
+.md-typeset a.glossary-link::after {
+  content: "";
+  display: none;
+}
+
+.md-typeset a.glossary-link abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  text-decoration-color: var(--link-internal);
+  cursor: help;
+  font-style: normal;
+}
+
+.md-typeset a.glossary-link:hover {
+  color: var(--link-internal-hov);
+  text-decoration: none;
+}
+
+.md-typeset a.glossary-link:hover abbr {
+  text-decoration: underline dotted;
+  text-decoration-color: var(--link-internal-hov);
+}
+
+/* Bare abbr — glossary page definitions and any unlinked abbr */
+.md-typeset abbr {
+  text-decoration: underline dotted;
+  text-underline-offset: 3px;
+  cursor: help;
+}
+
+/* =============================================================
+   OS Toggle — fixed-width two-button group in the header
+   Sits to the left of the dark/light mode toggle.
+   ============================================================= */
+
+/* Wrapper injected by os-toggle.js */
+.os-toggle-group {
+  display: flex;
+  align-items: center;
+  gap: 0;
+  margin-right: 0.5rem;
+  flex-shrink: 0;
+}
+
+.os-toggle-label {
+  font-size: 0.7rem;
+  color: var(--md-primary-bg-color);
+  opacity: 0.75;
+  margin-right: 0.35rem;
+  white-space: nowrap;
+  font-family: var(--md-text-font-family);
+}
+
+.os-toggle-btn {
+  width: 5.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.3em;
+  padding: 0.2em 0;
+  border: 1.5px solid rgba(255,255,255,0.4);
+  background: transparent;
+  color: var(--md-primary-bg-color);
+  font-size: 0.7rem;
+  font-family: var(--md-text-font-family);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background 0.15s, border-color 0.15s, opacity 0.15s;
+  opacity: 0.7;
+}
+
+.os-toggle-btn:first-of-type {
+  border-radius: 4px 0 0 4px;
+  border-right-width: 0.75px;
+}
+
+.os-toggle-btn:last-of-type {
+  border-radius: 0 4px 4px 0;
+  border-left-width: 0.75px;
+}
+
+.os-toggle-btn.os-active {
+  background: rgba(255,255,255,0.2);
+  border-color: rgba(255,255,255,0.85);
+  opacity: 1;
+}
+
+.os-toggle-btn:hover {
+  background: rgba(255,255,255,0.15);
+  opacity: 1;
+}
+
+/* =============================================================
+   Table of Contents — right sidebar
+   - More breathing room between all items
+   - Nested items (h3+) are smaller, faded, to visually subordinate
+     them from top-level section headings
+   ============================================================= */
+
+/* More vertical spacing on every TOC item */
+.md-nav--secondary .md-nav__item {
+  margin-top: 0.35rem;
+}
+
+/* Top-level TOC links (h2) — normal size, normal opacity */
+.md-nav--secondary > .md-nav__list > .md-nav__item > .md-nav__link {
+  font-size: 0.72rem;
+  opacity: 1;
+  line-height: 1.5;
+}
+
+/* Nested TOC links (h3 and deeper) — slightly smaller and faded */
+.md-nav--secondary .md-nav .md-nav__link {
+  font-size: 0.68rem;
+  opacity: 0.62;
+  line-height: 1.45;
+}
+
+/* Brighten nested item on hover so it's still clearly clickable */
+.md-nav--secondary .md-nav .md-nav__link:hover,
+.md-nav--secondary .md-nav .md-nav__link.md-nav__link--active {
+  opacity: 1;
+}

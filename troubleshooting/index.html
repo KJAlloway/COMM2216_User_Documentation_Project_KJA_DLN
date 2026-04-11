@@ -49,6 +49,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -718,19 +720,19 @@
 <p>This page covers common problems encountered during the setup and
 configuration tasks in this guide.</p>
 <h2 id="intellij-idea-will-not-activate-after-logging-in">IntelliJ IDEA Will Not Activate After Logging In</h2>
-<p><strong>Symptom:</strong> After logging into your JetBrains account in the IDE,
+<p><strong>Symptom:</strong> After logging into your <a href="../glossary/#jetbrains-account" class="glossary-link"><abbr title="An online account used to manage JetBrains licences and sync IDE settings across multiple devices — click for more details">JetBrains account</abbr></a> in the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>,
 IntelliJ IDEA still shows a trial or activation prompt.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Confirm your Education licence is active by logging into
-   <a href="https://account.jetbrains.com">account.jetbrains.com</a> in a browser.
+   <a href="https://account.jetbrains.com" target="_blank" rel="noopener noreferrer">account.jetbrains.com</a> in a browser.
    Under <strong>Licenses</strong>, you should see <strong>IntelliJ IDEA Ultimate —
    Educational</strong>.</li>
 <li>If the licence is listed but IDEA still will not activate, open
-   <strong>Help &gt; Register</strong> inside the IDE and log in again.</li>
+   <strong>Help &gt; Register</strong> inside the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> and log in again.</li>
 <li>If your licence is not listed, your BCIT email may not have been
    recognised automatically. Visit the
-   <a href="https://www.jetbrains.com/community/education/#students">JetBrains Education page</a>
+   <a href="https://www.jetbrains.com/community/education/#students" target="_blank" rel="noopener noreferrer">JetBrains Education page</a>
    and reapply using the <strong>Official Document</strong> tab, uploading a copy
    of your BCIT acceptance letter or student ID.</li>
 </ol>
@@ -743,86 +745,117 @@ email arrived at your BCIT address.</p>
 <li>Wait up to 15 minutes — delivery to institutional email addresses
    can be delayed.</li>
 <li>If the email still has not arrived, return to the
-   <a href="https://www.jetbrains.com/community/education/#students">JetBrains Education application page</a>
+   <a href="https://www.jetbrains.com/community/education/#students" target="_blank" rel="noopener noreferrer">JetBrains Education application page</a>
    and resubmit using the same email address.</li>
 </ol>
 <h2 id="settings-sync-is-not-working-on-a-second-device">Settings Sync Is Not Working on a Second Device</h2>
 <p><strong>Symptom:</strong> After logging into IntelliJ IDEA on a second computer,
-your keymaps, plugins, or inspection profiles are not present.</p>
+your <a href="../glossary/#keymap" class="glossary-link"><abbr title="Complete sets of keyboard shortcut assignments for IDE actions — click for more details">keymaps</abbr></a>, <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">plugins</abbr></a>, or <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> profiles are not present.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Open <strong>File &gt; Settings &gt; Settings Sync</strong> and confirm that sync
    is enabled and shows a recent sync timestamp.</li>
 <li>Click <strong>Sync</strong> to force a manual sync.</li>
-<li>If the categories you want are not syncing, check that they are
-   checked under <strong>File &gt; Settings &gt; Settings Sync</strong>.</li>
+<li>If the categories you want are not syncing, confirm they are checked
+   under <strong>File &gt; Settings &gt; Settings Sync</strong>.</li>
 </ol>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>Settings sync requires both devices to be running the same major
+<p><a href="../glossary/#settings-sync" class="glossary-link"><abbr title="An IntelliJ IDEA feature that uploads your IDE configuration to your JetBrains account so it is available on any device you log into — click for more details">Settings sync</abbr></a> requires both devices to be running the same major
 version of IntelliJ IDEA. If one device is on an older version,
 update it first.</p>
 </div>
-<h2 id="the-cst-inspection-profile-does-not-appear-after-importing">The CST Inspection Profile Does Not Appear After Importing</h2>
+<h2 id="the-cst-inspection-profile-does-not-appear-after-importing">The CST Inspection <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a> Does Not Appear After Importing</h2>
 <p><strong>Symptom:</strong> After importing <code>CST_Inspections.xml</code>, the profile name
 does not appear in the Inspections dropdown.</p>
 <p><strong>Solution:</strong></p>
 <ol>
-<li>Confirm that the file downloaded completely and is not corrupted —
-   it should be a valid XML file you can open in a text editor.</li>
+<li>Confirm the file downloaded completely — it should be a valid XML
+   file you can open in a text editor.</li>
 <li>In <strong>File &gt; Settings &gt; Editor &gt; Inspections</strong>, click the gear icon
-   (⚙) and select <strong>Import Profile</strong> again.</li>
-<li>If the import still fails, check that you are importing from
+   (⚙) and select <strong>Import <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a></strong> again.</li>
+<li>If the import still fails, confirm that you are importing from
    <strong>Editor &gt; Inspections</strong> and not from a different settings panel.</li>
 </ol>
-<h2 id="the-cst-inspection-profile-only-applies-to-one-project">The CST Inspection Profile Only Applies to One Project</h2>
+<h2 id="the-cst-inspection-profile-only-applies-to-one-project">The CST Inspection <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a> Only Applies to One Project</h2>
 <p><strong>Symptom:</strong> The <code>CST_Inspections</code> profile is active in one project
 but does not appear, or reverts to the default, when you open a
 different project.</p>
 <p><strong>Cause:</strong> The profile was imported while a project was open and was
-stored at the project level rather than globally in your IDE settings.
-It will show as <code>CST_Inspections (Project)</code> in the profile dropdown.</p>
+stored at the project level rather than globally. It will show as
+<code>CST_Inspections (Project)</code> in the profile dropdown.</p>
 <p><strong>Solution:</strong></p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
 <li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
 <li>Navigate to <strong>Editor &gt; Inspections</strong>.</li>
 <li>Confirm the profile dropdown shows <code>CST_Inspections (Project)</code>.</li>
 <li>Click the <strong>gear icon</strong> (⚙) at the top of the Inspections panel.</li>
 <li>
-<p>Select <strong>Copy to IDE</strong> from the dropdown.</p>
-<p>At this point, the profile is copied to your global IDE settings.
+<p>Select <strong>Copy to <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a></strong> from the dropdown.</p>
+<p>At this point, the profile is copied to your global <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> settings.
 The dropdown label will change to <code>CST_Inspections</code> without the
 <code>(Project)</code> suffix, and the profile will now apply to every project
 you open.</p>
 </li>
 </ol>
 <h2 id="a-plugin-fails-to-install-or-shows-an-error-after-installing">A Plugin Fails to Install or Shows an Error After Installing</h2>
-<p><strong>Symptom:</strong> A plugin download fails, or IntelliJ IDEA shows an error
-after installing a plugin and restarting.</p>
+<p><strong>Symptom:</strong> A <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> download fails, or IntelliJ IDEA shows an error
+after installing a <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> and restarting.</p>
 <p><strong>Solution:</strong></p>
 <ol>
 <li>Check your internet connection and retry the install from
-   <strong>File &gt; Settings &gt; Plugins &gt; Marketplace</strong>.</li>
-<li>If the plugin installed but is causing errors, disable it without
-   uninstalling: open <strong>File &gt; Settings &gt; Plugins</strong>, find the plugin,
-   and toggle it off. Restart the IDE.</li>
-<li>If problems persist, uninstall the plugin from the same panel and
+   <strong>File &gt; Settings &gt; <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a> &gt; Marketplace</strong>.</li>
+<li>If the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> installed but is causing errors, disable it without
+   uninstalling: open <strong>File &gt; Settings &gt; <a href="../glossary/#plugin" class="glossary-link"><abbr title="Optional add-ons that extend IntelliJ IDEA with new features or language support — click for more details">Plugins</abbr></a></strong>, find the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a>,
+   and toggle it off. Restart the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>.</li>
+<li>If problems persist, uninstall the <a href="../glossary/#plugin" class="glossary-link"><abbr title="An optional add-on that extends IntelliJ IDEA with new features or language support — click for more details">plugin</abbr></a> from the same panel and
    report the issue to your instructor.</li>
 </ol>
 <h2 id="ctrlaltl-does-not-reformat-code-on-windows"><span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-l">L</kbd></span> Does Not Reformat Code on Windows</h2>
 <p><strong>Symptom:</strong> Pressing <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-l">L</kbd></span> does not reformat code — the
 screen locks instead.</p>
 <p><strong>Cause:</strong> On some Windows systems, <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-l">L</kbd></span> is assigned to
-the system screen lock shortcut, which takes priority over the IDE.</p>
+the system screen lock shortcut, which takes priority over the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>.</p>
 <p><strong>Solution:</strong></p>
-<p>Use <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span> instead. This shortcut is included in the CST keymap
+<p>Use <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-l">L</kbd></span> instead. This shortcut is included in the CST <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a>
 as a second binding for Reformat Code and does not conflict with any
-Windows system shortcuts. If you have not yet imported the CST keymap,
+Windows system shortcuts. If you have not yet imported the CST <a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">keymap</abbr></a>,
 see <a href="../shortcuts/">Keyboard Shortcuts</a> for import instructions.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>On macOS, the default shortcut for Reformat Code is <span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-l">L</kbd></span>
+and does not conflict with any system shortcuts.</p>
+</div>
 <p>Alternatively, assign your own shortcut manually:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
 <li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
-<li>Navigate to <strong>Keymap</strong>.</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
+<li>Navigate to <strong><a href="../glossary/#keymap" class="glossary-link"><abbr title="A complete set of keyboard shortcut assignments for IDE actions — click for more details">Keymap</abbr></a></strong>.</li>
 <li>Search for <strong>Reformat Code</strong> in the action list.</li>
 <li><strong>Right-click</strong> <strong>Reformat Code</strong> and select <strong>Add Keyboard Shortcut</strong>.</li>
 <li>Press your desired key combination and click <strong>OK</strong>.</li>
@@ -906,10 +939,12 @@ see <a href="../shortcuts/">Keyboard Shortcuts</a> for import instructions.</p>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/os-toggle.js"></script>
       
     
   </body>

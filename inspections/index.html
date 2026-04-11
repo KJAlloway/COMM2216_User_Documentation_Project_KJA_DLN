@@ -51,6 +51,8 @@
       
     
     
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
     <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
@@ -830,66 +832,64 @@
 
 <h1 id="configuring-inspections">Configuring Inspections</h1>
 <h2 id="overview">Overview</h2>
-<p><a href="../glossary/#code-inspection">Code inspections</a> are IntelliJ IDEA's built-in
-real-time code analysis system — think of them as a spell-checker for your code.
-As you type, the IDE continuously scans your file and flags potential problems
-directly in the editor, without requiring you to compile or run your program.</p>
+<p><a href="../glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">Code inspections</abbr></a> are IntelliJ IDEA's built-in real-time code analysis
+system — think of them as a spell-checker for your code. As you type, the
+<a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> continuously scans your file and flags potential problems directly in
+the editor, without requiring you to compile or run your program.</p>
 <p>Inspections catch everything from code that will not compile, to style
-violations your instructors will mark against, to subtle logical bugs like
-comparing <a href="../glossary/#string">strings</a> with <code>==</code> instead of <code>.equals()</code>.
-In CST courses, your instructors expect code that conforms to specific style
-guidelines, and having the right inspection profile active means you get warned
-about violations the moment you write them.</p>
-<p>This section explains what inspections are, how to read what they flag, and
-how to import a pre-configured inspection profile matched to CST course
+violations your instructors will mark against, to subtle bugs like
+comparing <a href="../glossary/#string" class="glossary-link"><abbr title="Sequences of characters treated as text in Java, enclosed in double quotes — click for more details">strings</abbr></a> with <code>==</code> instead of <code>.equals()</code>. Having the right
+<a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> active means you get warned about violations the moment
+you write them, before you submit anything.</p>
+<p>This section explains what <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr></a> are, how to read what they flag, and
+how to import a pre-configured <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> matched to CST course
 requirements.</p>
-<p>By the end of this section you will have an inspection profile active
+<p>By the end of this section you will have an <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> active
 globally across all your IntelliJ IDEA projects.</p>
-<h3 id="inspections-vs-checkstyle">Inspections vs. Checkstyle</h3>
-<p>IntelliJ inspections and <a href="../glossary/#checkstyle">Checkstyle</a> are two separate
-tools that complement each other. Understanding the difference will save you
-from submitting code that looks clean in the editor but fails the course
-grading tool.</p>
+<h3 id="inspections-vs-checkstyle">Inspections vs. <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></h3>
+<p>IntelliJ <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr></a> and <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> are two separate tools that complement
+each other. Understanding the difference will save you from submitting code
+that looks clean in the editor but fails the course grading tool.</p>
 <table>
 <thead>
 <tr>
 <th></th>
 <th>IntelliJ Inspections</th>
-<th>Checkstyle</th>
+<th><a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a></th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td><strong>When it runs</strong></td>
 <td>Continuously, as you type</td>
-<td>On demand, from the Checkstyle panel</td>
+<td>On demand, from the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> panel</td>
 </tr>
 <tr>
 <td><strong>How it shows issues</strong></td>
 <td>Red and yellow underlines in the editor</td>
-<td>A list of violations in the Checkstyle <a href="../glossary/#tool-window">tool window</a></td>
+<td>A list of violations in the <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a></td>
 </tr>
 <tr>
 <td><strong>What it enforces</strong></td>
-<td>IDE-level code quality and style rules</td>
+<td><a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>-level code quality and style rules</td>
 <td>The exact ruleset your instructor grades against</td>
 </tr>
 <tr>
 <td><strong>Configuration</strong></td>
-<td>This inspection profile XML</td>
+<td>This <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a> XML</td>
 <td><code>COMP-2522-Checkstyle.xml</code> loaded into CheckStyle-IDEA</td>
 </tr>
 </tbody>
 </table>
-<p>Use inspections to catch issues early while you write. Use Checkstyle as your
-final check before every submission — it is the authoritative tool your
-instructor runs against your code.</p>
+<p>Use <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="Automated rules IntelliJ IDEA applies as you type, flagging errors, warnings, and style violations without compiling — click for more details">inspections</abbr></a> to catch issues early while you write. Use <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> as
+your final check before every submission — it is the authoritative tool
+your instructor runs against your code.</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
-<p>A clean editor with no underlines does not mean a clean Checkstyle run.
-Always run Checkstyle from the <a href="../glossary/#tool-window">tool window</a>
-before submitting. See
-<a href="../plugins/">Installing and Configuring Plugins</a> for setup instructions.</p>
+<p>A clean editor with no underlines does not mean a clean <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a>
+run. Always run <a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> from the <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a> before submitting.
+See <a href="../plugins/">Installing and Configuring Plugins</a> for setup
+instructions.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
@@ -898,8 +898,8 @@ issues and suggest fixes — you decide whether to apply them.</p>
 </div>
 <h2 id="understanding-inspection-severity-levels">Understanding Inspection Severity Levels</h2>
 <p>IntelliJ IDEA uses colour-coded highlights to indicate how serious an
-inspection finding is. The <a href="../glossary/#severity">severity</a> level appears
-in the inspection widget in the top-right corner of the editor.</p>
+<a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> finding is. The <a href="../glossary/#severity" class="glossary-link"><abbr title="The level of importance assigned to an inspection finding: Error, Warning, Weak Warning, or Typo — click for more details">severity</abbr></a> level also appears in the <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a>
+widget in the top-right corner of the editor.</p>
 <table>
 <thead>
 <tr>
@@ -927,13 +927,13 @@ in the inspection widget in the top-right corner of the editor.</p>
 <tr>
 <td>Green underline</td>
 <td>Typo</td>
-<td>A spelling issue in a string or comment</td>
+<td>A spelling issue in a <a href="../glossary/#string" class="glossary-link"><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">string</abbr></a> or comment</td>
 </tr>
 </tbody>
 </table>
-<h2 id="what-the-cst-inspection-profile-checks">What the CST Inspection Profile Checks</h2>
+<h2 id="what-the-cst-inspection-profile-checks">What the CST Inspection <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a> Checks</h2>
 <p>The profile provided with this guide covers the following categories, all
-drawn directly from the COMP 2522 Style Guide and Checkstyle configuration:</p>
+drawn directly from the COMP 2522 Style Guide and <a href="../glossary/#checkstyle-configuration" class="glossary-link"><abbr title="An XML file defining the exact style rules graded against your code submissions. In CST courses this is COMP-2522-Checkstyle.xml — click for more details">Checkstyle configuration</abbr></a>:</p>
 <table>
 <thead>
 <tr>
@@ -944,13 +944,13 @@ drawn directly from the COMP 2522 Style Guide and Checkstyle configuration:</p>
 </thead>
 <tbody>
 <tr>
-<td><strong><a href="../glossary/#javadoc">Javadoc</a></strong></td>
-<td>Missing comments on public classes, methods, and fields; missing <code>@author</code>, <code>@version</code>, <code>@param</code>, <code>@return</code>, <code>@throws</code> tags; empty Javadoc <a href="../glossary/#stub">stubs</a></td>
+<td><strong><a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a></strong></td>
+<td>Missing comments on public classes, methods, and fields; missing <code>@author</code>, <code>@version</code>, <code>@param</code>, <code>@return</code>, <code>@throws</code> tags; empty <a href="../glossary/#javadoc" class="glossary-link"><abbr title="Java's standard documentation comment format, written using /** */ blocks above classes, methods, and fields — click for more details">Javadoc</abbr></a> <a href="../glossary/#stub" class="glossary-link"><abbr title="Generated code skeletons with placeholder content for you to fill in — click for more details">stubs</abbr></a></td>
 <td>9, 10, 13, 14</td>
 </tr>
 <tr>
 <td><strong>StringBuilder</strong></td>
-<td><a href="../glossary/#string">String</a> concatenation using <code>+</code> inside loops; concatenation outside loops where StringBuilder is required</td>
+<td><a href="../glossary/#string" class="glossary-link"><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">String</abbr></a> concatenation using <code>+</code> inside loops; concatenation outside loops where StringBuilder is required</td>
 <td>—</td>
 </tr>
 <tr>
@@ -970,7 +970,7 @@ drawn directly from the COMP 2522 Style Guide and Checkstyle configuration:</p>
 </tr>
 <tr>
 <td><strong>Imports</strong></td>
-<td><a href="../glossary/#wildcard-import">Wildcard imports</a> (<code>import java.util.*</code>); unused imports</td>
+<td><a href="../glossary/#wildcard-import" class="glossary-link"><abbr title="Imports using * to bring in all classes from a package at once, e.g. import java.util.*. Prohibited in COMP 2522 — click for more details">Wildcard imports</abbr></a> (<code>import java.util.*</code>); unused imports</td>
 <td>—</td>
 </tr>
 <tr>
@@ -980,7 +980,7 @@ drawn directly from the COMP 2522 Style Guide and Checkstyle configuration:</p>
 </tr>
 <tr>
 <td><strong>Code quality</strong></td>
-<td><a href="../glossary/#magic-number">Magic numbers</a>; empty catch blocks; catching <code>Exception</code>/<code>Error</code>; string comparison with <code>==</code>; inline ternary operators; duplicate code</td>
+<td><a href="../glossary/#magic-number" class="glossary-link"><abbr title="Numeric literals used directly in code instead of named constants — click for more details">Magic numbers</abbr></a>; empty catch blocks; catching <code>Exception</code>/<code>Error</code>; <a href="../glossary/#string" class="glossary-link"><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">string</abbr></a> comparison with <code>==</code>; inline ternary operators; duplicate code</td>
 <td>17, 21, 24</td>
 </tr>
 <tr>
@@ -1011,23 +1011,32 @@ drawn directly from the COMP 2522 Style Guide and Checkstyle configuration:</p>
 </tbody>
 </table>
 <h3 id="a-note-on-stringbuilder">A Note on StringBuilder</h3>
-<p>COMP 2522 requires <code>StringBuilder</code> for all <a href="../glossary/#string">string</a>
-construction. String concatenation using <code>+</code> is not permitted, even outside
-of loops.</p>
-<p>By default, IntelliJ IDEA includes an inspection called
-<strong>"StringBuilder can be replaced with String"</strong> (found under
-<strong>Verbose or redundant code constructs</strong> in the Inspections panel)
-that suggests converting your <code>StringBuilder</code> back to simple concatenation.
-The CST inspection profile <strong>disables this inspection</strong> so it does not
-contradict course requirements.</p>
-<p>The profile keeps the complementary inspection — <strong>"String concatenation
+<p>COMP 2522 requires <code>StringBuilder</code> for all <a href="../glossary/#string" class="glossary-link"><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">string</abbr></a> construction — using
+the <code>+</code> operator to join <a href="../glossary/#string" class="glossary-link"><abbr title="Sequences of characters treated as text in Java, enclosed in double quotes — click for more details">strings</abbr></a> is not permitted, even outside of loops.</p>
+<p>By default, IntelliJ IDEA includes an <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> called <strong>"StringBuilder
+can be replaced with <a href="../glossary/#string" class="glossary-link"><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">String</abbr></a>"</strong> (found under <strong>Verbose or redundant code
+constructs</strong> in the Inspections panel) that suggests converting your
+<code>StringBuilder</code> back to simple concatenation. The CST <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved, importable collection of IntelliJ IDEA inspection settings. The CST profile provided with this guide is pre-configured to COMP 2522 requirements — click for more details">inspection profile</abbr></a>
+<strong>disables this <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a></strong> so it does not contradict course requirements.</p>
+<p>The profile keeps the complementary <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> — <strong>"<a href="../glossary/#string" class="glossary-link"><abbr title="A sequence of characters treated as text in Java, enclosed in double quotes — click for more details">String</abbr></a> concatenation
 in loop"</strong> — enabled, so you will still be warned if you accidentally use
 <code>+</code> concatenation inside a loop.</p>
-<h2 id="viewing-your-active-inspection-profile">Viewing Your Active Inspection Profile</h2>
+<h2 id="viewing-your-active-inspection-profile">Viewing Your Active Inspection <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a></h2>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Windows</label><label for="__tabbed_1_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
 <li>
 <p>In the <strong>Settings</strong> window, navigate to <strong>Editor &gt; Inspections</strong> in
    the left panel.</p>
@@ -1038,7 +1047,7 @@ top shows your currently active profile. The default is <strong>Project Default<
 <p>Click <strong>Cancel</strong> to close without making changes.</p>
 </li>
 </ol>
-<h2 id="importing-the-cst-inspection-profile">Importing the CST Inspection Profile</h2>
+<h2 id="importing-the-cst-inspection-profile">Importing the CST Inspection <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a></h2>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Importing a profile does not delete your existing profiles. You can
@@ -1046,29 +1055,40 @@ switch between profiles at any time using the dropdown in the
 Inspections panel.</p>
 </div>
 <ol>
-<li>
-<p>Download <code>CST_Inspections.xml</code> from the
-   <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources"><code>/resources</code></a>
+<li>Download <code>CST_Inspections.xml</code> from the
+   <a href="https://github.com/KJAlloway/COMM2216_User_Documentation_Project_KJA_DLN/tree/main/resources" target="_blank" rel="noopener noreferrer"><code>/resources</code></a>
    folder of this repository. Save it somewhere it will not be
    accidentally deleted — a dedicated folder such as
-   <code>Documents/BCIT/IDE_Config</code> works well.</p>
-</li>
-<li>
-<p>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</p>
-</li>
+   <code>Documents/BCIT/IDE_Config</code> works well.</li>
+</ol>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1">Windows</label><label for="__tabbed_2_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>File &gt; Settings</strong> (<span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-s">S</kbd></span>).</li>
+</ol>
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Open <strong>IntelliJ IDEA &gt; Settings</strong> (<span class="keys"><kbd class="key-command">Cmd</kbd><span>+</span><kbd class="key-comma">,</kbd></span>).</li>
+</ol>
+</div>
+</div>
+</div>
+<ol>
 <li>
 <p>In the <strong>Settings</strong> window, navigate to <strong>Editor &gt; Inspections</strong>.</p>
 </li>
 <li>
 <p>In the profile dropdown at the top of the Inspections panel, select
-   <strong>IDE</strong> from the scope options to ensure the profile is stored
+   <strong><a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a></strong> from the <a href="../glossary/#scope-ide-settings" class="glossary-link"><abbr title="Whether a setting applies to a single project only, or globally to every project you open — click for more details">scope</abbr></a> options to ensure the profile is stored
    globally rather than for a single project.</p>
 </li>
 <li>
 <p>Click the <strong>gear icon</strong> (⚙) at the top of the Inspections panel.</p>
 </li>
 <li>
-<p>Select <strong>Import Profile</strong> from the dropdown.</p>
+<p>Select <strong>Import <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a></strong> from the dropdown.</p>
 </li>
 <li>
 <p>Navigate to the downloaded <code>CST_Inspections.xml</code> file and click <strong>Open</strong>.</p>
@@ -1078,25 +1098,25 @@ Keep it as <code>CST_Inspections</code> so it is easy to identify later.</p>
 <li>
 <p>Click <strong>OK</strong> to confirm.</p>
 <p>At this point, <strong>CST_Inspections</strong> will appear in the profile dropdown
-at IDE scope.</p>
+at <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> <a href="../glossary/#scope-ide-settings" class="glossary-link"><abbr title="Whether a setting applies to a single project only, or globally to every project you open — click for more details">scope</abbr></a>.</p>
 </li>
 <li>
 <p>Select <strong>CST_Inspections</strong> from the profile dropdown to make it active.</p>
-<p><img alt="Editor &gt; Inspections panel showing the gear icon dropdown open with Import Profile visible, and CST_Inspections selected in the profile dropdown at IDE scope" src="graphics/import_inspection_profile.png" title="Importing and activating the CST inspection profile" /></p>
+<p><img alt="Editor &gt; Inspections panel showing the gear icon dropdown open with Import Profile visible, and CST_Inspections selected in the profile dropdown at IDE scope" src="../graphics/import_inspection_profile.png" title="Importing and activating the CST inspection profile" /></p>
 </li>
 </ol>
 <h2 id="confirming-global-scope">Confirming Global Scope</h2>
 <p>After selecting <strong>CST_Inspections</strong> in the dropdown, check whether it shows
 <code>CST_Inspections</code> or <code>CST_Inspections (Project)</code> in the dropdown label.</p>
 <ul>
-<li>If it shows <strong><code>CST_Inspections</code></strong> — the profile is stored in your IDE
+<li>If it shows <strong><code>CST_Inspections</code></strong> — the profile is stored in your <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a>
   settings and will apply to every project you open. You are done.</li>
 <li>
 <p>If it shows <strong><code>CST_Inspections (Project)</code></strong> — the profile is stored in
   the current project only. To fix this:</p>
 <ol>
 <li>Click the <strong>gear icon</strong> (⚙) again.</li>
-<li>Select <strong>Copy to IDE</strong> from the dropdown.</li>
+<li>Select <strong>Copy to <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a></strong> from the dropdown.</li>
 <li>Confirm the copy. The label will change to <code>CST_Inspections</code>
    without the <code>(Project)</code> suffix.</li>
 </ol>
@@ -1105,40 +1125,48 @@ at IDE scope.</p>
 <h2 id="applying-and-saving">Applying and Saving</h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>If IntelliJ IDEA is still <a href="../glossary/#indexing">indexing</a> your project
-when you apply the profile — indicated by a progress bar in the
-bottom-right corner of the IDE — wait for indexing to complete before
-proceeding. Applying profile changes during indexing can cause a
-temporary lag and may not highlight all issues immediately.</p>
+<p>If IntelliJ IDEA is still <a href="../glossary/#indexing" class="glossary-link"><abbr title="A background process IntelliJ IDEA runs when opening a project, scanning all files so search and navigation features work correctly — click for more details">indexing</abbr></a> your project when you apply the
+profile — indicated by a progress bar in the bottom-right corner —
+wait for <a href="../glossary/#indexing" class="glossary-link"><abbr title="A background process IntelliJ IDEA runs when opening a project, scanning all files so search and navigation features work correctly — click for more details">indexing</abbr></a> to finish before proceeding. Applying changes during
+<a href="../glossary/#indexing" class="glossary-link"><abbr title="A background process IntelliJ IDEA runs when opening a project, scanning all files so search and navigation features work correctly — click for more details">indexing</abbr></a> can cause a temporary lag and may not highlight all issues
+immediately.</p>
 </div>
+<div class="tabbed-set tabbed-alternate" data-tabs="3:2"><input checked="checked" id="__tabbed_3_1" name="__tabbed_3" type="radio" /><input id="__tabbed_3_2" name="__tabbed_3" type="radio" /><div class="tabbed-labels"><label for="__tabbed_3_1">Windows</label><label for="__tabbed_3_2">macOS</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
 <ol>
-<li>
-<p>Click <strong>Apply</strong> at the bottom of the Settings window.</p>
-</li>
-<li>
-<p>Click <strong>OK</strong> to close Settings and return to your code.</p>
-<p>At this point, IntelliJ IDEA will re-scan any open files and highlight
-issues according to the CST inspection rules.</p>
-</li>
+<li>Click <strong>Apply</strong> at the bottom of the Settings window.</li>
+<li>Click <strong>OK</strong> to close Settings and return to your code.</li>
 </ol>
-<h2 id="verifying-your-inspection-profile">Verifying Your Inspection Profile</h2>
-<p>Open any <code>.java</code> file in your project and look at the inspection widget in
+</div>
+<div class="tabbed-block">
+<ol>
+<li>Click <strong>Apply</strong> at the bottom of the Settings window.</li>
+<li>Click <strong>OK</strong> to close Settings and return to your code.</li>
+</ol>
+<p>At this point, IntelliJ IDEA will re-scan any open files and highlight
+issues according to the CST <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> rules.</p>
+</div>
+</div>
+</div>
+<h2 id="verifying-your-inspection-profile">Verifying Your Inspection <a href="../glossary/#profile" class="glossary-link"><abbr title="A saved collection of inspection settings that can be exported, shared, and imported between IDE installations — click for more details">Profile</abbr></a></h2>
+<p>Open any <code>.java</code> file in your project and look at the <a href="../glossary/#code-inspection" class="glossary-link"><abbr title="An automated analysis rule that flags potential errors and style violations as you type — click for more details">inspection</abbr></a> widget in
 the top-right corner of the editor. If the profile is active, IntelliJ IDEA
 is now analysing your code against CST style requirements.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> on any highlighted issue to see IntelliJ IDEA's
-suggested fix. This is one of the most useful shortcuts in the IDE —
-it works on errors, warnings, and suggestions alike.</p>
+<p>Press <span class="keys"><kbd class="key-alt">Alt</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> (Windows) or <span class="keys"><kbd class="key-option">Option</kbd><span>+</span><kbd class="key-enter">Enter</kbd></span> (macOS) on any highlighted
+issue to see IntelliJ IDEA's suggested fix. This is one of the most useful
+shortcuts in the <a href="../glossary/#ide" class="glossary-link"><abbr title="Integrated Development Environment — a single application combining a code editor, compiler, debugger, and other tools — click for more details">IDE</abbr></a> — it works on errors, warnings, and suggestions alike.</p>
 </div>
 <h2 id="conclusion">Conclusion</h2>
-<p>Your editor is now configured to flag code style issues that match CST
+<p>Your editor is now configured to flag <a href="../glossary/#code-style" class="glossary-link"><abbr title="A set of formatting rules defining indentation, line length, naming conventions, and so on — click for more details">code style</abbr></a> issues that match CST
 course requirements across every project you open. Any violations will
 appear as you type, giving you immediate feedback before you submit
 assignments.</p>
 <p>Remember that this profile is your early-warning system. Before submitting
-any lab or assignment, run the course Checkstyle configuration from the
-Checkstyle tool window to confirm your code passes the same checks your
+any lab or assignment, run the course <a href="../glossary/#checkstyle-configuration" class="glossary-link"><abbr title="An XML file defining the exact style rules graded against your code submissions. In CST courses this is COMP-2522-Checkstyle.xml — click for more details">Checkstyle configuration</abbr></a> from the
+<a href="../glossary/#checkstyle" class="glossary-link"><abbr title="A tool that checks your code against the exact ruleset your instructor grades against. Run it before every submission — click for more details">Checkstyle</abbr></a> <a href="../glossary/#tool-window" class="glossary-link"><abbr title="A panel docked to the edge of IntelliJ IDEA that provides access to a specific feature or view — click for more details">tool window</abbr></a> to confirm your code passes the same checks your
 instructor uses. Setup instructions are in
 <a href="../plugins/">Installing and Configuring Plugins</a>.</p>
 
@@ -1236,10 +1264,12 @@ instructor uses. Setup instructions are in
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.top", "navigation.indexes", "navigation.footer", "content.code.copy", "content.tooltips", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+        <script src="../javascripts/os-toggle.js"></script>
       
     
   </body>
